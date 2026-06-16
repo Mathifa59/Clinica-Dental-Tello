@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
 import styles from './Header.module.css';
@@ -52,8 +53,7 @@ export default function Header() {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
         <Link href={localePath('/')} className={styles.logo} onClick={() => setMenuOpen(false)}>
-          <span className={styles.logoLight}>Dental</span>
-          <span className={styles.logoBold}>Tello</span>
+          <Image src="/logo-horizontal.png" alt="Dental Tello" height={40} width={170} priority style={{ objectFit: 'contain', objectPosition: 'left center' }} />
         </Link>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>

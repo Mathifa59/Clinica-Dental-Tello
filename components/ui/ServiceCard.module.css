@@ -42,8 +42,13 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 10;
-  overflow: hidden;
   flex-shrink: 0;
+}
+
+.imageClip {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
 }
 
 /* Gradient overlay at bottom of image — blends into card body */
@@ -60,7 +65,7 @@
 }
 
 /* Scale image on hover */
-.card:hover .imageArea img {
+.card:hover .imageClip img {
   transform: scale(1.04);
   transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }

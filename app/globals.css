@@ -338,13 +338,8 @@ p  { color: var(--color-text-muted); line-height: 1.75; }
   position: relative;
 }
 
-.section--blue h2,
-.section--blue h3 {
+.section--blue .section-header h2 {
   color: #ffffff;
-}
-
-.section--blue p {
-  color: rgba(255, 255, 255, 0.76);
 }
 
 .section--blue .section-header p {

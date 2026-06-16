@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import styles from './Footer.module.css';
 
@@ -22,9 +23,8 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <div className={styles.col}>
-          <div className={styles.logo}>
-            <span className={styles.logoLight}>Dental</span>
-            <span className={styles.logoBold}>Tello</span>
+          <div className={styles.logoWrap}>
+            <Image src="/logo-horizontal.png" alt="Dental Tello" height={40} width={170} style={{ objectFit: 'contain', objectPosition: 'left center' }} />
           </div>
           <p className={styles.description}>{t('description')}</p>
           <div className={styles.socials}>
