@@ -23,6 +23,8 @@ Sitio web corporativo de 6 páginas diseñado para presentar los servicios de la
 
 > **Sin Tailwind. Sin librerías de animación externas.** Todas las animaciones y efectos visuales son CSS puro con custom properties y `@keyframes`.
 
+> El logo corporativo (`public/logo-horizontal.png`) se usa en el Header y en el Footer (sobre fondo claro con esquinas redondeadas para contrastar con el tema oscuro).
+
 ---
 
 ## Estructura de páginas
@@ -34,7 +36,7 @@ Sitio web corporativo de 6 páginas diseñado para presentar los servicios de la
 | `/es/nosotros` | **Nosotros** | Perfil del Dr. Tello, estadísticas, valores de la clínica |
 | `/es/blog` | **Blog** | 3 artículos sobre salud bucal |
 | `/es/citas` | **Agendar cita** | Formulario con validación, sidebar con horarios e imagen |
-| `/es/contacto` | **Contacto** | Datos de contacto, redes sociales, foto exterior + mapa |
+| `/es/contacto` | **Contacto** | Datos de contacto, redes sociales, foto exterior + mapa real de Google Maps |
 
 ---
 
@@ -69,12 +71,13 @@ clinica-dental-tello/
 │   ├── es.json                  # Contenido en español
 │   └── en.json                  # Contenido en inglés
 ├── public/
-│   └── images/                  # Carpeta lista para subir fotos
-│       ├── home/
-│       ├── services/
-│       ├── about/
-│       ├── blog/
-│       └── clinic/
+│   ├── logo-horizontal.png      # Logo corporativo (Header + Footer)
+│   └── images/                  # Fotos del sitio (organizadas por sección)
+│       ├── home/                # hero.png (+ clinica-interior pendiente)
+│       ├── services/            # 6 servicios
+│       ├── about/               # doctor-tello.png
+│       ├── blog/                # 3 artículos
+│       └── clinic/              # exterior.png
 ├── middleware.ts                # Enrutamiento de locales (es/en)
 ├── i18n.ts                      # Configuración next-intl
 └── next.config.mjs              # Config Next.js con plugin i18n
@@ -93,6 +96,9 @@ clinica-dental-tello/
 | `--color-text` | `#1A1F36` | Texto principal |
 | `--color-bg` | `#FFFFFF` | Fondo base |
 | `--color-bg-soft` | `#F7F8FC` | Secciones alternadas |
+| `.section--blue` | gradiente índigo + blobs | Secciones de acento (servicios destacados, stats, blog) |
+
+> **Secciones azules:** la clase global `.section--blue` aplica un fondo con gradiente multicapa (radiales turquesa/índigo + patrón de puntos sutil) para romper el predominio del blanco. Las tarjetas blancas y de glassmorphism contrastan sobre ella. Solo los títulos/subtítulos dentro de `.section-header` se invierten a blanco — el contenido de las tarjetas conserva sus colores.
 
 ### Tipografía
 
@@ -116,25 +122,27 @@ El sitio está disponible en **español** (por defecto) e **inglés**:
 - `/es/...` → Español
 - `/en/...` → English
 
-El cambio de idioma está integrado en el Header. Los textos se gestionan en `messages/es.json` y `messages/en.json`.
+El cambio de idioma está integrado en el Header como un **toggle tipo pill ES | EN**: el idioma activo se resalta con fondo azul y el inactivo queda en gris. Cada opción enlaza a la misma ruta en el otro idioma. Los textos se gestionan en `messages/es.json` y `messages/en.json`.
 
 ---
 
 ## Imágenes
 
-Las imágenes están **pre-cableadas** en el código pero no incluidas en el repositorio. El sitio muestra placeholders con degradado hasta que se suba cada foto.
+Las imágenes reales **ya están subidas** y organizadas en sus carpetas dentro de `public/images/`. El código sigue mostrando un placeholder con degradado para cualquier ruta que aún no tenga foto.
 
-Consulta [`public/images/LEEME.md`](public/images/LEEME.md) para ver la lista completa de archivos esperados, rutas y dimensiones recomendadas.
+| Carpeta / archivo | Estado | Usado en |
+|---|---|---|
+| `home/hero.png` | ✅ Subida | Hero de inicio |
+| `home/clinica-interior.jpg` | ⏳ Pendiente (placeholder) | Sección "Nuestra clínica" del inicio |
+| `services/orthodontics.jpg` … `emergency.jpg` (6) | ✅ Subidas | Servicios e inicio |
+| `about/doctor-tello.png` | ✅ Subida | Página Nosotros |
+| `blog/frecuencia-visitas.jpg`, `implantes-dentales.jpg`, `estres-salud-bucal.jpg` | ✅ Subidas | Página Blog |
+| `clinic/exterior.png` | ✅ Subida | Página Contacto |
+| `public/logo-horizontal.png` | ✅ Subida | Header + Footer |
 
-**Resumen de fotos a subir:**
+> Para reemplazar el placeholder del interior de la clínica, sube la foto a `public/images/home/clinica-interior.jpg` y actualiza la constante `CLINIC_IMAGE` en [`app/[locale]/page.tsx`](app/[locale]/page.tsx).
 
-| Carpeta | Archivos |
-|---|---|
-| `public/images/home/` | `hero.jpg`, `clinica-interior.jpg` |
-| `public/images/services/` | `orthodontics.jpg`, `implants.jpg`, `cleaning.jpg`, `whitening.jpg`, `pediatric.jpg`, `emergency.jpg` |
-| `public/images/about/` | `doctor-tello.jpg` |
-| `public/images/blog/` | `frecuencia-visitas.jpg`, `implantes-dentales.jpg`, `estres-salud-bucal.jpg` |
-| `public/images/clinic/` | `consultorio.jpg`, `exterior.jpg` |
+Consulta [`public/images/LEEME.md`](public/images/LEEME.md) para dimensiones recomendadas.
 
 ---
 
@@ -176,12 +184,28 @@ Para otros proveedores, ejecutar `npm run build` y servir la carpeta `.next/`.
 
 ## Pendiente / próximos pasos
 
-- [ ] Subir las fotos reales a `public/images/`
-- [ ] Actualizar número de WhatsApp real en `components/WhatsAppButton/WhatsAppButton.tsx` y `components/Footer/Footer.tsx`
-- [ ] Actualizar dirección, teléfono y correo reales en `messages/es.json` y `messages/en.json`
+- [x] Subir las fotos reales a `public/images/` *(hero, servicios, doctor, blog, exterior y logo)*
+- [x] Integrar el logo corporativo en Header y Footer
+- [x] Convertir el selector de idioma en un toggle ES | EN
+- [x] Añadir secciones con fondo azul para dar contraste visual
+- [x] Actualizar la dirección real a **Av. Próceres De Huandoy 7865, Ur Pro, Los Olivos** en `messages/es.json`, `messages/en.json` (contacto + footer)
+- [x] Integrar mapa real de Google Maps en la página de Contacto
+- [ ] Subir la foto del interior de la clínica (`public/images/home/clinica-interior.jpg`)
+- [ ] Actualizar número de WhatsApp real en `components/WhatsAppButton/WhatsAppButton.tsx`, `components/Footer/Footer.tsx` y la página de Contacto (actualmente `51999999999`)
+- [ ] Actualizar teléfono y correo reales en `messages/es.json` y `messages/en.json`
 - [ ] Conectar formulario de citas a un backend o servicio de email (Resend, EmailJS, etc.)
-- [ ] Integrar mapa real de Google Maps o OpenStreetMap en la página de Contacto
 - [ ] Añadir dominio personalizado en Vercel
+
+---
+
+## Cambios recientes (16 jun 2026)
+
+- **Imágenes reales** organizadas en `public/images/` (hero, 6 servicios, Dr. Tello, 3 del blog, exterior).
+- **Logo corporativo** (`logo-horizontal.png`) integrado en Header y Footer.
+- **Toggle de idioma ES | EN** estilo pill en el Header (antes era un botón único).
+- **Secciones azules** (`.section--blue`) con gradiente multicapa y patrón de puntos para dar contraste; aplicadas a servicios destacados (inicio), estadísticas (nosotros) y artículos (blog).
+- **Dirección actualizada** a la ubicación real en Los Olivos + **mapa de Google Maps** embebido en Contacto.
+- **Fix de las tarjetas de servicio:** el badge de ícono ya no se recorta — la imagen se recorta en un contenedor interno (`imageClip`) mientras el badge puede sobresalir hacia el cuerpo de la tarjeta.
 
 ---
 
