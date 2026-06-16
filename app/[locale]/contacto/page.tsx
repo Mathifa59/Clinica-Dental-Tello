@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import styles from './page.module.css';
 
-const EXTERIOR_IMAGE = '/images/clinic/exterior.jpg';
+const EXTERIOR_IMAGE = '/images/clinic/exterior.png';
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const t = await getTranslations({ locale: params.locale, namespace: 'contact' });
@@ -142,14 +142,17 @@ export default function ContactPage() {
                 )}
               </div>
 
-              <div className={styles.mapPlaceholder}>
-                <div className={styles.mapContent}>
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--color-text-muted)', opacity: 0.5 }}>
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                  <span>{t('map_label')}</span>
-                </div>
+              <div className={styles.mapWrap}>
+                <iframe
+                  src="https://maps.google.com/maps?q=Av.+Pr%C3%B3ceres+De+Huandoy+7865%2C+Los+Olivos%2C+Lima%2C+Peru&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title={t('map_label')}
+                />
               </div>
             </div>
           </div>

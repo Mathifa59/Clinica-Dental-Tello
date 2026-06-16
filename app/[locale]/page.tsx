@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   };
 }
 
-const HERO_IMAGE = '/images/home/hero.jpg';
-const CLINIC_IMAGE = '/images/home/clinica-interior.jpg';
+const HERO_IMAGE = '/images/home/hero.png';
+const CLINIC_IMAGE = '';
 
 const serviceIcons = {
   orthodontics: (
