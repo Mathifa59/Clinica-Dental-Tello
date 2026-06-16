@@ -144,7 +144,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Featured Services ─────────────────────────────────────────────── */}
-      <section className="section--gradient">
+      <section className="section--blue">
         <div className="container">
           <Reveal>
             <div className="section-header">

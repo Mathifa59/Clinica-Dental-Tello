@@ -105,7 +105,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="section--gradient">
+      <section className="section--blue">
         <div className="container">
           <div className={styles.statsGrid}>
             {stats.map((s, i) => (

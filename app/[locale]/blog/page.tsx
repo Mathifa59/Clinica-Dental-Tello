@@ -35,7 +35,7 @@ export default function BlogPage() {
         </div>
       </div>
 
-      <section className="section">
+      <section className="section--blue">
         <div className="container">
           <div className="grid-3">
             {blogImages.map(({ key, imageSrc, placeholder }, i) => (

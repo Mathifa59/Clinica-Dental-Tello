@@ -326,6 +326,48 @@ p  { color: var(--color-text-muted); line-height: 1.75; }
   position: relative;
 }
 
+/* ─── Blue section ──────────────────────────────────────────────────────── */
+.section--blue {
+  background:
+    radial-gradient(circle, rgba(255,255,255,0.055) 1px, transparent 1px) 0 0 / 28px 28px,
+    radial-gradient(ellipse 700px 480px at 100% 0%,   rgba(91,189,177,0.22)   0%, transparent 65%),
+    radial-gradient(ellipse 560px 420px at 0%   100%, rgba(16,28,110,0.55)    0%, transparent 65%),
+    radial-gradient(ellipse 400px 300px at 60%  55%,  rgba(69,84,161,0.35)    0%, transparent 70%),
+    linear-gradient(145deg, #181f58 0%, #2e3d8e 35%, #4554A1 65%, #3c58a8 100%);
+  padding: var(--section-padding);
+  position: relative;
+}
+
+.section--blue h2,
+.section--blue h3 {
+  color: #ffffff;
+}
+
+.section--blue p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.section--blue .section-header p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.section--blue .eyebrow {
+  color: var(--color-secondary);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(91, 189, 177, 0.5);
+}
+
+.section--blue .btn--secondary {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.section--blue .btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: none;
+}
+
 /* ─── Focus ring ────────────────────────────────────────────────────────── */
 :focus-visible {
   outline: 2.5px solid var(--color-primary);

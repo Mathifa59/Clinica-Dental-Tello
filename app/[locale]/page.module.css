@@ -227,6 +227,15 @@
 
 .viewAllLink:hover { border-color: var(--color-primary); color: var(--color-primary-dark); }
 
+:global(.section--blue) .viewAllLink {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+:global(.section--blue) .viewAllLink:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
 @media (max-width: 480px) {
   .statsRow { grid-template-columns: 1fr; }
 }

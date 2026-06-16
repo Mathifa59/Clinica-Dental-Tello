@@ -44,9 +44,9 @@ export default function Header() {
     return pathname.startsWith(full);
   };
 
-  const otherLocale = locale === 'es' ? 'en' : 'es';
   const currentPath = pathname.replace(`/${locale}`, '') || '/';
-  const otherLocalePath = `/${otherLocale}${currentPath === '/' ? '' : currentPath}`;
+  const esPath = `/es${currentPath === '/' ? '' : currentPath}`;
+  const enPath = `/en${currentPath === '/' ? '' : currentPath}`;
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
@@ -77,9 +77,10 @@ export default function Header() {
         </nav>
 
         <div className={styles.actions}>
-          <Link href={otherLocalePath} className={styles.langToggle} aria-label="Cambiar idioma">
-            {otherLocale.toUpperCase()}
-          </Link>
+          <div className={styles.langSwitch} aria-label="Cambiar idioma">
+            <Link href={esPath} className={`${styles.langOption} ${locale === 'es' ? styles.langOptionActive : ''}`}>ES</Link>
+            <Link href={enPath} className={`${styles.langOption} ${locale === 'en' ? styles.langOptionActive : ''}`}>EN</Link>
+          </div>
           <Link href={localePath('/citas')} className={`btn btn--primary ${styles.ctaDesktop}`}>
             {t('cta')}
           </Link>
