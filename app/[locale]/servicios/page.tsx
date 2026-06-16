@@ -19,6 +19,8 @@ export async function generateMetadata({ params }: { params: { locale: string } 
 const serviceData = [
   {
     key: 'orthodontics',
+    imageSrc: '/images/services/orthodontics.jpg',
+    placeholderLabel: 'images/services/orthodontics.jpg',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2C8.5 2 6 4.5 6 7c0 1.5.5 2.5 1 3.5L8 14h2l.5 2h3l.5-2h2l1-3.5c.5-1 1-2 1-3.5C17 4.5 15.5 2 12 2z" />
@@ -28,6 +30,8 @@ const serviceData = [
   },
   {
     key: 'implants',
+    imageSrc: '/images/services/implants.jpg',
+    placeholderLabel: 'images/services/implants.jpg',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2v10" /><path d="M9 5l3-3 3 3" />
@@ -37,6 +41,8 @@ const serviceData = [
   },
   {
     key: 'cleaning',
+    imageSrc: '/images/services/cleaning.jpg',
+    placeholderLabel: 'images/services/cleaning.jpg',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -46,6 +52,8 @@ const serviceData = [
   },
   {
     key: 'whitening',
+    imageSrc: '/images/services/whitening.jpg',
+    placeholderLabel: 'images/services/whitening.jpg',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="5" />
@@ -55,6 +63,8 @@ const serviceData = [
   },
   {
     key: 'pediatric',
+    imageSrc: '/images/services/pediatric.jpg',
+    placeholderLabel: 'images/services/pediatric.jpg',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
@@ -63,6 +73,8 @@ const serviceData = [
   },
   {
     key: 'emergency',
+    imageSrc: '/images/services/emergency.jpg',
+    placeholderLabel: 'images/services/emergency.jpg',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" />
@@ -88,13 +100,16 @@ export default function ServicesPage() {
       <section className="section">
         <div className="container">
           <div className="grid-3">
-            {serviceData.map(({ key, icon }, i) => (
+            {serviceData.map(({ key, icon, imageSrc, placeholderLabel }, i) => (
               <Reveal key={key} delay={i * 80} direction="scale">
                 <ServiceCard
                   icon={icon}
                   name={t(`items.${key}.name` as Parameters<typeof t>[0])}
                   description={t(`items.${key}.description` as Parameters<typeof t>[0])}
                   learnMore={t('learn_more')}
+                  imageSrc={imageSrc}
+                  imageAlt={t(`items.${key}.name` as Parameters<typeof t>[0])}
+                  placeholderLabel={placeholderLabel}
                 />
               </Reveal>
             ))}

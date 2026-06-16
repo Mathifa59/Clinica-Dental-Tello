@@ -2,21 +2,17 @@
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 2rem 1.75rem;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 0.875rem;
   transition:
     box-shadow var(--transition-slow),
     border-color var(--transition-slow),
-    transform var(--transition-spring),
-    background var(--transition-slow);
-  position: relative;
-  overflow: hidden;
+    transform var(--transition-spring);
   height: 100%;
+  position: relative;
 }
 
-/* Gradient shimmer border on hover via pseudo */
 .card::before {
   content: '';
   position: absolute;
@@ -29,70 +25,119 @@
   mask-composite: exclude;
   opacity: 0;
   transition: opacity var(--transition-slow);
-}
-
-/* Subtle gradient overlay */
-.card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(69,84,161,0.03) 0%, rgba(91,189,177,0.03) 100%);
-  opacity: 0;
-  transition: opacity var(--transition-slow);
   pointer-events: none;
+  z-index: 1;
 }
 
 .card:hover {
   box-shadow: var(--shadow-card-hover);
   border-color: transparent;
   transform: translateY(-4px);
-  background: rgba(255,255,255,0.98);
 }
 
 .card:hover::before { opacity: 1; }
-.card:hover::after  { opacity: 1; }
 
-/* Icon */
-.iconWrap {
-  width: 52px;
-  height: 52px;
+/* ── Image area ─────────────────────────────────────────────────────────── */
+.imageArea {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Gradient overlay at bottom of image — blends into card body */
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(14, 21, 37, 0.22) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Scale image on hover */
+.card:hover .imageArea img {
+  transform: scale(1.04);
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Placeholder when no image */
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #dde1f5 0%, #d2eeed 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+}
+
+.imagePlaceholder svg {
+  color: rgba(69, 84, 161, 0.35);
+}
+
+.imagePlaceholder span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
+
+/* Icon badge over image */
+.iconBadge {
+  position: absolute;
+  bottom: -20px;
+  left: 1.5rem;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--gradient-brand);
   border-radius: var(--radius-md);
   color: #ffffff;
-  flex-shrink: 0;
+  z-index: 2;
+  box-shadow: 0 4px 16px rgba(69, 84, 161, 0.35);
   transition: transform var(--transition-spring), box-shadow var(--transition-slow);
-  position: relative;
-  z-index: 1;
 }
 
-.iconWrap svg {
-  width: 24px;
-  height: 24px;
+.iconBadge svg {
+  width: 22px;
+  height: 22px;
 }
 
-.card:hover .iconWrap {
-  transform: scale(1.08) rotate(-3deg);
-  box-shadow: 0 8px 24px rgba(69,84,161,0.28);
+.card:hover .iconBadge {
+  transform: scale(1.1) rotate(-4deg);
+  box-shadow: 0 8px 24px rgba(69, 84, 161, 0.4);
+}
+
+/* ── Body ───────────────────────────────────────────────────────────────── */
+.body {
+  padding: 2rem 1.5rem 1.75rem;
+  padding-top: 2.25rem; /* extra top to clear the overflowing icon badge */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
 }
 
 .name {
   font-size: 1.0625rem;
   font-weight: 600;
   color: var(--color-text);
-  position: relative;
-  z-index: 1;
 }
 
 .description {
-  font-size: 0.9375rem;
+  font-size: 0.9125rem;
   color: var(--color-text-muted);
-  line-height: 1.7;
+  line-height: 1.72;
   flex: 1;
-  position: relative;
-  z-index: 1;
 }
 
 .link {
@@ -103,9 +148,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  margin-top: auto;
-  position: relative;
-  z-index: 1;
+  margin-top: 0.25rem;
 }
 
 .link:hover {

@@ -16,9 +16,14 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   };
 }
 
+const blogImages = [
+  { key: 'post1', imageSrc: '/images/blog/frecuencia-visitas.jpg',  placeholder: 'images/blog/frecuencia-visitas.jpg' },
+  { key: 'post2', imageSrc: '/images/blog/implantes-dentales.jpg',  placeholder: 'images/blog/implantes-dentales.jpg' },
+  { key: 'post3', imageSrc: '/images/blog/estres-salud-bucal.jpg', placeholder: 'images/blog/estres-salud-bucal.jpg' },
+] as const;
+
 export default function BlogPage() {
   const t = useTranslations('blog');
-  const posts = ['post1', 'post2', 'post3'] as const;
 
   return (
     <>
@@ -33,14 +38,17 @@ export default function BlogPage() {
       <section className="section">
         <div className="container">
           <div className="grid-3">
-            {posts.map((postKey, i) => (
-              <Reveal key={postKey} delay={i * 100} direction="scale">
+            {blogImages.map(({ key, imageSrc, placeholder }, i) => (
+              <Reveal key={key} delay={i * 100} direction="scale">
                 <BlogCard
-                  title={t(`posts.${postKey}.title`)}
-                  excerpt={t(`posts.${postKey}.excerpt`)}
-                  category={t(`posts.${postKey}.category`)}
-                  date={t(`posts.${postKey}.date`)}
+                  title={t(`posts.${key}.title`)}
+                  excerpt={t(`posts.${key}.excerpt`)}
+                  category={t(`posts.${key}.category`)}
+                  date={t(`posts.${key}.date`)}
                   readMore={t('read_more')}
+                  imageSrc={imageSrc}
+                  imageAlt={t(`posts.${key}.title`)}
+                  placeholderLabel={placeholder}
                 />
               </Reveal>
             ))}
