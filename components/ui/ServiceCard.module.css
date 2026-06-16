@@ -1,0 +1,114 @@
+.card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  transition:
+    box-shadow var(--transition-slow),
+    border-color var(--transition-slow),
+    transform var(--transition-spring),
+    background var(--transition-slow);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Gradient shimmer border on hover via pseudo */
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: var(--gradient-brand);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+}
+
+/* Subtle gradient overlay */
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(69,84,161,0.03) 0%, rgba(91,189,177,0.03) 100%);
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+  pointer-events: none;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-card-hover);
+  border-color: transparent;
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.98);
+}
+
+.card:hover::before { opacity: 1; }
+.card:hover::after  { opacity: 1; }
+
+/* Icon */
+.iconWrap {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-brand);
+  border-radius: var(--radius-md);
+  color: #ffffff;
+  flex-shrink: 0;
+  transition: transform var(--transition-spring), box-shadow var(--transition-slow);
+  position: relative;
+  z-index: 1;
+}
+
+.iconWrap svg {
+  width: 24px;
+  height: 24px;
+}
+
+.card:hover .iconWrap {
+  transform: scale(1.08) rotate(-3deg);
+  box-shadow: 0 8px 24px rgba(69,84,161,0.28);
+}
+
+.name {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--color-text);
+  position: relative;
+  z-index: 1;
+}
+
+.description {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-secondary);
+  transition: color var(--transition), letter-spacing var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.link:hover {
+  color: var(--color-secondary-dark);
+  letter-spacing: 0.01em;
+}

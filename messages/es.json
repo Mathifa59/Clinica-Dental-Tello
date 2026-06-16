@@ -1,0 +1,189 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Nosotros",
+    "blog": "Blog",
+    "appointments": "Citas",
+    "contact": "Contacto",
+    "cta": "Reservar cita"
+  },
+  "home": {
+    "eyebrow": "Clínica Odontológica en Lima",
+    "title": "Tu mejor sonrisa comienza aquí",
+    "subtitle": "Brindamos atención dental de excelencia con tecnología de última generación y un equipo de especialistas comprometidos con tu salud bucal.",
+    "cta_primary": "Reservar cita",
+    "cta_secondary": "Nuestros servicios",
+    "stats": {
+      "years": "10+",
+      "years_label": "Años de experiencia",
+      "patients": "5,000+",
+      "patients_label": "Pacientes atendidos",
+      "specialties": "6",
+      "specialties_label": "Especialidades"
+    },
+    "photo_label": "Foto clínica",
+    "featured_services_title": "Servicios destacados",
+    "featured_services_subtitle": "Tratamientos dentales de alta calidad para toda la familia",
+    "view_all": "Ver todos los servicios →"
+  },
+  "services": {
+    "hero_title": "Nuestros Servicios",
+    "hero_subtitle": "Ofrecemos tratamientos odontológicos completos con tecnología de vanguardia y profesionales altamente capacitados.",
+    "learn_more": "Saber más →",
+    "items": {
+      "orthodontics": {
+        "name": "Ortodoncia",
+        "description": "Alineación dental con brackets metálicos, cerámicos o alineadores invisibles. Recupera la funcionalidad y estética de tu sonrisa con tratamientos personalizados para adultos y niños."
+      },
+      "implants": {
+        "name": "Implantes Dentales",
+        "description": "Reemplaza dientes perdidos con implantes de titanio de alta durabilidad. La solución más estética y funcional que se integra perfectamente a tu estructura ósea."
+      },
+      "cleaning": {
+        "name": "Limpieza y Profilaxis",
+        "description": "Eliminación profesional de sarro, placa bacteriana y manchas. Tratamiento esencial para prevenir caries y enfermedades periodontales, con resultados visibles desde la primera sesión."
+      },
+      "whitening": {
+        "name": "Blanqueamiento Dental",
+        "description": "Recupera el brillo natural de tus dientes con nuestro sistema de blanqueamiento profesional. Resultados seguros, inmediatos y duraderos supervisados por especialistas."
+      },
+      "pediatric": {
+        "name": "Odontopediatría",
+        "description": "Atención dental especializada para niños en un ambiente amigable y sin estrés. Prevenimos caries, guiamos el desarrollo dental y creamos hábitos saludables desde temprana edad."
+      },
+      "emergency": {
+        "name": "Urgencias 24h",
+        "description": "Atención inmediata para dolores agudos, traumatismos dentales y otras emergencias odontológicas. Estamos disponibles las 24 horas para cuando más nos necesitas."
+      }
+    }
+  },
+  "about": {
+    "hero_title": "Sobre Nosotros",
+    "hero_subtitle": "Más de una década comprometidos con la salud bucal de Lima.",
+    "doctor_title": "Dr. Daniel Tello",
+    "doctor_subtitle": "Director y Especialista en Implantología",
+    "doctor_bio": "El Dr. Daniel Tello es un cirujano dentista con más de 10 años de experiencia en el campo de la odontología moderna. Egresado con honores de la Universidad Cayetano Heredia, realizó estudios de especialización en implantología y rehabilitación oral en España y Brasil. Su enfoque combina la precisión clínica con un trato cercano y humano, priorizando siempre el bienestar del paciente. Bajo su dirección, la Clínica Dental Tello se ha consolidado como un referente de excelencia en Lima, atendiendo a más de cinco mil pacientes con resultados que hablan por sí solos.",
+    "photo_label": "Dr. Daniel Tello",
+    "stats": {
+      "years": "10+",
+      "years_label": "Años de experiencia",
+      "patients": "5,000+",
+      "patients_label": "Pacientes satisfechos",
+      "specialties": "6",
+      "specialties_label": "Especialidades clínicas"
+    },
+    "values_title": "Nuestros Valores",
+    "values": {
+      "trust": {
+        "title": "Confianza",
+        "description": "Construimos relaciones duraderas con nuestros pacientes basadas en la transparencia, el respeto y la comunicación honesta en cada etapa del tratamiento."
+      },
+      "technology": {
+        "title": "Tecnología",
+        "description": "Invertimos constantemente en equipamiento de última generación para ofrecer diagnósticos precisos y tratamientos menos invasivos con mejores resultados."
+      },
+      "warmth": {
+        "title": "Calidez",
+        "description": "Entendemos que visitar al dentista puede generar ansiedad. Por eso creamos un ambiente acogedor donde cada paciente se siente seguro y bien cuidado."
+      }
+    }
+  },
+  "blog": {
+    "hero_title": "Blog Dental",
+    "hero_subtitle": "Consejos, novedades y educación para cuidar tu salud bucal.",
+    "read_more": "Leer más →",
+    "posts": {
+      "post1": {
+        "title": "¿Con qué frecuencia debo visitar al dentista?",
+        "excerpt": "La mayoría de las personas subestima la importancia de las visitas preventivas. Descubre por qué la frecuencia adecuada puede ahorrarte tiempo, dinero y molestias.",
+        "category": "Prevención",
+        "date": "10 junio 2026"
+      },
+      "post2": {
+        "title": "Todo sobre los implantes dentales",
+        "excerpt": "Los implantes dentales representan la solución más avanzada para reemplazar dientes perdidos. Te explicamos el proceso, duración, cuidados y por qué vale la pena la inversión.",
+        "category": "Tratamientos",
+        "date": "28 mayo 2026"
+      },
+      "post3": {
+        "title": "Cómo el estrés afecta tu salud bucal",
+        "excerpt": "El bruxismo, las úlceras y la enfermedad periodontal tienen un vínculo directo con el estrés crónico. Conoce los signos de alerta y cómo proteger tu boca.",
+        "category": "Salud General",
+        "date": "15 mayo 2026"
+      }
+    }
+  },
+  "appointments": {
+    "hero_title": "Reservar Cita",
+    "hero_subtitle": "Agenda tu consulta en pocos pasos. Te confirmaremos en menos de 24 horas.",
+    "form": {
+      "name_label": "Nombre completo",
+      "name_placeholder": "Tu nombre completo",
+      "phone_label": "Teléfono",
+      "phone_placeholder": "9XX-XXX-XXX",
+      "service_label": "Servicio",
+      "service_placeholder": "Selecciona un servicio",
+      "date_label": "Fecha preferida",
+      "message_label": "Mensaje (opcional)",
+      "message_placeholder": "Cuéntanos más sobre tu consulta...",
+      "submit": "Solicitar cita",
+      "submitting": "Enviando...",
+      "char_count": "{count}/300 caracteres",
+      "errors": {
+        "name_required": "El nombre es obligatorio",
+        "phone_required": "El teléfono es obligatorio",
+        "phone_invalid": "Formato inválido. Usa 9XX-XXX-XXX",
+        "service_required": "Selecciona un servicio",
+        "date_required": "Selecciona una fecha",
+        "date_past": "La fecha no puede ser en el pasado"
+      },
+      "services": {
+        "orthodontics": "Ortodoncia",
+        "implants": "Implantes Dentales",
+        "cleaning": "Limpieza y Profilaxis",
+        "whitening": "Blanqueamiento Dental",
+        "pediatric": "Odontopediatría",
+        "emergency": "Urgencias"
+      }
+    },
+    "success_title": "¡Cita solicitada con éxito!",
+    "success_message": "Hemos recibido tu solicitud. Nos pondremos en contacto contigo en menos de 24 horas para confirmar tu cita.",
+    "contact_info": {
+      "title": "También puedes contactarnos por",
+      "phone": "+51 (01) 234-5678",
+      "whatsapp": "WhatsApp disponible",
+      "hours_title": "Horario de atención",
+      "hours_weekdays": "Lun – Vie: 9:00 am – 7:00 pm",
+      "hours_saturday": "Sábado: 9:00 am – 2:00 pm",
+      "hours_sunday": "Domingo: Urgencias 24h"
+    }
+  },
+  "contact": {
+    "hero_title": "Contáctanos",
+    "hero_subtitle": "Estamos aquí para responder tus preguntas y ayudarte a comenzar tu tratamiento.",
+    "address_label": "Dirección",
+    "address": "Av. Javier Prado Este 123, San Isidro, Lima",
+    "phone_label": "Teléfono",
+    "phone": "+51 (01) 234-5678",
+    "email_label": "Correo electrónico",
+    "email": "contacto@dentaltello.pe",
+    "hours_label": "Horario",
+    "hours_weekdays": "Lun – Vie: 9:00 am – 7:00 pm",
+    "hours_saturday": "Sáb: 9:00 am – 2:00 pm",
+    "social_title": "Síguenos en redes",
+    "map_label": "Ubicación en Google Maps"
+  },
+  "footer": {
+    "description": "Clínica odontológica de alta especialidad en Lima. Comprometidos con tu salud bucal y tu sonrisa.",
+    "nav_title": "Navegación",
+    "contact_title": "Contacto rápido",
+    "address": "Av. Javier Prado Este 123, San Isidro, Lima",
+    "phone": "+51 (01) 234-5678",
+    "email": "contacto@dentaltello.pe",
+    "copyright": "© 2026 Dental Tello. Desarrollado por DevHorses."
+  },
+  "whatsapp": {
+    "tooltip": "Escríbenos por WhatsApp"
+  }
+}

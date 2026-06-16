@@ -1,0 +1,189 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "blog": "Blog",
+    "appointments": "Appointments",
+    "contact": "Contact",
+    "cta": "Book Appointment"
+  },
+  "home": {
+    "eyebrow": "Dental Clinic in Lima",
+    "title": "Your best smile starts here",
+    "subtitle": "We provide excellent dental care with state-of-the-art technology and a team of specialists committed to your oral health.",
+    "cta_primary": "Book Appointment",
+    "cta_secondary": "Our Services",
+    "stats": {
+      "years": "10+",
+      "years_label": "Years of experience",
+      "patients": "5,000+",
+      "patients_label": "Patients treated",
+      "specialties": "6",
+      "specialties_label": "Specialties"
+    },
+    "photo_label": "Clinic photo",
+    "featured_services_title": "Featured Services",
+    "featured_services_subtitle": "High-quality dental treatments for the whole family",
+    "view_all": "View all services →"
+  },
+  "services": {
+    "hero_title": "Our Services",
+    "hero_subtitle": "We offer comprehensive dental treatments with cutting-edge technology and highly trained professionals.",
+    "learn_more": "Learn more →",
+    "items": {
+      "orthodontics": {
+        "name": "Orthodontics",
+        "description": "Dental alignment with metal, ceramic brackets or invisible aligners. Restore the functionality and aesthetics of your smile with personalized treatments for adults and children."
+      },
+      "implants": {
+        "name": "Dental Implants",
+        "description": "Replace missing teeth with high-durability titanium implants. The most aesthetic and functional solution that integrates perfectly with your bone structure."
+      },
+      "cleaning": {
+        "name": "Cleaning & Prophylaxis",
+        "description": "Professional removal of tartar, bacterial plaque and stains. Essential treatment to prevent cavities and periodontal diseases, with visible results from the first session."
+      },
+      "whitening": {
+        "name": "Teeth Whitening",
+        "description": "Restore the natural brightness of your teeth with our professional whitening system. Safe, immediate and long-lasting results supervised by specialists."
+      },
+      "pediatric": {
+        "name": "Pediatric Dentistry",
+        "description": "Specialized dental care for children in a friendly, stress-free environment. We prevent cavities, guide dental development and build healthy habits from an early age."
+      },
+      "emergency": {
+        "name": "24h Emergencies",
+        "description": "Immediate attention for acute pain, dental trauma and other dental emergencies. We are available 24 hours a day for when you need us most."
+      }
+    }
+  },
+  "about": {
+    "hero_title": "About Us",
+    "hero_subtitle": "Over a decade committed to the oral health of Lima.",
+    "doctor_title": "Dr. Daniel Tello",
+    "doctor_subtitle": "Director & Implantology Specialist",
+    "doctor_bio": "Dr. Daniel Tello is a dental surgeon with over 10 years of experience in modern dentistry. A honors graduate from Universidad Cayetano Heredia, he completed specialization studies in implantology and oral rehabilitation in Spain and Brazil. His approach combines clinical precision with a close, human touch, always prioritizing patient well-being. Under his leadership, Dental Tello Clinic has established itself as a reference of excellence in Lima, serving over five thousand patients with results that speak for themselves.",
+    "photo_label": "Dr. Daniel Tello",
+    "stats": {
+      "years": "10+",
+      "years_label": "Years of experience",
+      "patients": "5,000+",
+      "patients_label": "Satisfied patients",
+      "specialties": "6",
+      "specialties_label": "Clinical specialties"
+    },
+    "values_title": "Our Values",
+    "values": {
+      "trust": {
+        "title": "Trust",
+        "description": "We build lasting relationships with our patients based on transparency, respect and honest communication at every stage of treatment."
+      },
+      "technology": {
+        "title": "Technology",
+        "description": "We constantly invest in state-of-the-art equipment to offer precise diagnoses and less invasive treatments with better results."
+      },
+      "warmth": {
+        "title": "Warmth",
+        "description": "We understand that visiting the dentist can cause anxiety. That's why we create a welcoming environment where every patient feels safe and well cared for."
+      }
+    }
+  },
+  "blog": {
+    "hero_title": "Dental Blog",
+    "hero_subtitle": "Tips, news and education to care for your oral health.",
+    "read_more": "Read more →",
+    "posts": {
+      "post1": {
+        "title": "How often should I visit the dentist?",
+        "excerpt": "Most people underestimate the importance of preventive visits. Discover why the right frequency can save you time, money and discomfort.",
+        "category": "Prevention",
+        "date": "June 10, 2026"
+      },
+      "post2": {
+        "title": "Everything about dental implants",
+        "excerpt": "Dental implants represent the most advanced solution for replacing lost teeth. We explain the process, duration, care and why the investment is worth it.",
+        "category": "Treatments",
+        "date": "May 28, 2026"
+      },
+      "post3": {
+        "title": "How stress affects your oral health",
+        "excerpt": "Bruxism, ulcers and periodontal disease have a direct link to chronic stress. Learn the warning signs and how to protect your mouth.",
+        "category": "General Health",
+        "date": "May 15, 2026"
+      }
+    }
+  },
+  "appointments": {
+    "hero_title": "Book Appointment",
+    "hero_subtitle": "Schedule your consultation in a few steps. We will confirm within 24 hours.",
+    "form": {
+      "name_label": "Full name",
+      "name_placeholder": "Your full name",
+      "phone_label": "Phone",
+      "phone_placeholder": "9XX-XXX-XXX",
+      "service_label": "Service",
+      "service_placeholder": "Select a service",
+      "date_label": "Preferred date",
+      "message_label": "Message (optional)",
+      "message_placeholder": "Tell us more about your consultation...",
+      "submit": "Request appointment",
+      "submitting": "Sending...",
+      "char_count": "{count}/300 characters",
+      "errors": {
+        "name_required": "Name is required",
+        "phone_required": "Phone is required",
+        "phone_invalid": "Invalid format. Use 9XX-XXX-XXX",
+        "service_required": "Select a service",
+        "date_required": "Select a date",
+        "date_past": "The date cannot be in the past"
+      },
+      "services": {
+        "orthodontics": "Orthodontics",
+        "implants": "Dental Implants",
+        "cleaning": "Cleaning & Prophylaxis",
+        "whitening": "Teeth Whitening",
+        "pediatric": "Pediatric Dentistry",
+        "emergency": "Emergencies"
+      }
+    },
+    "success_title": "Appointment requested successfully!",
+    "success_message": "We have received your request. We will contact you within 24 hours to confirm your appointment.",
+    "contact_info": {
+      "title": "You can also contact us via",
+      "phone": "+51 (01) 234-5678",
+      "whatsapp": "WhatsApp available",
+      "hours_title": "Office hours",
+      "hours_weekdays": "Mon – Fri: 9:00 am – 7:00 pm",
+      "hours_saturday": "Saturday: 9:00 am – 2:00 pm",
+      "hours_sunday": "Sunday: 24h Emergencies"
+    }
+  },
+  "contact": {
+    "hero_title": "Contact Us",
+    "hero_subtitle": "We are here to answer your questions and help you start your treatment.",
+    "address_label": "Address",
+    "address": "Av. Javier Prado Este 123, San Isidro, Lima",
+    "phone_label": "Phone",
+    "phone": "+51 (01) 234-5678",
+    "email_label": "Email",
+    "email": "contacto@dentaltello.pe",
+    "hours_label": "Hours",
+    "hours_weekdays": "Mon – Fri: 9:00 am – 7:00 pm",
+    "hours_saturday": "Sat: 9:00 am – 2:00 pm",
+    "social_title": "Follow us",
+    "map_label": "Location on Google Maps"
+  },
+  "footer": {
+    "description": "High-specialty dental clinic in Lima. Committed to your oral health and your smile.",
+    "nav_title": "Navigation",
+    "contact_title": "Quick Contact",
+    "address": "Av. Javier Prado Este 123, San Isidro, Lima",
+    "phone": "+51 (01) 234-5678",
+    "email": "contacto@dentaltello.pe",
+    "copyright": "© 2026 Dental Tello. Developed by DevHorses."
+  },
+  "whatsapp": {
+    "tooltip": "Write to us on WhatsApp"
+  }
+}
