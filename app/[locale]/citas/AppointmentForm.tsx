@@ -1,8 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import styles from './page.module.css';
+
+const CLINIC_IMAGE = '/images/clinic/consultorio.jpg';
 
 type FormState = {
   name: string;
@@ -217,6 +220,28 @@ export default function AppointmentForm() {
 
             {/* Sidebar */}
             <aside className={styles.sidebar}>
+              {/* Clinic image */}
+              <div className={styles.clinicImgWrap}>
+                {CLINIC_IMAGE ? (
+                  <Image
+                    src={CLINIC_IMAGE}
+                    alt="Consultorio Dental Tello"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 380px"
+                    style={{ objectFit: 'cover' }}
+                  />
+                ) : (
+                  <div className={styles.clinicImgPlaceholder}>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2" />
+                      <circle cx="8.5" cy="8.5" r="1.5" />
+                      <polyline points="21 15 16 10 5 21" />
+                    </svg>
+                    <span>images/clinic/consultorio.jpg</span>
+                  </div>
+                )}
+              </div>
+
               <div className={styles.sideCard}>
                 <h3 className={styles.sideTitle}>{t('contact_info.title')}</h3>
 

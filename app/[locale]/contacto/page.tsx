@@ -1,7 +1,10 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import styles from './page.module.css';
+
+const EXTERIOR_IMAGE = '/images/clinic/exterior.jpg';
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const t = await getTranslations({ locale: params.locale, namespace: 'contact' });
@@ -115,8 +118,30 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Map placeholder */}
+            {/* Map + exterior photo */}
             <div className={styles.mapCol}>
+              {/* Clinic exterior photo */}
+              <div className={styles.exteriorWrap}>
+                {EXTERIOR_IMAGE ? (
+                  <Image
+                    src={EXTERIOR_IMAGE}
+                    alt="Exterior Clínica Dental Tello"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    style={{ objectFit: 'cover' }}
+                  />
+                ) : (
+                  <div className={styles.exteriorPlaceholder}>
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2" />
+                      <circle cx="8.5" cy="8.5" r="1.5" />
+                      <polyline points="21 15 16 10 5 21" />
+                    </svg>
+                    <span>images/clinic/exterior.jpg</span>
+                  </div>
+                )}
+              </div>
+
               <div className={styles.mapPlaceholder}>
                 <div className={styles.mapContent}>
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--color-text-muted)', opacity: 0.5 }}>

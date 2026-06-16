@@ -1,9 +1,12 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import StatCard from '@/components/ui/StatCard';
 import Reveal from '@/components/ui/Reveal';
 import styles from './page.module.css';
+
+const DOCTOR_IMAGE = '/images/about/doctor-tello.jpg';
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const t = await getTranslations({ locale: params.locale, namespace: 'about' });
@@ -72,8 +75,21 @@ export default function AboutPage() {
           <div className={styles.doctorGrid}>
             <Reveal direction="scale">
               <div className={styles.doctorPhoto}>
-                <div className={styles.photoPlaceholder}>
-                  <span>{t('photo_label')}</span>
+                <div className={styles.photoWrap}>
+                  {DOCTOR_IMAGE ? (
+                    <Image
+                      src={DOCTOR_IMAGE}
+                      alt={t('photo_label')}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 400px"
+                      style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                    />
+                  ) : (
+                    <div className={styles.photoPlaceholder}>
+                      <span>{t('photo_label')}</span>
+                      <small>images/about/doctor-tello.jpg</small>
+                    </div>
+                  )}
                 </div>
               </div>
             </Reveal>
