@@ -105,6 +105,9 @@ export default function HomePage() {
                 muted
                 loop
                 playsInline
+                disablePictureInPicture
+                disableRemotePlayback
+                controlsList="nodownload noplaybackrate nofullscreen"
                 aria-label={t('photo_label')}
               />
             </div>
@@ -153,6 +156,9 @@ export default function HomePage() {
                 muted
                 loop
                 playsInline
+                disablePictureInPicture
+                disableRemotePlayback
+                controlsList="nodownload noplaybackrate nofullscreen"
                 aria-label="Interior Clínica Dental Tello"
               />
             </div>

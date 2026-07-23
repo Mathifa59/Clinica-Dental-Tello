@@ -164,15 +164,27 @@
 
 .imgWrap:hover img { transform: scale(1.04); }
 
+/* Video decorativo (autoplay/loop/sin controles) — pointer-events:none evita
+   que Chrome muestre el botón de picture-in-picture al pasar el mouse */
 .heroVideo {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  pointer-events: none;
   transition: transform 0.8s cubic-bezier(0.22,1,0.36,1);
 }
 
 .imgWrap:hover .heroVideo { transform: scale(1.04); }
+
+.heroVideo::-webkit-media-controls,
+.clinicVideo::-webkit-media-controls,
+.heroVideo::-webkit-media-controls-overlay-play-button,
+.clinicVideo::-webkit-media-controls-overlay-play-button,
+.heroVideo::-webkit-media-controls-picture-in-picture-button,
+.clinicVideo::-webkit-media-controls-picture-in-picture-button {
+  display: none !important;
+}
 
 .imgPlaceholder {
   width: 100%; height: 100%;
@@ -309,6 +321,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  pointer-events: none;
   transition: transform 0.7s cubic-bezier(0.22,1,0.36,1);
 }
 
