@@ -69,7 +69,7 @@
 .imagePlaceholder {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #dde1f5 0%, #d2eeed 100%);
+  background: linear-gradient(135deg, #EFE8D8 0%, #DFEFE6 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,7 +78,7 @@
 }
 
 .imagePlaceholder svg {
-  color: rgba(69, 84, 161, 0.35);
+  color: rgba(14, 124, 102, 0.35);
 }
 
 .imagePlaceholder span {
@@ -103,7 +103,7 @@
   border-radius: var(--radius-md);
   color: #ffffff;
   z-index: 2;
-  box-shadow: 0 4px 16px rgba(69, 84, 161, 0.35);
+  box-shadow: 0 4px 16px rgba(14, 124, 102, 0.35);
   transition: transform var(--transition-spring), box-shadow var(--transition-slow);
 }
 
@@ -114,7 +114,7 @@
 
 .card:hover .iconBadge {
   transform: scale(1.1) rotate(-4deg);
-  box-shadow: 0 8px 24px rgba(69, 84, 161, 0.4);
+  box-shadow: 0 8px 24px rgba(14, 124, 102, 0.4);
 }
 
 /* ── Body ───────────────────────────────────────────────────────────────── */

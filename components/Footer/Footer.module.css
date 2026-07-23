@@ -1,5 +1,9 @@
 .footer {
-  background: var(--color-bg-dark);
+  background-color: var(--color-bg-darker);
+  background-image: var(--aurora-dark);
+  background-size: 180% 180%, 180% 180%, 180% 180%, 180% 180%;
+  background-repeat: no-repeat;
+  animation: aurora 26s ease-in-out infinite;
   color: rgba(255, 255, 255, 0.75);
   position: relative;
   overflow: hidden;
@@ -13,7 +17,7 @@
   right: -80px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(69,84,161,0.18) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(14,124,102,0.18) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -24,7 +28,7 @@
   left: -60px;
   width: 360px;
   height: 360px;
-  background: radial-gradient(circle, rgba(91,189,177,0.1) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(62,207,178,0.1) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -106,7 +110,7 @@
 .social:hover {
   color: #fff;
   border-color: var(--color-secondary);
-  background: rgba(91,189,177,0.15);
+  background: rgba(62,207,178,0.15);
   transform: translateY(-2px);
 }
 
@@ -191,4 +195,12 @@
 .bottomInner p {
   font-size: 0.8125rem;
   color: rgba(255, 255, 255, 0.25);
+}
+
+/* Keyframes local (CSS Modules escopa los nombres) */
+@keyframes aurora {
+  0%, 100% { background-position: 0% 0%, 100% 0%, 100% 100%, 0% 100%; }
+  25%       { background-position: 30% 15%, 75% 20%, 80% 75%, 15% 80%; }
+  50%       { background-position: 15% 35%, 85% 40%, 65% 90%, 30% 60%; }
+  75%       { background-position: 40% 10%, 60% 30%, 90% 65%, 10% 90%; }
 }

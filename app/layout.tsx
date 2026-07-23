@@ -1,17 +1,21 @@
 import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans, Inter } from 'next/font/google';
+import { Fraunces, Figtree } from 'next/font/google';
 import './globals.css';
 
-const jakartaSans = Plus_Jakarta_Sans({
+// Fraunces → var(--font-jakarta) (títulos) · Figtree → var(--font-inter) (cuerpo).
+// Se conservan los nombres de variable para no tocar cada CSS Module.
+const fraunces = Fraunces({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: 'variable',
+  style: ['normal', 'italic'],
   variable: '--font-jakarta',
   display: 'swap',
+  axes: ['opsz', 'SOFT', 'WONK'],
 });
 
-const inter = Inter({
+const figtree = Figtree({
   subsets: ['latin'],
-  weight: ['400', '500'],
+  weight: ['400', '500', '600'],
   variable: '--font-inter',
   display: 'swap',
 });
@@ -24,7 +28,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body className={`${jakartaSans.variable} ${inter.variable}`}>{children}</body>
+      <body className={`${fraunces.variable} ${figtree.variable}`}>{children}</body>
     </html>
   );
 }

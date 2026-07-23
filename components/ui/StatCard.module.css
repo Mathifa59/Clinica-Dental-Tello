@@ -11,7 +11,7 @@
   border-radius: var(--radius-lg);
   gap: 0.375rem;
   transition: box-shadow var(--transition-slow), transform var(--transition-spring);
-  box-shadow: 0 2px 16px rgba(69,84,161,0.06);
+  box-shadow: 0 2px 16px rgba(14,124,102,0.06);
   position: relative;
   overflow: hidden;
 }
@@ -35,8 +35,23 @@
   opacity: 1;
 }
 
+/* Variante para fondos oscuros (hero aurora) */
+.cardDark {
+  background: rgba(8, 48, 42, 0.45);
+  border-color: rgba(244, 239, 229, 0.14);
+  box-shadow: 0 4px 24px rgba(5, 32, 25, 0.35);
+}
+
+.cardDark:hover {
+  box-shadow: 0 12px 40px rgba(5, 32, 25, 0.5);
+}
+
+.cardDark .label {
+  color: var(--color-text-on-dark-muted);
+}
+
 .value {
-  font-family: var(--font-jakarta), sans-serif;
+  font-family: var(--font-jakarta), Georgia, serif;
   font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 700;
   line-height: 1;

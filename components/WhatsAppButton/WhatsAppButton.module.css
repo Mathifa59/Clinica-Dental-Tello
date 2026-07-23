@@ -55,3 +55,9 @@
   border-right: none;
   border-left-color: var(--color-bg-dark);
 }
+
+/* Keyframes local (CSS Modules escopa los nombres) */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(37, 211, 102, 0.35); }
+  50%       { box-shadow: 0 0 44px rgba(37, 211, 102, 0.65); }
+}

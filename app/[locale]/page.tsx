@@ -23,6 +23,8 @@ export async function generateMetadata({ params }: { params: { locale: string } 
 const HERO_IMAGE = '/images/home/hero.jpg';
 const CLINIC_IMAGE = '/images/home/clinica-interior.jpg';
 
+const SERVICE_KEYS = ['orthodontics', 'implants', 'cleaning', 'whitening', 'pediatric', 'emergency'] as const;
+
 const serviceIcons = {
   orthodontics: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
@@ -44,9 +46,18 @@ const serviceIcons = {
   ),
 };
 
+/* Separa la última palabra del título para darle el acento en itálica/gradiente */
+function splitTitle(title: string): [string, string] {
+  const words = title.trim().split(' ');
+  const last = words.pop() ?? '';
+  return [words.join(' '), last];
+}
+
 export default function HomePage() {
   const t = useTranslations('home');
   const tServices = useTranslations('services');
+
+  const [titleStart, titleEnd] = splitTitle(t('title'));
 
   const stats = [
     { value: t('stats.years'), label: t('stats.years_label') },
@@ -60,26 +71,32 @@ export default function HomePage() {
     { key: 'cleaning',     icon: serviceIcons.cleaning,     imageSrc: '/images/services/cleaning.jpg',     placeholder: 'images/services/cleaning.jpg' },
   ];
 
+  const marqueeNames = SERVICE_KEYS.map((key) =>
+    tServices(`items.${key}.name` as Parameters<typeof tServices>[0])
+  );
+
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <div className={styles.heroContent}>
-            <span className="eyebrow">{t('eyebrow')}</span>
-            <h1>{t('title')}</h1>
-            <div className={styles.gradientAccent} />
+            <span className={styles.heroEyebrow}>{t('eyebrow')}</span>
+            <h1 className={styles.heroTitle}>
+              {titleStart}{' '}
+              <span className={styles.titleAccent}>{titleEnd}</span>
+            </h1>
             <p className={styles.heroSubtitle}>{t('subtitle')}</p>
             <div className={styles.heroCtas}>
-              <Link href="citas"    className="btn btn--primary">{t('cta_primary')}</Link>
-              <Link href="servicios" className="btn btn--secondary">{t('cta_secondary')}</Link>
+              <Link href="citas" className="btn btn--light">{t('cta_primary')}</Link>
+              <Link href="servicios" className="btn btn--ghost-light">{t('cta_secondary')}</Link>
             </div>
             <div className={styles.statsRow}>
-              {stats.map((s) => <StatCard key={s.label} value={s.value} label={s.label} />)}
+              {stats.map((s) => <StatCard key={s.label} value={s.value} label={s.label} onDark />)}
             </div>
           </div>
 
-          {/* Hero image */}
+          {/* Hero image — arco */}
           <div className={styles.heroImage}>
             <div className={styles.imgWrap}>
               {HERO_IMAGE ? (
@@ -88,7 +105,7 @@ export default function HomePage() {
                   alt={t('photo_label')}
                   fill
                   priority
-                  sizes="(max-width: 1024px) 100vw, 560px"
+                  sizes="(max-width: 1024px) 100vw, 460px"
                   style={{ objectFit: 'cover' }}
                 />
               ) : (
@@ -98,9 +115,38 @@ export default function HomePage() {
                 </div>
               )}
             </div>
+            <div className={styles.floatBadge}>
+              <div className={styles.floatBadgeIcon}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 12l2 2 4-4" />
+                  <circle cx="12" cy="12" r="10" />
+                </svg>
+              </div>
+              <div>
+                <strong>{t('stats.patients')}</strong>
+                <small>{t('stats.patients_label')}</small>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* ── Marquee de servicios ─────────────────────────────────────────── */}
+      <div className={styles.marqueeStrip}>
+        <div className="marquee">
+          <div className="marquee__track">
+            {[0, 1].map((copy) => (
+              <span key={copy} className={styles.marqueeItem} aria-hidden={copy === 1}>
+                {marqueeNames.map((name) => (
+                  <span key={name} className={styles.marqueeItem}>
+                    {name} <span className={styles.marqueeStar}>✦</span>
+                  </span>
+                ))}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* ── Clinic strip ─────────────────────────────────────────────────── */}
       <section className={styles.clinicStrip}>
@@ -130,7 +176,7 @@ export default function HomePage() {
           <Reveal delay={120}>
             <div className={styles.clinicText}>
               <span className="eyebrow">Nuestra clínica</span>
-              <h2>Un espacio diseñado para tu comodidad</h2>
+              <h2>Un espacio diseñado para tu <em className="gradient-text">comodidad</em></h2>
               <p>
                 Instalaciones modernas, equipos de última generación y un ambiente cálido
                 pensado para que tu visita al dentista sea una experiencia agradable.
