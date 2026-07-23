@@ -38,12 +38,21 @@
 .card:hover::before { opacity: 1; }
 
 /* ── Image area ─────────────────────────────────────────────────────────── */
+/* overflow: visible aquí a propósito — el iconBadge sobresale por debajo
+   de la imagen hacia el cuerpo de la tarjeta y no debe recortarse.
+   El recorte de la foto en sí ocurre en .imageInner. */
 .imageArea {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 10;
-  overflow: hidden;
+  overflow: visible;
   flex-shrink: 0;
+}
+
+.imageInner {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
 }
 
 /* Gradient overlay at bottom of image — blends into card body */
