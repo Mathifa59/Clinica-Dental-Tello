@@ -1,63 +1,42 @@
 # Carpeta de Imágenes — Dental Tello
 
-Sube aquí tus fotos. El sitio las tomará automáticamente en cuanto estén en la ruta correcta.
+Estado de los recursos del sitio. Los archivos ya organizados se toman automáticamente por el código.
 
 ---
 
-## 📁 home/
-| Archivo | Dónde aparece | Tamaño recomendado |
-|---|---|---|
-| `hero.jpg` | Foto principal del hero en la página de inicio | 1120 × 1280 px (proporción 7:8) |
-| `clinica-interior.jpg` | Foto interior de la clínica en la sección "Sobre la clínica" | 1280 × 720 px |
+## ✅ Ya cargados
 
----
-
-## 📁 services/
-| Archivo | Servicio | Tamaño recomendado |
-|---|---|---|
-| `orthodontics.jpg` | Ortodoncia | 800 × 500 px (16:10) |
-| `implants.jpg` | Implantes Dentales | 800 × 500 px |
-| `cleaning.jpg` | Limpieza y Profilaxis | 800 × 500 px |
-| `whitening.jpg` | Blanqueamiento Dental | 800 × 500 px |
-| `pediatric.jpg` | Odontopediatría | 800 × 500 px |
-| `emergency.jpg` | Urgencias 24h | 800 × 500 px |
-
----
-
-## 📁 about/
-| Archivo | Dónde aparece | Tamaño recomendado |
-|---|---|---|
-| `doctor-tello.jpg` | Foto del Dr. Daniel Tello | 800 × 1000 px (4:5) |
-| `equipo.jpg` | Foto del equipo médico (opcional) | 1280 × 720 px |
-
----
-
-## 📁 blog/
-| Archivo | Artículo | Tamaño recomendado |
-|---|---|---|
-| `frecuencia-visitas.jpg` | ¿Con qué frecuencia visitar al dentista? | 800 × 480 px (5:3) |
-| `implantes-dentales.jpg` | Todo sobre los implantes dentales | 800 × 480 px |
-| `estres-salud-bucal.jpg` | Cómo el estrés afecta tu salud bucal | 800 × 480 px |
-
----
-
-## 📁 clinic/
-Fotos generales de la clínica (instalaciones, recepción, equipos).
-Puedes nombrarlas como quieras; úsalas en secciones adicionales si las añades.
-
-| Sugerencia | Descripción |
+| Archivo | Dónde aparece |
 |---|---|
-| `recepcion.jpg` | Área de recepción |
-| `sala-espera.jpg` | Sala de espera |
-| `consultorio.jpg` | Interior del consultorio |
-| `exterior.jpg` | Fachada exterior |
+| `brand/logo-horizontal.png` | Logo del header (fondo blanco fundido con `mix-blend-mode`) |
+| `brand/logo.png` | Logo cuadrado (referencia — tiene el damero de fondo pintado, pedir versión con transparencia real) |
+| `about/doctor-tello.png` | Foto del Dr. Tello en la página Nosotros |
+| `clinic/exterior.png` | Fachada en la página Contacto |
+| `services/orthodontics.jpg` | Tarjeta Ortodoncia |
+| `services/implants.jpg` | Tarjeta Implantes Dentales |
+| `services/cleaning.jpg` | Tarjeta Limpieza y Profilaxis |
+| `services/whitening.jpg` | Tarjeta Blanqueamiento Dental |
+| `services/pediatric.jpg` | Tarjeta Odontopediatría |
+| `services/emergency.jpg` | Tarjeta Urgencias 24h |
+| `blog/frecuencia-visitas.jpg` | Artículo "¿Con qué frecuencia visitar al dentista?" |
+| `blog/implantes-dentales.jpg` | Artículo "Todo sobre los implantes dentales" |
+| `blog/estres-salud-bucal.jpg` | Artículo "Cómo el estrés afecta tu salud bucal" |
+| `../videos/hero.mp4` | Video del hero en la portada (vertical 720×1280, 9s) |
+| `../videos/clinica.mp4` | Video de la sección "Nuestra clínica" en la portada (vertical 720×1280, 12s) |
 
 ---
+
+## ⬜ Pendientes
+
+| Archivo | Dónde aparecería | Tamaño recomendado |
+|---|---|---|
+| `clinic/consultorio.jpg` | Barra lateral de la página Citas (hoy muestra placeholder) | 1280 × 720 px |
+| `about/equipo.jpg` | Foto del equipo médico (opcional) | 1280 × 720 px |
+
+## 💡 Mejoras sugeridas
+
+- **Logo con transparencia real**: el `brand/logo.png` cuadrado tiene el patrón de damero pintado en los píxeles (no es transparencia). Pedir al diseñador el PNG original con canal alfa para poder usarlo sobre el footer oscuro.
+- Las fotos de servicios y blog son pequeñas (~300px). Si consigues versiones a 800px+ se verán más nítidas en pantallas retina — mismo nombre de archivo y listo.
 
 ## Formatos aceptados
-`.jpg` · `.jpeg` · `.png` · `.webp` · `.avif`
-
-## Tips
-- Usa JPG u WebP para fotos (mejor compresión)
-- Resolución mínima recomendada: el doble del tamaño mostrado (para pantallas Retina)
-- Next.js optimiza las imágenes automáticamente, no es necesario comprimirlas antes
+`.jpg` · `.jpeg` · `.png` · `.webp` · `.avif` · `.mp4` (videos en `public/videos/`)

@@ -5,7 +5,8 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import styles from './page.module.css';
 
-const CLINIC_IMAGE = '/images/clinic/consultorio.jpg';
+// Aún no hay foto del consultorio — cadena vacía muestra el placeholder
+const CLINIC_IMAGE = '';
 
 type FormState = {
   name: string;

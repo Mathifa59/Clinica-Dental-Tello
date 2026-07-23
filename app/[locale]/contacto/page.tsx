@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import styles from './page.module.css';
 
-const EXTERIOR_IMAGE = '/images/clinic/exterior.jpg';
+const EXTERIOR_IMAGE = '/images/clinic/exterior.png';
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const t = await getTranslations({ locale: params.locale, namespace: 'contact' });

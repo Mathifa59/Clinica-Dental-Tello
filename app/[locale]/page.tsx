@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
@@ -20,8 +19,8 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   };
 }
 
-const HERO_IMAGE = '/images/home/hero.jpg';
-const CLINIC_IMAGE = '/images/home/clinica-interior.jpg';
+const HERO_VIDEO = '/videos/hero.mp4';
+const CLINIC_VIDEO = '/videos/clinica.mp4';
 
 const SERVICE_KEYS = ['orthodontics', 'implants', 'cleaning', 'whitening', 'pediatric', 'emergency'] as const;
 
@@ -96,24 +95,18 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Hero image — arco */}
+          {/* Hero video — arco */}
           <div className={styles.heroImage}>
             <div className={styles.imgWrap}>
-              {HERO_IMAGE ? (
-                <Image
-                  src={HERO_IMAGE}
-                  alt={t('photo_label')}
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 460px"
-                  style={{ objectFit: 'cover' }}
-                />
-              ) : (
-                <div className={styles.imgPlaceholder}>
-                  <span>{t('photo_label')}</span>
-                  <small>images/home/hero.jpg</small>
-                </div>
-              )}
+              <video
+                className={styles.heroVideo}
+                src={HERO_VIDEO}
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-label={t('photo_label')}
+              />
             </div>
             <div className={styles.floatBadge}>
               <div className={styles.floatBadgeIcon}>
@@ -153,24 +146,15 @@ export default function HomePage() {
         <div className={styles.clinicInner}>
           <Reveal direction="scale">
             <div className={styles.clinicImageWrap}>
-              {CLINIC_IMAGE ? (
-                <Image
-                  src={CLINIC_IMAGE}
-                  alt="Interior Clínica Dental Tello"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  style={{ objectFit: 'cover' }}
-                />
-              ) : (
-                <div className={styles.clinicPlaceholder}>
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="3" y="3" width="18" height="18" rx="2" />
-                    <circle cx="8.5" cy="8.5" r="1.5" />
-                    <polyline points="21 15 16 10 5 21" />
-                  </svg>
-                  <span>images/home/clinica-interior.jpg</span>
-                </div>
-              )}
+              <video
+                className={styles.clinicVideo}
+                src={CLINIC_VIDEO}
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-label="Interior Clínica Dental Tello"
+              />
             </div>
           </Reveal>
           <Reveal delay={120}>

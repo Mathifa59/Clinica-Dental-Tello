@@ -164,6 +164,16 @@
 
 .imgWrap:hover img { transform: scale(1.04); }
 
+.heroVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.22,1,0.36,1);
+}
+
+.imgWrap:hover .heroVideo { transform: scale(1.04); }
+
 .imgPlaceholder {
   width: 100%; height: 100%;
   background:
@@ -293,6 +303,16 @@
 }
 
 .clinicImageWrap:hover img { transform: scale(1.03); }
+
+.clinicVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+
+.clinicImageWrap:hover .clinicVideo { transform: scale(1.03); }
 
 .clinicPlaceholder {
   width: 100%; height: 100%;

@@ -6,7 +6,7 @@ import StatCard from '@/components/ui/StatCard';
 import Reveal from '@/components/ui/Reveal';
 import styles from './page.module.css';
 
-const DOCTOR_IMAGE = '/images/about/doctor-tello.jpg';
+const DOCTOR_IMAGE = '/images/about/doctor-tello.png';
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const t = await getTranslations({ locale: params.locale, namespace: 'about' });

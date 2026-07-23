@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
@@ -51,9 +52,15 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
-        <Link href={localePath('/')} className={styles.logo} onClick={() => setMenuOpen(false)}>
-          <span className={styles.logoLight}>Dental</span>
-          <span className={styles.logoBold}>Tello</span>
+        <Link href={localePath('/')} className={styles.logo} onClick={() => setMenuOpen(false)} aria-label="Dental Tello — Inicio">
+          <Image
+            src="/images/brand/logo-horizontal.png"
+            alt="Dental Tello — Implantología y Rehabilitación Oral"
+            width={190}
+            height={134}
+            priority
+            className={styles.logoImg}
+          />
         </Link>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
