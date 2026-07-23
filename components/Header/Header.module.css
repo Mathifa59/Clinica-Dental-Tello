@@ -135,9 +135,9 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
-  width: 36px;
-  height: 36px;
-  padding: 4px;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
   border-radius: var(--radius-sm);
   transition: background var(--transition);
 }
