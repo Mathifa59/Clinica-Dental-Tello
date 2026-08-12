@@ -115,6 +115,10 @@
   color: var(--color-text-muted);
   letter-spacing: 0.06em;
   padding: 5px 10px;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   transition: color var(--transition), border-color var(--transition), background var(--transition);

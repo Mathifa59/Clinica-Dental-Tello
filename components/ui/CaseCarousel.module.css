@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   height: 100%;
+  touch-action: pan-y;
 }
 
 .viewport {
@@ -29,13 +30,14 @@
 }
 
 /* ── Arrows ─────────────────────────────────────────────────────────────── */
+/* Visibles siempre en pantallas táctiles (no hay :hover que las revele) */
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 3;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,30 +63,46 @@
 .arrowPrev { left: 0.625rem; }
 .arrowNext { right: 0.625rem; }
 
+@media (hover: none) {
+  .arrow { opacity: 1; }
+}
+
 /* ── Dots ───────────────────────────────────────────────────────────────── */
 .dots {
   position: absolute;
-  bottom: 0.75rem;
+  bottom: 0.25rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
   display: flex;
-  gap: 6px;
+  gap: 2px;
 }
 
+/* El botón tiene un área táctil de 28px; el punto visible queda centrado
+   adentro y más pequeño, para no perder el look delicado original. */
 .dot {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.dot::after {
+  content: '';
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  border: none;
-  padding: 0;
-  transition: background var(--transition), transform var(--transition), width var(--transition);
+  background: rgba(255, 255, 255, 0.55);
+  transition: background var(--transition), width var(--transition), border-radius var(--transition);
 }
 
-.dot:hover { background: rgba(255, 255, 255, 0.8); }
+.dot:hover::after { background: rgba(255, 255, 255, 0.85); }
 
-.dotActive {
+.dotActive::after {
   background: #fff;
   width: 16px;
   border-radius: 3px;

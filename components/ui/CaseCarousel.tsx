@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Image from 'next/image';
 import styles from './CaseCarousel.module.css';
 
@@ -9,14 +9,29 @@ type CaseCarouselProps = {
   alt: string;
 };
 
+const SWIPE_THRESHOLD = 40;
+
 export default function CaseCarousel({ images, alt }: CaseCarouselProps) {
   const [index, setIndex] = useState(0);
   const multi = images.length > 1;
+  const touchStartX = useRef<number | null>(null);
 
   const go = (next: number) => setIndex((next + images.length) % images.length);
 
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const delta = e.changedTouches[0].clientX - touchStartX.current;
+    touchStartX.current = null;
+    if (Math.abs(delta) < SWIPE_THRESHOLD) return;
+    go(delta < 0 ? index + 1 : index - 1);
+  };
+
   return (
-    <div className={styles.carousel}>
+    <div className={styles.carousel} onTouchStart={multi ? onTouchStart : undefined} onTouchEnd={multi ? onTouchEnd : undefined}>
       <div className={styles.viewport}>
         {images.map((src, i) => (
           <div key={src} className={`${styles.slide} ${i === index ? styles.active : ''}`}>

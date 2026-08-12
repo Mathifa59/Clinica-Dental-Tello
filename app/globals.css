@@ -25,8 +25,8 @@
   --gradient-brand: linear-gradient(135deg, #0E7C66 0%, #3ECFB2 100%);
   --gradient-hero: linear-gradient(160deg, #FDFAF4 0%, #F4EEE2 60%, #E8F5EF 100%);
   --gradient-card: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(244,238,226,0.8) 100%);
-  --gradient-text: linear-gradient(120deg, #3ECFB2 0%, #9BE8D3 45%, #FFB397 100%);
-  --gradient-text-light: linear-gradient(120deg, #0E7C66 0%, #159F84 60%, #FF7A59 130%);
+  --gradient-text: linear-gradient(120deg, #3ECFB2 0%, #9BE8D3 45%, #6FCFEA 100%);
+  --gradient-text-light: linear-gradient(120deg, #0E7C66 0%, #159F84 60%, #1373A6 130%);
 
   /* Aurora — capas de radiales para fondos oscuros */
   --aurora-dark:
