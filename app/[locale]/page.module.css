@@ -356,7 +356,14 @@
 .clinicText h2 { letter-spacing: -0.02em; }
 
 /* ── View all ───────────────────────────────────────────────────────────── */
-.viewAll { text-align: center; margin-top: 2.5rem; }
+.viewAll {
+  text-align: center;
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
 
 .viewAllLink {
   font-size: 0.9375rem;

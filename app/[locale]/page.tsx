@@ -207,6 +207,7 @@ export default function HomePage() {
           <Reveal delay={300}>
             <div className={styles.viewAll}>
               <Link href="servicios" className={styles.viewAllLink}>{t('view_all')}</Link>
+              <Link href="casos" className={styles.viewAllLink}>{t('view_cases')}</Link>
             </div>
           </Reveal>
         </div>
