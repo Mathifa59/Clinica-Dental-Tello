@@ -75,6 +75,14 @@
       "specialties": "6",
       "specialties_label": "Especialidades clínicas"
     },
+    "facilities_title": "Nuestras instalaciones",
+    "facilities_subtitle": "Un espacio moderno y cómodo, pensado para tu tranquilidad.",
+    "facilities": {
+      "exterior": "Fachada de la clínica",
+      "reception": "Recepción",
+      "waiting": "Sala de espera",
+      "equipment": "Consultorio equipado"
+    },
     "values_title": "Nuestros Valores",
     "values": {
       "trust": {

@@ -181,6 +181,38 @@
 .valueCard h3 { font-size: 1.0625rem; font-weight: 600; color: var(--color-text); }
 .valueCard p  { font-size: 0.9375rem; line-height: 1.7; }
 
+/* Facilities */
+.facilitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .facilitiesGrid { grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+}
+
+.facilityPhoto {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 20px rgba(18,49,44,0.08);
+  transition: transform var(--transition-spring), box-shadow var(--transition-slow);
+}
+
+.facilityPhoto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(18,49,44,0.16);
+}
+
+.facilityPhoto img {
+  transition: transform 0.6s cubic-bezier(0.22,1,0.36,1) !important;
+}
+
+.facilityPhoto:hover img { transform: scale(1.06); }
+
 /* Keyframes local (CSS Modules escopa los nombres) */
 @keyframes shimmer {
   0%   { background-position: -200% center; }
