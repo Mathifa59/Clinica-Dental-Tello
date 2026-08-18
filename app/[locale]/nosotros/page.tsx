@@ -8,6 +8,13 @@ import styles from './page.module.css';
 
 const DOCTOR_IMAGE = '/images/about/doctor-tello.png';
 
+const FACILITY_PHOTOS = [
+  { key: 'exterior', src: '/images/clinic/exterior-amplio.jpg' },
+  { key: 'reception', src: '/images/clinic/recepcion.jpg' },
+  { key: 'waiting', src: '/images/clinic/sala-espera.jpg' },
+  { key: 'equipment', src: '/images/clinic/equipos.jpg' },
+] as const;
+
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const t = await getTranslations({ locale: params.locale, namespace: 'about' });
   return {
@@ -105,7 +112,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="section--blue">
+      <section className="section--gradient">
         <div className="container">
           <div className={styles.statsGrid}>
             {stats.map((s, i) => (
@@ -132,6 +139,33 @@ export default function AboutPage() {
                   <div className={styles.valueIcon}>{icon}</div>
                   <h3>{t(`values.${key}.title` as Parameters<typeof t>[0])}</h3>
                   <p>{t(`values.${key}.description` as Parameters<typeof t>[0])}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Facilities */}
+      <section className="section--gradient">
+        <div className="container">
+          <Reveal>
+            <div className="section-header">
+              <h2>{t('facilities_title')}</h2>
+              <p>{t('facilities_subtitle')}</p>
+            </div>
+          </Reveal>
+          <div className={styles.facilitiesGrid}>
+            {FACILITY_PHOTOS.map(({ key, src }, i) => (
+              <Reveal key={key} delay={i * 90} direction="scale">
+                <div className={styles.facilityPhoto}>
+                  <Image
+                    src={src}
+                    alt={t(`facilities.${key}` as Parameters<typeof t>[0])}
+                    fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    style={{ objectFit: 'cover' }}
+                  />
                 </div>
               </Reveal>
             ))}

@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "services": "Services",
+    "cases": "Cases",
     "about": "About Us",
     "blog": "Blog",
     "appointments": "Appointments",
@@ -25,7 +26,8 @@
     "photo_label": "Clinic photo",
     "featured_services_title": "Featured Services",
     "featured_services_subtitle": "High-quality dental treatments for the whole family",
-    "view_all": "View all services →"
+    "view_all": "View all services →",
+    "view_cases": "View real cases →"
   },
   "services": {
     "hero_title": "Our Services",
@@ -73,6 +75,14 @@
       "specialties": "6",
       "specialties_label": "Clinical specialties"
     },
+    "facilities_title": "Our Facilities",
+    "facilities_subtitle": "A modern, comfortable space designed for your peace of mind.",
+    "facilities": {
+      "exterior": "Clinic exterior",
+      "reception": "Reception",
+      "waiting": "Waiting room",
+      "equipment": "Fully equipped treatment room"
+    },
     "values_title": "Our Values",
     "values": {
       "trust": {
@@ -86,6 +96,54 @@
       "warmth": {
         "title": "Warmth",
         "description": "We understand that visiting the dentist can cause anxiety. That's why we create a welcoming environment where every patient feels safe and well cared for."
+      }
+    }
+  },
+  "cases": {
+    "eyebrow": "Clinical Portfolio",
+    "hero_title": "Real Cases",
+    "hero_subtitle": "Real results from patients treated at our clinic, documented at every stage of treatment.",
+    "disclaimer": "All photographs correspond to real cases treated at our clinic and are published with each patient's consent.",
+    "items": {
+      "desgasteDental": {
+        "title": "Dental Wear",
+        "description": "Rehabilitation of front teeth affected by wear, restoring their original shape and function."
+      },
+      "resinaAnterior": {
+        "title": "Anterior Aesthetic Resin",
+        "description": "Resin restoration of a front tooth to bring back a natural, harmonious smile."
+      },
+      "resinasMolares": {
+        "title": "Molar Resin Fillings",
+        "description": "Cavity treatment in molars with composite resin, built to withstand chewing wear."
+      },
+      "reparacionCuellos": {
+        "title": "Cervical Repair",
+        "description": "Correction of cervical wear to protect the tooth root and reduce sensitivity."
+      },
+      "incrustacionesResina": {
+        "title": "Direct Resin Inlay",
+        "description": "Full process of a dental inlay: isolation, preparation and placement of the restoration."
+      },
+      "pernoCorona": {
+        "title": "Fiber Post & Crown",
+        "description": "Reconstruction of a severely damaged tooth with a fiberglass post as the crown's foundation."
+      },
+      "protesisTotal": {
+        "title": "Full Denture",
+        "description": "Complete rehabilitation with a removable denture, restoring aesthetics and chewing function."
+      },
+      "protocoloImplantes": {
+        "title": "Implant-Supported Rehabilitation",
+        "description": "Fixed prosthesis protocol on dental implants, from the working model to the final result."
+      },
+      "resinaEstetica": {
+        "title": "Aesthetic Molar Resin",
+        "description": "Treatment of multiple cavities with resin, preserving as much healthy tooth structure as possible."
+      },
+      "radiografias": {
+        "title": "X-Rays",
+        "description": "Examples of radiographs used for diagnosis and precise treatment planning."
       }
     }
   },

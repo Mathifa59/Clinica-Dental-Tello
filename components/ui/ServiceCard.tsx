@@ -26,7 +26,10 @@ export default function ServiceCard({
   return (
     <div className={styles.card}>
       <div className={styles.imageArea}>
-        <div className={styles.imageClip}>
+        {/* imageInner recorta la foto en las esquinas; imageArea permanece
+            sin overflow:hidden para que el iconBadge pueda sobresalir hacia
+            el cuerpo de la tarjeta sin que su mitad inferior quede cortada. */}
+        <div className={styles.imageInner}>
           {imageSrc ? (
             <Image
               src={imageSrc}

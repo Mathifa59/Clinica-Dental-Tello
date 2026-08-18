@@ -1,17 +1,18 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
 import styles from './Header.module.css';
 
-const NAV_KEYS = ['home', 'services', 'about', 'blog', 'appointments', 'contact'] as const;
+const NAV_KEYS = ['home', 'services', 'cases', 'about', 'blog', 'appointments', 'contact'] as const;
 
 const NAV_ROUTES: Record<string, string> = {
   home: '/',
   services: '/servicios',
+  cases: '/casos',
   about: '/nosotros',
   blog: '/blog',
   appointments: '/citas',
@@ -45,15 +46,22 @@ export default function Header() {
     return pathname.startsWith(full);
   };
 
+  const otherLocale = locale === 'es' ? 'en' : 'es';
   const currentPath = pathname.replace(`/${locale}`, '') || '/';
-  const esPath = `/es${currentPath === '/' ? '' : currentPath}`;
-  const enPath = `/en${currentPath === '/' ? '' : currentPath}`;
+  const otherLocalePath = `/${otherLocale}${currentPath === '/' ? '' : currentPath}`;
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
-        <Link href={localePath('/')} className={styles.logo} onClick={() => setMenuOpen(false)}>
-          <Image src="/logo-horizontal.png" alt="Dental Tello" height={40} width={170} priority style={{ objectFit: 'contain', objectPosition: 'left center' }} />
+        <Link href={localePath('/')} className={styles.logo} onClick={() => setMenuOpen(false)} aria-label="Dental Tello — Inicio">
+          <Image
+            src="/images/brand/logo-horizontal.png"
+            alt="Dental Tello — Implantología y Rehabilitación Oral"
+            width={190}
+            height={134}
+            priority
+            className={styles.logoImg}
+          />
         </Link>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
@@ -77,10 +85,9 @@ export default function Header() {
         </nav>
 
         <div className={styles.actions}>
-          <div className={styles.langSwitch} aria-label="Cambiar idioma">
-            <Link href={esPath} className={`${styles.langOption} ${locale === 'es' ? styles.langOptionActive : ''}`}>ES</Link>
-            <Link href={enPath} className={`${styles.langOption} ${locale === 'en' ? styles.langOptionActive : ''}`}>EN</Link>
-          </div>
+          <Link href={otherLocalePath} className={styles.langToggle} aria-label="Cambiar idioma">
+            {otherLocale.toUpperCase()}
+          </Link>
           <Link href={localePath('/citas')} className={`btn btn--primary ${styles.ctaDesktop}`}>
             {t('cta')}
           </Link>
