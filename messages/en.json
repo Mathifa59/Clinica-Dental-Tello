@@ -10,17 +10,17 @@
     "cta": "Book Appointment"
   },
   "home": {
-    "eyebrow": "Dental Clinic in Lima",
-    "title": "Your best smile starts here",
-    "subtitle": "We provide excellent dental care with state-of-the-art technology and a team of specialists committed to your oral health.",
+    "eyebrow": "Dental Clinic in Los Olivos",
+    "title": "We care for your smile, we transform your life",
+    "subtitle": "Over 26 years transforming smiles in Lima. We specialize in oral rehabilitation, dental aesthetics and implants, giving you back confidence when you speak, smile and eat.",
     "cta_primary": "Book Appointment",
     "cta_secondary": "Our Services",
     "stats": {
-      "years": "10+",
+      "years": "26+",
       "years_label": "Years of experience",
       "patients": "5,000+",
       "patients_label": "Patients treated",
-      "specialties": "6",
+      "specialties": "7",
       "specialties_label": "Specialties"
     },
     "photo_label": "Clinic photo",
@@ -36,44 +36,70 @@
     "items": {
       "orthodontics": {
         "name": "Orthodontics",
-        "description": "Dental alignment with metal, ceramic brackets or invisible aligners. Restore the functionality and aesthetics of your smile with personalized treatments for adults and children."
+        "description": "Bracket placement with personalized check-ups and follow-up throughout treatment, until you achieve an aligned, functional smile. Direct financing with no interest or surcharges."
       },
       "implants": {
         "name": "Dental Implants",
-        "description": "Replace missing teeth with high-durability titanium implants. The most aesthetic and functional solution that integrates perfectly with your bone structure."
+        "description": "Personalized evaluation with a CT scan, safe implant placement and crown fitting in porcelain or zirconia. Recover your missing tooth naturally, without affecting neighboring teeth."
       },
       "cleaning": {
         "name": "Cleaning & Prophylaxis",
-        "description": "Professional removal of tartar, bacterial plaque and stains. Essential treatment to prevent cavities and periodontal diseases, with visible results from the first session."
+        "description": "Ultrasonic scaling to remove tartar, plus prophylaxis with electric brushing. Keeps your mouth free of bacterial plaque, with fresh breath and healthy gums."
       },
       "whitening": {
         "name": "Teeth Whitening",
-        "description": "Restore the natural brightness of your teeth with our professional whitening system. Safe, immediate and long-lasting results supervised by specialists."
+        "description": "Up to two in-office sessions with a professional whitening gel applied for 1 to 2 hours. Visibly whiter teeth, with natural-looking, aesthetic results."
       },
       "pediatric": {
         "name": "Pediatric Dentistry",
-        "description": "Specialized dental care for children in a friendly, stress-free environment. We prevent cavities, guide dental development and build healthy habits from an early age."
+        "description": "Cleaning, cavity prevention and guidance for parents on caring for their children's teeth. Fluoride prophylaxis, restorations and sealants from the first months of life."
       },
       "emergency": {
-        "name": "24h Emergencies",
-        "description": "Immediate attention for acute pain, dental trauma and other dental emergencies. We are available 24 hours a day for when you need us most."
+        "name": "Dental Emergencies",
+        "description": "Immediate attention for acute pain, swelling or other dental trauma. Message us on WhatsApp and we'll help resolve your emergency as soon as possible."
+      },
+      "oralRehab": {
+        "name": "Oral Rehabilitation",
+        "description": "Full and removable dentures, crowns and bridges in porcelain or zirconia. We restore chewing function and the aesthetics of your smile with solutions tailored to each case."
+      },
+      "aesthetics": {
+        "name": "Dental Aesthetics",
+        "description": "Aesthetic restorations and veneers in resin, porcelain or zirconia. We harmonize the shape and color of your teeth for a natural, balanced smile."
+      },
+      "surgery": {
+        "name": "Dental Surgery",
+        "description": "Simple extractions, wisdom teeth, impacted or supernumerary teeth and mucocele surgery. Safe procedures under strict biosafety protocols."
       }
     }
   },
   "about": {
     "hero_title": "About Us",
-    "hero_subtitle": "Over a decade committed to the oral health of Lima.",
-    "doctor_title": "Dr. Daniel Tello",
-    "doctor_subtitle": "Director & Implantology Specialist",
-    "doctor_bio": "Dr. Daniel Tello is a dental surgeon with over 10 years of experience in modern dentistry. A honors graduate from Universidad Cayetano Heredia, he completed specialization studies in implantology and oral rehabilitation in Spain and Brazil. His approach combines clinical precision with a close, human touch, always prioritizing patient well-being. Under his leadership, Dental Tello Clinic has established itself as a reference of excellence in Lima, serving over five thousand patients with results that speak for themselves.",
+    "hero_subtitle": "Over 26 years committed to the oral health of Los Olivos and Lima.",
+    "doctor_title": "Dr. Daniel Tello Fernández",
+    "doctor_subtitle": "Dental Surgeon · Implantology, Oral Rehabilitation & Aesthetics",
+    "doctor_credentials": "COP 15480 · RNE 5532",
+    "doctor_bio": "I'm Dr. Daniel Tello, a dentist specializing in implantology, oral rehabilitation and aesthetics, with over 26 years of experience caring for your oral health. Throughout my career, I've put my knowledge and skills at the service of my patients, combining personalized care with the latest dental techniques. My motivation is to see you regain confidence when you smile, speak and eat; that's why I keep training continuously and work under strict biosafety protocols, using high-quality materials. My biggest challenge: seeing you smile again with satisfaction, freedom and confidence.",
+    "doctor_education_title": "Academic Background",
+    "doctor_education": {
+      "degree": "Universidad Inca Garcilaso de la Vega — Undergraduate Degree in Dentistry",
+      "spec1": "GROIS Institute, Rio Branco, Brazil — Specialization in Implantology",
+      "spec2": "Faculdade do Centro Oeste Paulista (FACOP), Brazil — Oral Rehabilitation & Aesthetics"
+    },
     "photo_label": "Dr. Daniel Tello",
     "stats": {
-      "years": "10+",
+      "years": "26+",
       "years_label": "Years of experience",
       "patients": "5,000+",
       "patients_label": "Satisfied patients",
-      "specialties": "6",
+      "specialties": "7",
       "specialties_label": "Clinical specialties"
+    },
+    "team_title": "Our Team",
+    "team_subtitle": "Specialized professionals behind every treatment.",
+    "team": {
+      "member1": { "name": "Dr. Wilber Tello Fernández", "role": "Implantologist" },
+      "member2": { "name": "Dr. Miguel Córdova García", "role": "General Dental Surgeon" },
+      "member3": { "name": "Dr. Edwin Del Pino Palomino", "role": "Dental Surgeon, Implantologist" }
     },
     "facilities_title": "Our Facilities",
     "facilities_subtitle": "A modern, comfortable space designed for your peace of mind.",
@@ -87,11 +113,11 @@
     "values": {
       "trust": {
         "title": "Trust",
-        "description": "We build lasting relationships with our patients based on transparency, respect and honest communication at every stage of treatment."
+        "description": "Friendly, sincere and honest treatment: we will always tell you the truth about your oral health. Over 26 years back every relationship we build with our patients."
       },
       "technology": {
         "title": "Technology",
-        "description": "We constantly invest in state-of-the-art equipment to offer precise diagnoses and less invasive treatments with better results."
+        "description": "We have digital X-ray, electrosurgery, dental laser, state-of-the-art implant equipment and dry-heat and autoclave sterilization for your maximum safety."
       },
       "warmth": {
         "title": "Warmth",
@@ -202,43 +228,70 @@
         "cleaning": "Cleaning & Prophylaxis",
         "whitening": "Teeth Whitening",
         "pediatric": "Pediatric Dentistry",
-        "emergency": "Emergencies"
+        "emergency": "Dental Emergencies",
+        "oralRehab": "Oral Rehabilitation",
+        "aesthetics": "Dental Aesthetics",
+        "surgery": "Dental Surgery"
       }
     },
     "success_title": "Appointment requested successfully!",
     "success_message": "We have received your request. We will contact you within 24 hours to confirm your appointment.",
     "contact_info": {
       "title": "You can also contact us via",
-      "phone": "+51 (01) 234-5678",
+      "phone": "+51 942 661 120",
       "whatsapp": "WhatsApp available",
       "hours_title": "Office hours",
-      "hours_weekdays": "Mon – Fri: 9:00 am – 7:00 pm",
-      "hours_saturday": "Saturday: 9:00 am – 2:00 pm",
-      "hours_sunday": "Sunday: 24h Emergencies"
+      "hours_weekdays": "Mon – Fri: 9:00 am – 1:00 pm and 3:00 pm – 8:00 pm",
+      "hours_saturday": "Saturday: 9:00 am – 1:00 pm and 3:00 pm – 6:00 pm",
+      "hours_sunday": "Sunday & holidays: closed · emergencies via WhatsApp"
+    },
+    "faq_title": "Frequently Asked Questions",
+    "faq_subtitle": "We answer our patients' most common questions.",
+    "faq": {
+      "q1": {
+        "question": "Do you accept health insurance or EPS?",
+        "answer": "At this time we do not work with health insurance or EPS plans."
+      },
+      "q2": {
+        "question": "Do you offer payment plans or financing?",
+        "answer": "Yes. We offer direct financing for implants and orthodontics, plus payment plans for other treatments, with no interest or surcharges."
+      },
+      "q3": {
+        "question": "How long does an evaluation appointment take?",
+        "answer": "It depends on the case: it can take between 15 minutes and 2 hours, depending on the treatment being evaluated."
+      },
+      "q4": {
+        "question": "From what age do you treat children?",
+        "answer": "Yes, we treat children from 5 months of age, with guidance for parents on their children's oral care."
+      },
+      "q5": {
+        "question": "What should I do if I have a dental emergency outside office hours?",
+        "answer": "Message us on WhatsApp and we'll help you resolve your emergency as soon as possible."
+      }
     }
   },
   "contact": {
     "hero_title": "Contact Us",
     "hero_subtitle": "We are here to answer your questions and help you start your treatment.",
     "address_label": "Address",
-    "address": "Av. Próceres De Huandoy 7865, Ur Pro, Los Olivos",
-    "phone_label": "Phone",
-    "phone": "+51 (01) 234-5678",
+    "address": "Av. Próceres de Huandoy 7865, Urb. Pro, Los Olivos, Lima",
+    "phone_label": "Phone / WhatsApp",
+    "phone": "+51 942 661 120",
     "email_label": "Email",
-    "email": "contacto@dentaltello.pe",
+    "email": "dgt_21@hotmail.com",
     "hours_label": "Hours",
-    "hours_weekdays": "Mon – Fri: 9:00 am – 7:00 pm",
-    "hours_saturday": "Sat: 9:00 am – 2:00 pm",
+    "hours_weekdays": "Mon – Fri: 9:00 am – 1:00 pm and 3:00 pm – 8:00 pm",
+    "hours_saturday": "Sat: 9:00 am – 1:00 pm and 3:00 pm – 6:00 pm",
     "social_title": "Follow us",
     "map_label": "Location on Google Maps"
   },
   "footer": {
-    "description": "High-specialty dental clinic in Lima. Committed to your oral health and your smile.",
+    "description": "Dental clinic with over 26 years of experience in Los Olivos. Specialists in oral rehabilitation, dental aesthetics and implants.",
     "nav_title": "Navigation",
     "contact_title": "Quick Contact",
-    "address": "Av. Próceres De Huandoy 7865, Ur Pro, Los Olivos",
-    "phone": "+51 (01) 234-5678",
-    "email": "contacto@dentaltello.pe",
+    "address": "Av. Próceres de Huandoy 7865, Urb. Pro, Los Olivos, Lima",
+    "phone": "+51 942 661 120",
+    "email": "dgt_21@hotmail.com",
     "copyright": "© 2026 Dental Tello. Developed by DevHorses."
   },
   "whatsapp": {

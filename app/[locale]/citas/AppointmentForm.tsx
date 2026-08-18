@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import FaqAccordion from '@/components/ui/FaqAccordion';
+import Reveal from '@/components/ui/Reveal';
 import styles from './page.module.css';
 
 const CLINIC_IMAGE = '/images/clinic/consultorio.jpg';
@@ -18,7 +20,7 @@ type FormState = {
 type FormErrors = Partial<Record<keyof FormState, string>>;
 type Status = 'idle' | 'loading' | 'success';
 
-const SERVICE_KEYS = ['orthodontics', 'implants', 'cleaning', 'whitening', 'pediatric', 'emergency'] as const;
+const SERVICE_KEYS = ['orthodontics', 'implants', 'cleaning', 'whitening', 'pediatric', 'emergency', 'oralRehab', 'aesthetics', 'surgery'] as const;
 
 function getTodayString() {
   const today = new Date();
@@ -29,9 +31,15 @@ function validatePhone(phone: string) {
   return /^9\d{2}-\d{3}-\d{3}$/.test(phone);
 }
 
+const FAQ_KEYS = ['q1', 'q2', 'q3', 'q4', 'q5'] as const;
+
 export default function AppointmentForm() {
   const t = useTranslations('appointments');
   const tForm = useTranslations('appointments.form');
+  const faqItems = FAQ_KEYS.map((key) => ({
+    question: t(`faq.${key}.question` as Parameters<typeof t>[0]),
+    answer: t(`faq.${key}.answer` as Parameters<typeof t>[0]),
+  }));
 
   const [form, setForm] = useState<FormState>({
     name: '',
@@ -267,7 +275,7 @@ export default function AppointmentForm() {
                   </div>
                   <div>
                     <p className={styles.contactLabel}>WhatsApp</p>
-                    <a href="https://wa.me/51999999999" target="_blank" rel="noopener noreferrer" className={styles.contactValue}>
+                    <a href="https://wa.me/51942661120" target="_blank" rel="noopener noreferrer" className={styles.contactValue}>
                       {t('contact_info.whatsapp')}
                     </a>
                   </div>
@@ -290,6 +298,21 @@ export default function AppointmentForm() {
               </div>
             </aside>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section--gradient">
+        <div className="container">
+          <Reveal>
+            <div className="section-header">
+              <h2>{t('faq_title')}</h2>
+              <p>{t('faq_subtitle')}</p>
+            </div>
+          </Reveal>
+          <Reveal delay={100}>
+            <FaqAccordion items={faqItems} />
+          </Reveal>
         </div>
       </section>
     </>

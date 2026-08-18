@@ -10,17 +10,17 @@
     "cta": "Reservar cita"
   },
   "home": {
-    "eyebrow": "Clínica Odontológica en Lima",
-    "title": "Tu mejor sonrisa comienza aquí",
-    "subtitle": "Brindamos atención dental de excelencia con tecnología de última generación y un equipo de especialistas comprometidos con tu salud bucal.",
+    "eyebrow": "Clínica Odontológica en Los Olivos",
+    "title": "Cuidamos tu sonrisa, transformamos tu vida",
+    "subtitle": "Más de 26 años transformando sonrisas en Lima. Nos especializamos en rehabilitación oral, estética dental e implantes, devolviéndote confianza y seguridad al hablar, sonreír y masticar.",
     "cta_primary": "Reservar cita",
     "cta_secondary": "Nuestros servicios",
     "stats": {
-      "years": "10+",
+      "years": "26+",
       "years_label": "Años de experiencia",
       "patients": "5,000+",
       "patients_label": "Pacientes atendidos",
-      "specialties": "6",
+      "specialties": "7",
       "specialties_label": "Especialidades"
     },
     "photo_label": "Foto clínica",
@@ -36,44 +36,70 @@
     "items": {
       "orthodontics": {
         "name": "Ortodoncia",
-        "description": "Alineación dental con brackets metálicos, cerámicos o alineadores invisibles. Recupera la funcionalidad y estética de tu sonrisa con tratamientos personalizados para adultos y niños."
+        "description": "Instalación de brackets con controles y seguimiento personalizado durante todo el tratamiento, hasta lograr una sonrisa alineada y funcional. Financiamiento directo sin intereses ni recargos."
       },
       "implants": {
         "name": "Implantes Dentales",
-        "description": "Reemplaza dientes perdidos con implantes de titanio de alta durabilidad. La solución más estética y funcional que se integra perfectamente a tu estructura ósea."
+        "description": "Evaluación personalizada con tomografía, instalación segura del implante y colocación de la corona en porcelana o zirconia. Recupera el diente perdido de forma natural, sin afectar los dientes vecinos."
       },
       "cleaning": {
         "name": "Limpieza y Profilaxis",
-        "description": "Eliminación profesional de sarro, placa bacteriana y manchas. Tratamiento esencial para prevenir caries y enfermedades periodontales, con resultados visibles desde la primera sesión."
+        "description": "Destartaje con ultrasonido para eliminar el sarro, más profilaxis con cepillado eléctrico. Mantiene la boca libre de placa bacteriana, con aliento fresco y encías saludables."
       },
       "whitening": {
         "name": "Blanqueamiento Dental",
-        "description": "Recupera el brillo natural de tus dientes con nuestro sistema de blanqueamiento profesional. Resultados seguros, inmediatos y duraderos supervisados por especialistas."
+        "description": "Hasta dos sesiones en consultorio con gel aclarador profesional aplicado durante 1 a 2 horas. Dientes visiblemente más blancos, con resultados estéticos y de apariencia natural."
       },
       "pediatric": {
         "name": "Odontopediatría",
-        "description": "Atención dental especializada para niños en un ambiente amigable y sin estrés. Prevenimos caries, guiamos el desarrollo dental y creamos hábitos saludables desde temprana edad."
+        "description": "Limpieza, prevención de caries y consejería a los padres sobre el cuidado bucal de los más pequeños. Profilaxis con flúor, restauraciones y sellado de fosas y fisuras desde los primeros meses de vida."
       },
       "emergency": {
-        "name": "Urgencias 24h",
-        "description": "Atención inmediata para dolores agudos, traumatismos dentales y otras emergencias odontológicas. Estamos disponibles las 24 horas para cuando más nos necesitas."
+        "name": "Urgencias Dentales",
+        "description": "Atención inmediata ante dolor agudo, hinchazón u otros traumatismos dentales. Escríbenos por WhatsApp y te ayudamos a resolver tu urgencia lo más pronto posible."
+      },
+      "oralRehab": {
+        "name": "Rehabilitación Oral",
+        "description": "Prótesis totales y removibles, coronas y puentes en porcelana o zirconia. Devolvemos la función masticatoria y la estética de tu sonrisa con soluciones a la medida de cada caso."
+      },
+      "aesthetics": {
+        "name": "Estética Dental",
+        "description": "Restauraciones estéticas y carillas en resina, porcelana o zirconia. Armonizamos la forma y el color de tus dientes para una sonrisa natural y equilibrada."
+      },
+      "surgery": {
+        "name": "Cirugía Dental",
+        "description": "Extracciones simples, muelas del juicio, dientes retenidos o supernumerarios y cirugía de mucoceles. Procedimientos seguros con protocolos estrictos de bioseguridad."
       }
     }
   },
   "about": {
     "hero_title": "Sobre Nosotros",
-    "hero_subtitle": "Más de una década comprometidos con la salud bucal de Lima.",
-    "doctor_title": "Dr. Daniel Tello",
-    "doctor_subtitle": "Director y Especialista en Implantología",
-    "doctor_bio": "El Dr. Daniel Tello es un cirujano dentista con más de 10 años de experiencia en el campo de la odontología moderna. Egresado con honores de la Universidad Cayetano Heredia, realizó estudios de especialización en implantología y rehabilitación oral en España y Brasil. Su enfoque combina la precisión clínica con un trato cercano y humano, priorizando siempre el bienestar del paciente. Bajo su dirección, la Clínica Dental Tello se ha consolidado como un referente de excelencia en Lima, atendiendo a más de cinco mil pacientes con resultados que hablan por sí solos.",
+    "hero_subtitle": "Más de 26 años comprometidos con la salud bucal de Los Olivos y Lima.",
+    "doctor_title": "Dr. Daniel Tello Fernández",
+    "doctor_subtitle": "Cirujano Dentista · Implantología, Rehabilitación Oral y Estética",
+    "doctor_credentials": "COP 15480 · RNE 5532",
+    "doctor_bio": "Soy el Dr. Daniel Tello, odontólogo especialista en implantología, rehabilitación oral y estética, con más de 26 años de experiencia dedicados al cuidado de tu salud bucal. A lo largo de mi trayectoria, he puesto mis conocimientos y habilidades al servicio de mis pacientes, combinando atención personalizada con las técnicas odontológicas más actuales. Mi motivación es ver que recuperes la confianza al sonreír, hablar y masticar; por eso me capacito continuamente y trabajo bajo estrictos protocolos de bioseguridad, utilizando materiales de alta calidad. Mi mayor reto: que vuelvas a sonreír con satisfacción, libertad y confianza.",
+    "doctor_education_title": "Formación académica",
+    "doctor_education": {
+      "degree": "Universidad Inca Garcilaso de la Vega — Pregrado en Odontología",
+      "spec1": "Instituto GROIS, Río Branco, Brasil — Especialización en Implantología",
+      "spec2": "Faculdade do Centro Oeste Paulista (FACOP), Brasil — Rehabilitación Oral y Estética"
+    },
     "photo_label": "Dr. Daniel Tello",
     "stats": {
-      "years": "10+",
+      "years": "26+",
       "years_label": "Años de experiencia",
       "patients": "5,000+",
       "patients_label": "Pacientes satisfechos",
-      "specialties": "6",
+      "specialties": "7",
       "specialties_label": "Especialidades clínicas"
+    },
+    "team_title": "Nuestro Equipo",
+    "team_subtitle": "Profesionales especializados que respaldan cada tratamiento.",
+    "team": {
+      "member1": { "name": "Dr. Wilber Tello Fernández", "role": "Implantólogo" },
+      "member2": { "name": "Dr. Miguel Córdova García", "role": "Cirujano Dentista General" },
+      "member3": { "name": "Dr. Edwin Del Pino Palomino", "role": "Cirujano Dental, Implantólogo" }
     },
     "facilities_title": "Nuestras instalaciones",
     "facilities_subtitle": "Un espacio moderno y cómodo, pensado para tu tranquilidad.",
@@ -87,11 +113,11 @@
     "values": {
       "trust": {
         "title": "Confianza",
-        "description": "Construimos relaciones duraderas con nuestros pacientes basadas en la transparencia, el respeto y la comunicación honesta en cada etapa del tratamiento."
+        "description": "Trato amical, sincero y honesto: siempre te hablaremos con la verdad sobre tu salud oral. Más de 26 años respaldan cada relación que construimos con nuestros pacientes."
       },
       "technology": {
         "title": "Tecnología",
-        "description": "Invertimos constantemente en equipamiento de última generación para ofrecer diagnósticos precisos y tratamientos menos invasivos con mejores resultados."
+        "description": "Contamos con rayos X digital, electrobisturí, láser dental, equipos de implantes de última generación y esterilización con calor seco y autoclave para tu máxima seguridad."
       },
       "warmth": {
         "title": "Calidez",
@@ -202,43 +228,70 @@
         "cleaning": "Limpieza y Profilaxis",
         "whitening": "Blanqueamiento Dental",
         "pediatric": "Odontopediatría",
-        "emergency": "Urgencias"
+        "emergency": "Urgencias Dentales",
+        "oralRehab": "Rehabilitación Oral",
+        "aesthetics": "Estética Dental",
+        "surgery": "Cirugía Dental"
       }
     },
     "success_title": "¡Cita solicitada con éxito!",
     "success_message": "Hemos recibido tu solicitud. Nos pondremos en contacto contigo en menos de 24 horas para confirmar tu cita.",
     "contact_info": {
       "title": "También puedes contactarnos por",
-      "phone": "+51 (01) 234-5678",
+      "phone": "+51 942 661 120",
       "whatsapp": "WhatsApp disponible",
       "hours_title": "Horario de atención",
-      "hours_weekdays": "Lun – Vie: 9:00 am – 7:00 pm",
-      "hours_saturday": "Sábado: 9:00 am – 2:00 pm",
-      "hours_sunday": "Domingo: Urgencias 24h"
+      "hours_weekdays": "Lun – Vie: 9:00 am – 1:00 pm y 3:00 pm – 8:00 pm",
+      "hours_saturday": "Sábado: 9:00 am – 1:00 pm y 3:00 pm – 6:00 pm",
+      "hours_sunday": "Domingo y feriados: cerrado · urgencias por WhatsApp"
+    },
+    "faq_title": "Preguntas Frecuentes",
+    "faq_subtitle": "Resolvemos las dudas más comunes de nuestros pacientes.",
+    "faq": {
+      "q1": {
+        "question": "¿Aceptan seguros médicos o EPS?",
+        "answer": "Por el momento no trabajamos con seguros médicos ni EPS."
+      },
+      "q2": {
+        "question": "¿Tienen facilidades de pago o financiamiento?",
+        "answer": "Sí. Ofrecemos financiamiento directo en implantes y ortodoncia, además de facilidades de pago en los demás tratamientos, sin intereses ni recargos."
+      },
+      "q3": {
+        "question": "¿Cuánto dura una consulta de evaluación?",
+        "answer": "Depende del caso: puede durar entre 15 minutos y 2 horas, según el tratamiento a evaluar."
+      },
+      "q4": {
+        "question": "¿Atienden a niños desde qué edad?",
+        "answer": "Sí, atendemos desde los 5 meses de edad, con consejería a los padres sobre el cuidado bucal de sus hijos."
+      },
+      "q5": {
+        "question": "¿Qué hago si tengo una emergencia dental fuera de horario?",
+        "answer": "Comunícate con nosotros por WhatsApp y te ayudamos a resolver tu urgencia lo más pronto posible."
+      }
     }
   },
   "contact": {
     "hero_title": "Contáctanos",
     "hero_subtitle": "Estamos aquí para responder tus preguntas y ayudarte a comenzar tu tratamiento.",
     "address_label": "Dirección",
-    "address": "Av. Próceres De Huandoy 7865, Ur Pro, Los Olivos",
-    "phone_label": "Teléfono",
-    "phone": "+51 (01) 234-5678",
+    "address": "Av. Próceres de Huandoy 7865, Urb. Pro, Los Olivos, Lima",
+    "phone_label": "Teléfono / WhatsApp",
+    "phone": "+51 942 661 120",
     "email_label": "Correo electrónico",
-    "email": "contacto@dentaltello.pe",
+    "email": "dgt_21@hotmail.com",
     "hours_label": "Horario",
-    "hours_weekdays": "Lun – Vie: 9:00 am – 7:00 pm",
-    "hours_saturday": "Sáb: 9:00 am – 2:00 pm",
+    "hours_weekdays": "Lun – Vie: 9:00 am – 1:00 pm y 3:00 pm – 8:00 pm",
+    "hours_saturday": "Sáb: 9:00 am – 1:00 pm y 3:00 pm – 6:00 pm",
     "social_title": "Síguenos en redes",
     "map_label": "Ubicación en Google Maps"
   },
   "footer": {
-    "description": "Clínica odontológica de alta especialidad en Lima. Comprometidos con tu salud bucal y tu sonrisa.",
+    "description": "Clínica odontológica con más de 26 años de experiencia en Los Olivos. Especialistas en rehabilitación oral, estética dental e implantes.",
     "nav_title": "Navegación",
     "contact_title": "Contacto rápido",
-    "address": "Av. Próceres De Huandoy 7865, Ur Pro, Los Olivos",
-    "phone": "+51 (01) 234-5678",
-    "email": "contacto@dentaltello.pe",
+    "address": "Av. Próceres de Huandoy 7865, Urb. Pro, Los Olivos, Lima",
+    "phone": "+51 942 661 120",
+    "email": "dgt_21@hotmail.com",
     "copyright": "© 2026 Dental Tello. Desarrollado por DevHorses."
   },
   "whatsapp": {

@@ -102,6 +102,54 @@
   color: var(--color-text-muted);
 }
 
+.credentials {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--color-primary-dark);
+  background: rgba(14, 124, 102, 0.08);
+  border: 1px solid rgba(14, 124, 102, 0.16);
+  border-radius: var(--radius-full);
+  padding: 5px 14px;
+}
+
+.educationTitle {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-text-muted);
+  margin-top: 0.5rem;
+}
+
+.educationList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.educationList li {
+  display: flex;
+  gap: 0.625rem;
+  align-items: flex-start;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.educationList li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  margin-top: 0.55em;
+  border-radius: 50%;
+  background: var(--gradient-brand);
+}
+
 /* Stats */
 .statsGrid {
   display: grid;
@@ -180,6 +228,55 @@
 
 .valueCard h3 { font-size: 1.0625rem; font-weight: 600; color: var(--color-text); }
 .valueCard p  { font-size: 0.9375rem; line-height: 1.7; }
+
+/* Team */
+.teamGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .teamGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.teamCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.7);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  transition: box-shadow var(--transition-slow), transform var(--transition-spring);
+}
+
+.teamCard:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-3px);
+}
+
+.teamAvatar {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-brand);
+  border-radius: 50%;
+  color: #fff;
+}
+
+.teamAvatar svg { width: 24px; height: 24px; }
+
+.teamName { font-size: 1.0625rem; font-weight: 600; color: var(--color-text); }
+.teamRole { font-size: 0.875rem; color: var(--color-text-muted); }
 
 /* Facilities */
 .facilitiesGrid {

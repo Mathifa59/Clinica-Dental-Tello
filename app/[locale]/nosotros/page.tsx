@@ -8,6 +8,8 @@ import styles from './page.module.css';
 
 const DOCTOR_IMAGE = '/images/about/doctor-tello.png';
 
+const TEAM_KEYS = ['member1', 'member2', 'member3'] as const;
+
 const FACILITY_PHOTOS = [
   { key: 'exterior', src: '/images/clinic/exterior-amplio.jpg' },
   { key: 'reception', src: '/images/clinic/recepcion.jpg' },
@@ -104,9 +106,44 @@ export default function AboutPage() {
               <div className={styles.doctorInfo}>
                 <span className="eyebrow">{t('doctor_subtitle')}</span>
                 <h2>{t('doctor_title')}</h2>
+                <span className={styles.credentials}>{t('doctor_credentials')}</span>
                 <p className={styles.bio}>{t('doctor_bio')}</p>
+                <span className={styles.educationTitle}>{t('doctor_education_title')}</span>
+                <ul className={styles.educationList}>
+                  <li>{t('doctor_education.degree')}</li>
+                  <li>{t('doctor_education.spec1')}</li>
+                  <li>{t('doctor_education.spec2')}</li>
+                </ul>
               </div>
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section className="section--gradient">
+        <div className="container">
+          <Reveal>
+            <div className="section-header">
+              <h2>{t('team_title')}</h2>
+              <p>{t('team_subtitle')}</p>
+            </div>
+          </Reveal>
+          <div className={styles.teamGrid}>
+            {TEAM_KEYS.map((key, i) => (
+              <Reveal key={key} delay={i * 100} direction="scale">
+                <div className={styles.teamCard}>
+                  <div className={styles.teamAvatar}>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                      <circle cx="12" cy="7" r="4" />
+                    </svg>
+                  </div>
+                  <span className={styles.teamName}>{t(`team.${key}.name` as Parameters<typeof t>[0])}</span>
+                  <span className={styles.teamRole}>{t(`team.${key}.role` as Parameters<typeof t>[0])}</span>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>

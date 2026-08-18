@@ -29,7 +29,7 @@ export default function Footer() {
           <p className={styles.description}>{t('description')}</p>
           <div className={styles.socials}>
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/dr.daniel.tello"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.social}
@@ -42,18 +42,18 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://facebook.com"
+              href="https://www.tiktok.com/@dr.daniel.tello"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.social}
-              aria-label="Facebook"
+              aria-label="TikTok"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
               </svg>
             </a>
             <a
-              href="https://wa.me/51999999999"
+              href="https://wa.me/51942661120"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.social}

@@ -82,6 +82,37 @@ const serviceData = [
       </svg>
     ),
   },
+  {
+    key: 'oralRehab',
+    placeholderLabel: 'images/services/oral-rehab.jpg',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 8l4 3 5-6 5 6 4-3-2 10H5L3 8z" />
+        <path d="M5 18h14" />
+      </svg>
+    ),
+  },
+  {
+    key: 'aesthetics',
+    placeholderLabel: 'images/services/aesthetics.jpg',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M6 3h12l4 6-10 12L2 9z" />
+        <path d="M2 9h20M9 3l3 6 3-6M9 9l3 12 3-12" />
+      </svg>
+    ),
+  },
+  {
+    key: 'surgery',
+    placeholderLabel: 'images/services/surgery.jpg',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 20L14 10" />
+        <path d="M14 10l6-6a2 2 0 0 0-3-3l-6 6" />
+        <circle cx="4" cy="20" r="1.5" fill="currentColor" stroke="none" />
+      </svg>
+    ),
+  },
 ];
 
 export default function ServicesPage() {
