@@ -15,7 +15,7 @@
 }
 
 .item[open] {
-  border-color: rgba(14, 124, 102, 0.25);
+  border-color: rgba(25, 125, 159, 0.25);
   box-shadow: var(--shadow-card);
 }
 
