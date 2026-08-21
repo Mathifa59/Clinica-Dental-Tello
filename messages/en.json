@@ -4,9 +4,7 @@
     "services": "Services",
     "cases": "Cases",
     "about": "About Us",
-    "blog": "Blog",
     "appointments": "Appointments",
-    "contact": "Contact",
     "cta": "Book Appointment"
   },
   "home": {
@@ -42,17 +40,9 @@
         "name": "Dental Implants",
         "description": "Personalized evaluation with a CT scan, safe implant placement and crown fitting in porcelain or zirconia. Recover your missing tooth naturally, without affecting neighboring teeth."
       },
-      "cleaning": {
-        "name": "Cleaning & Prophylaxis",
-        "description": "Ultrasonic scaling to remove tartar, plus prophylaxis with electric brushing. Keeps your mouth free of bacterial plaque, with fresh breath and healthy gums."
-      },
       "whitening": {
         "name": "Teeth Whitening",
         "description": "Up to two in-office sessions with a professional whitening gel applied for 1 to 2 hours. Visibly whiter teeth, with natural-looking, aesthetic results."
-      },
-      "pediatric": {
-        "name": "Pediatric Dentistry",
-        "description": "Cleaning, cavity prevention and guidance for parents on caring for their children's teeth. Fluoride prophylaxis, restorations and sealants from the first months of life."
       },
       "emergency": {
         "name": "Dental Emergencies",
@@ -173,31 +163,6 @@
       }
     }
   },
-  "blog": {
-    "hero_title": "Dental Blog",
-    "hero_subtitle": "Tips, news and education to care for your oral health.",
-    "read_more": "Read more →",
-    "posts": {
-      "post1": {
-        "title": "How often should I visit the dentist?",
-        "excerpt": "Most people underestimate the importance of preventive visits. Discover why the right frequency can save you time, money and discomfort.",
-        "category": "Prevention",
-        "date": "June 10, 2026"
-      },
-      "post2": {
-        "title": "Everything about dental implants",
-        "excerpt": "Dental implants represent the most advanced solution for replacing lost teeth. We explain the process, duration, care and why the investment is worth it.",
-        "category": "Treatments",
-        "date": "May 28, 2026"
-      },
-      "post3": {
-        "title": "How stress affects your oral health",
-        "excerpt": "Bruxism, ulcers and periodontal disease have a direct link to chronic stress. Learn the warning signs and how to protect your mouth.",
-        "category": "General Health",
-        "date": "May 15, 2026"
-      }
-    }
-  },
   "appointments": {
     "hero_title": "Book Appointment",
     "hero_subtitle": "Schedule your consultation in a few steps. We will confirm within 24 hours.",
@@ -225,9 +190,7 @@
       "services": {
         "orthodontics": "Orthodontics",
         "implants": "Dental Implants",
-        "cleaning": "Cleaning & Prophylaxis",
         "whitening": "Teeth Whitening",
-        "pediatric": "Pediatric Dentistry",
         "emergency": "Dental Emergencies",
         "oralRehab": "Oral Rehabilitation",
         "aesthetics": "Dental Aesthetics",

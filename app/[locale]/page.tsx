@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
 const HERO_VIDEO = '/videos/hero.mp4';
 const CLINIC_VIDEO = '/videos/clinica.mp4';
 
-const SERVICE_KEYS = ['orthodontics', 'implants', 'cleaning', 'whitening', 'pediatric', 'emergency', 'oralRehab', 'aesthetics', 'surgery'] as const;
+const SERVICE_KEYS = ['orthodontics', 'implants', 'whitening', 'emergency', 'oralRehab', 'aesthetics', 'surgery'] as const;
 
 const serviceIcons = {
   orthodontics: (
@@ -37,10 +37,10 @@ const serviceIcons = {
       <path d="M8 12h8l1 8H7l1-8z" /><path d="M10 16h4" />
     </svg>
   ),
-  cleaning: (
+  whitening: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      <path d="M9 12l2 2 4-4" />
+      <circle cx="12" cy="12" r="5" />
+      <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
     </svg>
   ),
 };
@@ -67,7 +67,7 @@ export default function HomePage() {
   const featuredServices = [
     { key: 'orthodontics', icon: serviceIcons.orthodontics, imageSrc: '/images/services/orthodontics.jpg', placeholder: 'images/services/orthodontics.jpg' },
     { key: 'implants',     icon: serviceIcons.implants,     imageSrc: '/images/services/implants.jpg',     placeholder: 'images/services/implants.jpg' },
-    { key: 'cleaning',     icon: serviceIcons.cleaning,     imageSrc: '/images/services/cleaning.jpg',     placeholder: 'images/services/cleaning.jpg' },
+    { key: 'whitening',    icon: serviceIcons.whitening,    imageSrc: '/images/services/whitening.jpg',    placeholder: 'images/services/whitening.jpg' },
   ];
 
   const marqueeNames = SERVICE_KEYS.map((key) =>

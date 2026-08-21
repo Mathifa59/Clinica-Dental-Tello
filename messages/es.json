@@ -4,9 +4,7 @@
     "services": "Servicios",
     "cases": "Casos",
     "about": "Nosotros",
-    "blog": "Blog",
     "appointments": "Citas",
-    "contact": "Contacto",
     "cta": "Reservar cita"
   },
   "home": {
@@ -42,17 +40,9 @@
         "name": "Implantes Dentales",
         "description": "Evaluación personalizada con tomografía, instalación segura del implante y colocación de la corona en porcelana o zirconia. Recupera el diente perdido de forma natural, sin afectar los dientes vecinos."
       },
-      "cleaning": {
-        "name": "Limpieza y Profilaxis",
-        "description": "Destartaje con ultrasonido para eliminar el sarro, más profilaxis con cepillado eléctrico. Mantiene la boca libre de placa bacteriana, con aliento fresco y encías saludables."
-      },
       "whitening": {
         "name": "Blanqueamiento Dental",
         "description": "Hasta dos sesiones en consultorio con gel aclarador profesional aplicado durante 1 a 2 horas. Dientes visiblemente más blancos, con resultados estéticos y de apariencia natural."
-      },
-      "pediatric": {
-        "name": "Odontopediatría",
-        "description": "Limpieza, prevención de caries y consejería a los padres sobre el cuidado bucal de los más pequeños. Profilaxis con flúor, restauraciones y sellado de fosas y fisuras desde los primeros meses de vida."
       },
       "emergency": {
         "name": "Urgencias Dentales",
@@ -173,31 +163,6 @@
       }
     }
   },
-  "blog": {
-    "hero_title": "Blog Dental",
-    "hero_subtitle": "Consejos, novedades y educación para cuidar tu salud bucal.",
-    "read_more": "Leer más →",
-    "posts": {
-      "post1": {
-        "title": "¿Con qué frecuencia debo visitar al dentista?",
-        "excerpt": "La mayoría de las personas subestima la importancia de las visitas preventivas. Descubre por qué la frecuencia adecuada puede ahorrarte tiempo, dinero y molestias.",
-        "category": "Prevención",
-        "date": "10 junio 2026"
-      },
-      "post2": {
-        "title": "Todo sobre los implantes dentales",
-        "excerpt": "Los implantes dentales representan la solución más avanzada para reemplazar dientes perdidos. Te explicamos el proceso, duración, cuidados y por qué vale la pena la inversión.",
-        "category": "Tratamientos",
-        "date": "28 mayo 2026"
-      },
-      "post3": {
-        "title": "Cómo el estrés afecta tu salud bucal",
-        "excerpt": "El bruxismo, las úlceras y la enfermedad periodontal tienen un vínculo directo con el estrés crónico. Conoce los signos de alerta y cómo proteger tu boca.",
-        "category": "Salud General",
-        "date": "15 mayo 2026"
-      }
-    }
-  },
   "appointments": {
     "hero_title": "Reservar Cita",
     "hero_subtitle": "Agenda tu consulta en pocos pasos. Te confirmaremos en menos de 24 horas.",
@@ -225,9 +190,7 @@
       "services": {
         "orthodontics": "Ortodoncia",
         "implants": "Implantes Dentales",
-        "cleaning": "Limpieza y Profilaxis",
         "whitening": "Blanqueamiento Dental",
-        "pediatric": "Odontopediatría",
         "emergency": "Urgencias Dentales",
         "oralRehab": "Rehabilitación Oral",
         "aesthetics": "Estética Dental",

@@ -7,16 +7,14 @@ import { usePathname } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
 import styles from './Header.module.css';
 
-const NAV_KEYS = ['home', 'services', 'cases', 'about', 'blog', 'appointments', 'contact'] as const;
+const NAV_KEYS = ['home', 'services', 'cases', 'about', 'appointments'] as const;
 
 const NAV_ROUTES: Record<string, string> = {
   home: '/',
   services: '/servicios',
   cases: '/casos',
   about: '/nosotros',
-  blog: '/blog',
   appointments: '/citas',
-  contact: '/contacto',
 };
 
 export default function Header() {

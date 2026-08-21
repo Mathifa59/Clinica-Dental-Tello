@@ -11,10 +11,9 @@ export default function Footer() {
   const navLinks = [
     { key: 'home', href: '/' },
     { key: 'services', href: '/servicios' },
+    { key: 'cases', href: '/casos' },
     { key: 'about', href: '/nosotros' },
-    { key: 'blog', href: '/blog' },
     { key: 'appointments', href: '/citas' },
-    { key: 'contact', href: '/contacto' },
   ];
 
   const localePath = (path: string) => `/${locale}${path === '/' ? '' : path}`;

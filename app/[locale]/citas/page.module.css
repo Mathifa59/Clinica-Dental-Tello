@@ -318,3 +318,146 @@
   font-size: inherit;
   color: inherit;
 }
+
+/* ── Contacto (sección azul, tarjetas de vidrio) ─────────────────────────── */
+.contactWrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .contactWrap {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.contactInfoCard {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: var(--shadow-card-hover);
+}
+
+.contactInfoItem {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.contactInfoIcon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-brand);
+  border-radius: var(--radius-md);
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.contactInfoIcon svg { width: 19px; height: 19px; }
+
+.contactInfoLabel {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin-bottom: 3px;
+}
+
+.contactInfoValue {
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.contactInfoLink {
+  font-size: 0.9375rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  transition: color var(--transition);
+  display: inline-block;
+}
+
+.contactInfoLink:hover { color: var(--color-primary-dark); }
+
+.contactSocialSection {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.contactSocialTitle {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.875rem;
+}
+
+.contactSocialRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+.contactSocialPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  background: var(--color-bg-soft);
+  border-radius: var(--radius-full);
+  padding: 8px 16px;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.contactSocialPill:hover {
+  background: var(--color-primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.contactMediaCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contactExterior {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.contactExterior img {
+  transition: transform 0.7s cubic-bezier(0.22,1,0.36,1) !important;
+}
+
+.contactExterior:hover img { transform: scale(1.04); }
+
+.contactMapEmbed {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: var(--shadow-card-hover);
+}
