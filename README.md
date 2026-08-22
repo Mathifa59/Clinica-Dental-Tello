@@ -189,7 +189,6 @@ El proyecto está listo para desplegarse en **Vercel** (recomendado para Next.js
 - [ ] Fotos reales para Rehabilitación Oral, Estética Dental y Cirugía Dental (`public/images/services/oral-rehab.jpg`, `aesthetics.jpg`, `surgery.jpg`) — ya están destacadas en Inicio con placeholder a la espera
 - [ ] Actualizar el logo a la nueva paleta azul/petróleo (a cargo de la agencia)
 - [ ] Header y Footer usan actualmente dos archivos de logo distintos (`/images/brand/logo-horizontal.png` y `/logo-horizontal.png`) — conviene unificar a uno solo
-- [ ] `public/images/` tiene archivos sueltos duplicados en la raíz (reaparecieron al fusionar una rama anterior) — pendiente una limpieza como la que se hizo antes
 - [ ] Conectar el formulario de citas a un backend o servicio de email real (Resend, EmailJS, etc.)
 - [ ] Añadir dominio personalizado en Vercel
 
