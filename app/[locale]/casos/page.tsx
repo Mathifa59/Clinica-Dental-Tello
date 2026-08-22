@@ -27,7 +27,6 @@ const CASE_DATA = [
   { key: 'protesisTotal', slug: 'protesis-total', images: ['01-comparacion.jpg', '02-sonrisa.jpg', '03-sonrisa-lateral.jpg'] },
   { key: 'protocoloImplantes', slug: 'protocolo-implantes', images: ['01-modelo.jpg', '02-prueba.jpg', '03-sonrisa.jpg', '04-sonrisa-detalle.jpg'] },
   { key: 'resinaEstetica', slug: 'resina-estetica', images: ['01-antes.jpg', '02-proceso.jpg'] },
-  { key: 'radiografias', slug: 'radiografias', images: ['01-implantes.png', '02-endodoncia.png'] },
 ] as const;
 
 export default function CasosPage() {
