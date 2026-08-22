@@ -114,6 +114,13 @@ export default function AboutPage() {
                   <li>{t('doctor_education.spec1')}</li>
                   <li>{t('doctor_education.spec2')}</li>
                 </ul>
+                <div className={styles.doctorStats}>
+                  {stats.map((s, i) => (
+                    <Reveal key={s.label} delay={i * 90} direction="scale">
+                      <StatCard value={s.value} label={s.label} />
+                    </Reveal>
+                  ))}
+                </div>
               </div>
             </Reveal>
           </div>
@@ -121,7 +128,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="section--gradient">
+      <section className="section--dark">
         <div className="container">
           <Reveal>
             <div className="section-header">
@@ -142,19 +149,6 @@ export default function AboutPage() {
                   <span className={styles.teamName}>{t(`team.${key}.name` as Parameters<typeof t>[0])}</span>
                   <span className={styles.teamRole}>{t(`team.${key}.role` as Parameters<typeof t>[0])}</span>
                 </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="section--gradient">
-        <div className="container">
-          <div className={styles.statsGrid}>
-            {stats.map((s, i) => (
-              <Reveal key={s.label} delay={i * 100} direction="scale">
-                <StatCard value={s.value} label={s.label} />
               </Reveal>
             ))}
           </div>
