@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
 const HERO_VIDEO = '/videos/hero.mp4';
 const CLINIC_VIDEO = '/videos/clinica.mp4';
 
-const SERVICE_KEYS = ['orthodontics', 'implants', 'whitening', 'emergency', 'oralRehab', 'aesthetics', 'surgery'] as const;
+const SERVICE_KEYS = ['orthodontics', 'implants', 'emergency', 'oralRehab', 'aesthetics', 'surgery'] as const;
 
 const serviceIcons = {
   oralRehab: (

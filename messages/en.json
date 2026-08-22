@@ -40,10 +40,6 @@
         "name": "Dental Implants",
         "description": "Personalized evaluation with a CT scan, safe implant placement and crown fitting in porcelain or zirconia. Recover your missing tooth naturally, without affecting neighboring teeth."
       },
-      "whitening": {
-        "name": "Teeth Whitening",
-        "description": "Up to two in-office sessions with a professional whitening gel applied for 1 to 2 hours. Visibly whiter teeth, with natural-looking, aesthetic results."
-      },
       "emergency": {
         "name": "Dental Emergencies",
         "description": "Immediate attention for acute pain, swelling or other dental trauma. Message us on WhatsApp and we'll help resolve your emergency as soon as possible."
@@ -186,7 +182,6 @@
       "services": {
         "orthodontics": "Orthodontics",
         "implants": "Dental Implants",
-        "whitening": "Teeth Whitening",
         "emergency": "Dental Emergencies",
         "oralRehab": "Oral Rehabilitation",
         "aesthetics": "Dental Aesthetics",

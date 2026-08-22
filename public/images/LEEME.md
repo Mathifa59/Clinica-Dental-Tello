@@ -16,7 +16,7 @@ Estado de los recursos del sitio. Los archivos ya organizados se toman automáti
 | `services/orthodontics.jpg` | Tarjeta Ortodoncia |
 | `services/implants.jpg` | Tarjeta Implantes Dentales |
 | `services/emergency.jpg` | Tarjeta Urgencias Dentales |
-| `casos/*/` | 10 categorías de casos clínicos reales (página Casos) — ver `casos-review` en el historial de commits para el detalle de cada una |
+| `casos/*/` | 9 categorías de casos clínicos reales (página Casos) — ver `casos-review` en el historial de commits para el detalle de cada una |
 | `../videos/hero.mp4` | Video vertical del hero en Inicio (entrada al consultorio) |
 | `../videos/clinica.mp4` | Video de la sección "Nuestra clínica" en Inicio |
 
@@ -26,7 +26,6 @@ Estado de los recursos del sitio. Los archivos ya organizados se toman automáti
 
 | Archivo | Dónde aparecería |
 |---|---|
-| `services/whitening.jpg` | Blanqueamiento Dental (Servicios) — el archivo existe pero es una foto de stock genérica; se quitó de la vista a propósito y espera una foto real con este mismo nombre |
 | `services/oral-rehab.jpg` | Rehabilitación Oral — destacado en Inicio, hoy con placeholder |
 | `services/aesthetics.jpg` | Estética Dental — destacado en Inicio, hoy con placeholder |
 | `services/surgery.jpg` | Cirugía Dental — destacado en Inicio, hoy con placeholder |

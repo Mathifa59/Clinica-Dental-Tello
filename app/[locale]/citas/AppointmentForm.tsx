@@ -20,7 +20,7 @@ type FormState = {
 type FormErrors = Partial<Record<keyof FormState, string>>;
 type Status = 'idle' | 'loading' | 'success';
 
-const SERVICE_KEYS = ['orthodontics', 'implants', 'whitening', 'emergency', 'oralRehab', 'aesthetics', 'surgery'] as const;
+const SERVICE_KEYS = ['orthodontics', 'implants', 'emergency', 'oralRehab', 'aesthetics', 'surgery'] as const;
 
 const EXTERIOR_IMAGE = '/images/clinic/exterior.png';
 

@@ -31,9 +31,9 @@ Sitio web corporativo de 5 páginas diseñado para presentar los servicios de la
 
 | Ruta | Página | Descripción |
 |---|---|---|
-| `/es` o `/en` | **Inicio** | Hero con video vertical (entrada al consultorio), estadísticas, marquee animado con los 7 servicios, video de "Nuestra clínica", 3 servicios destacados |
-| `/es/servicios` | **Servicios** | 7 tarjetas de servicio (Ortodoncia, Implantes, Blanqueamiento, Urgencias, Rehabilitación Oral, Estética Dental, Cirugía Dental) |
-| `/es/casos` | **Casos** | Portafolio de 10 categorías de casos clínicos reales, cada una con carrusel de fotos (antes/después o proceso), con swipe táctil en móvil |
+| `/es` o `/en` | **Inicio** | Hero con video vertical (entrada al consultorio), estadísticas, marquee animado con los 6 servicios, video de "Nuestra clínica", 3 servicios destacados |
+| `/es/servicios` | **Servicios** | 6 tarjetas de servicio (Ortodoncia, Implantes, Urgencias, Rehabilitación Oral, Estética Dental, Cirugía Dental) |
+| `/es/casos` | **Casos** | Portafolio de 9 categorías de casos clínicos reales, cada una con carrusel de fotos (antes/después o proceso), con swipe táctil en móvil |
 | `/es/nosotros` | **Nosotros** | Perfil, credenciales y formación del Dr. Tello (con estadísticas integradas en la misma columna), equipo médico (3 doctores, sección con fondo oscuro), valores, galería de instalaciones |
 | `/es/citas` | **Citas** | Formulario de reserva + FAQ (5 preguntas) + bloque de contacto completo (dirección, horario, redes, teléfono/WhatsApp) + mapa real embebido de Google Maps. Fusiona lo que antes eran dos páginas separadas (Citas y Contacto) alternando franjas oscura/blanca/azul/clara |
 
@@ -74,13 +74,13 @@ clinica-dental-tello/
 │   ├── videos/                  # hero.mp4 (vertical, entrada al consultorio), clinica.mp4
 │   └── images/
 │       ├── brand/                # Logo usado en el Header
-│       ├── services/              # 4 de 7 servicios con foto (Ortodoncia, Implantes,
-│       │                          #  Blanqueamiento, Urgencias) — faltan Rehabilitación
-│       │                          #  Oral, Estética Dental y Cirugía (por eso están
-│       │                          #  destacados en Inicio, a la espera de sus fotos)
+│       ├── services/              # 3 de 6 servicios con foto (Ortodoncia, Implantes,
+│       │                          #  Urgencias) — faltan Rehabilitación Oral, Estética
+│       │                          #  Dental y Cirugía (por eso están destacados en
+│       │                          #  Inicio, a la espera de sus fotos)
 │       ├── about/                 # doctor-tello.png
 │       ├── clinic/                # fachada, consultorio, recepción, sala de espera, equipos
-│       └── casos/                 # 10 carpetas con fotos reales de casos clínicos
+│       └── casos/                 # 9 carpetas con fotos reales de casos clínicos
 ├── middleware.ts                # Enrutamiento de locales (es/en)
 ├── i18n.ts                      # Configuración next-intl
 └── next.config.mjs              # Config Next.js con plugin i18n
@@ -116,7 +116,7 @@ clinica-dental-tello/
 - Gradientes lineales y radiales en hero, botones, badges e íconos
 - Glassmorphism (`backdrop-filter: blur`) en header al scroll, tarjetas de valores/equipo/stats
 - Videos de fondo verticales en el hero y en "Nuestra clínica" del inicio (`autoPlay muted loop playsInline`, sin controles nativos ni picture-in-picture)
-- Marquee animado con los 7 servicios en la página de inicio
+- Marquee animado con los 6 servicios en la página de inicio
 - Grano sutil (`body::after`) sobre toda la página vía SVG de ruido
 - Animaciones CSS: `fadeUp`, `fadeIn`, `scaleIn`, `float`, `shimmer`, `pulse-glow`, `aurora`, `marquee`
 - Scroll reveal con `IntersectionObserver` (sin librería JS, solo CSS transitions)
@@ -150,7 +150,7 @@ Datos reales actualmente en el sitio:
 
 ## Casos clínicos
 
-La página `/casos` muestra 10 categorías curadas a partir de **268 fotos clínicas reales** revisadas una por una (de una carpeta original de 1.5GB), seleccionando las que mejor documentan cada tratamiento sin mostrar contenido innecesariamente gráfico. Los nombres de archivo y carpetas no contienen ningún dato identificable de paciente; las fotos que muestran parte del rostro se incluyeron solo tras confirmar autorización del paciente con el Dr. Tello.
+La página `/casos` muestra 9 categorías curadas a partir de **268 fotos clínicas reales** revisadas una por una (de una carpeta original de 1.5GB), seleccionando las que mejor documentan cada tratamiento sin mostrar contenido innecesariamente gráfico. Los nombres de archivo y carpetas no contienen ningún dato identificable de paciente; las fotos que muestran parte del rostro se incluyeron solo tras confirmar autorización del paciente con el Dr. Tello.
 
 ---
 

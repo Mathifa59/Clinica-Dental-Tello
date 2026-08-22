@@ -40,10 +40,6 @@
         "name": "Implantes Dentales",
         "description": "Evaluación personalizada con tomografía, instalación segura del implante y colocación de la corona en porcelana o zirconia. Recupera el diente perdido de forma natural, sin afectar los dientes vecinos."
       },
-      "whitening": {
-        "name": "Blanqueamiento Dental",
-        "description": "Hasta dos sesiones en consultorio con gel aclarador profesional aplicado durante 1 a 2 horas. Dientes visiblemente más blancos, con resultados estéticos y de apariencia natural."
-      },
       "emergency": {
         "name": "Urgencias Dentales",
         "description": "Atención inmediata ante dolor agudo, hinchazón u otros traumatismos dentales. Escríbenos por WhatsApp y te ayudamos a resolver tu urgencia lo más pronto posible."
@@ -186,7 +182,6 @@
       "services": {
         "orthodontics": "Ortodoncia",
         "implants": "Implantes Dentales",
-        "whitening": "Blanqueamiento Dental",
         "emergency": "Urgencias Dentales",
         "oralRehab": "Rehabilitación Oral",
         "aesthetics": "Estética Dental",
