@@ -90,7 +90,6 @@ export default function AppointmentForm() {
     <>
       <div className="page-hero">
         <div className="container">
-          <span className="eyebrow">{t('hero_title')}</span>
           <h1>{t('hero_title')}</h1>
           <p>{t('hero_subtitle')}</p>
         </div>

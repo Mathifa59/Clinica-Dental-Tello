@@ -72,9 +72,8 @@ export default function AboutPage() {
     <>
       <div className="page-hero">
         <div className="container">
-          <span className="eyebrow animate-fade-up">{t('hero_title')}</span>
-          <h1 className="animate-fade-up animate-delay-1">{t('hero_title')}</h1>
-          <p className="animate-fade-up animate-delay-2">{t('hero_subtitle')}</p>
+          <h1 className="animate-fade-up">{t('hero_title')}</h1>
+          <p className="animate-fade-up animate-delay-1">{t('hero_subtitle')}</p>
         </div>
       </div>
 
