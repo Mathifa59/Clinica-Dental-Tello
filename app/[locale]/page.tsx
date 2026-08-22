@@ -25,22 +25,23 @@ const CLINIC_VIDEO = '/videos/clinica.mp4';
 const SERVICE_KEYS = ['orthodontics', 'implants', 'whitening', 'emergency', 'oralRehab', 'aesthetics', 'surgery'] as const;
 
 const serviceIcons = {
-  orthodontics: (
+  oralRehab: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 2C8.5 2 6 4.5 6 7c0 1.5.5 2.5 1 3.5L8 14h2l.5 2h3l.5-2h2l1-3.5c.5-1 1-2 1-3.5C17 4.5 15.5 2 12 2z" />
-      <path d="M9 7h6" /><path d="M9 10h6" />
+      <path d="M3 8l4 3 5-6 5 6 4-3-2 10H5L3 8z" />
+      <path d="M5 18h14" />
     </svg>
   ),
-  implants: (
+  aesthetics: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 2v10" /><path d="M9 5l3-3 3 3" />
-      <path d="M8 12h8l1 8H7l1-8z" /><path d="M10 16h4" />
+      <path d="M6 3h12l4 6-10 12L2 9z" />
+      <path d="M2 9h20M9 3l3 6 3-6M9 9l3 12 3-12" />
     </svg>
   ),
-  whitening: (
+  surgery: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="5" />
-      <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+      <path d="M4 20L14 10" />
+      <path d="M14 10l6-6a2 2 0 0 0-3-3l-6 6" />
+      <circle cx="4" cy="20" r="1.5" fill="currentColor" stroke="none" />
     </svg>
   ),
 };
@@ -65,9 +66,9 @@ export default function HomePage() {
   ];
 
   const featuredServices = [
-    { key: 'orthodontics', icon: serviceIcons.orthodontics, imageSrc: '/images/services/orthodontics.jpg', placeholder: 'images/services/orthodontics.jpg' },
-    { key: 'implants',     icon: serviceIcons.implants,     imageSrc: '/images/services/implants.jpg',     placeholder: 'images/services/implants.jpg' },
-    { key: 'whitening',    icon: serviceIcons.whitening,    imageSrc: '/images/services/whitening.jpg',    placeholder: 'images/services/whitening.jpg' },
+    { key: 'oralRehab',  icon: serviceIcons.oralRehab,  placeholder: 'images/services/oral-rehab.jpg' },
+    { key: 'aesthetics', icon: serviceIcons.aesthetics, placeholder: 'images/services/aesthetics.jpg' },
+    { key: 'surgery',    icon: serviceIcons.surgery,    placeholder: 'images/services/surgery.jpg' },
   ];
 
   const marqueeNames = SERVICE_KEYS.map((key) =>
@@ -189,7 +190,7 @@ export default function HomePage() {
             </div>
           </Reveal>
           <div className="grid-3">
-            {featuredServices.map(({ key, icon, imageSrc, placeholder }, i) => (
+            {featuredServices.map(({ key, icon, placeholder }, i) => (
               <Reveal key={key} delay={i * 100} direction="scale">
                 <ServiceCard
                   icon={icon}
@@ -197,7 +198,6 @@ export default function HomePage() {
                   description={tServices(`items.${key}.description` as Parameters<typeof tServices>[0])}
                   learnMore={tServices('learn_more')}
                   href="servicios"
-                  imageSrc={imageSrc}
                   imageAlt={tServices(`items.${key}.name` as Parameters<typeof tServices>[0])}
                   placeholderLabel={placeholder}
                 />
