@@ -41,7 +41,6 @@ const serviceData = [
   },
   {
     key: 'whitening',
-    imageSrc: '/images/services/whitening.jpg',
     placeholderLabel: 'images/services/whitening.jpg',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
