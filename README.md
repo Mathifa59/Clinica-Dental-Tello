@@ -104,7 +104,7 @@ clinica-dental-tello/
 
 > **Fondo "aurora":** las secciones oscuras (`.section--dark`, hero de Inicio, page-hero de páginas internas, Footer) usan `--aurora-dark`, cuatro capas de radiales azul/teal que se desplazan lentamente con `@keyframes aurora`, con `h2`/`h3`/`p` invertidos automáticamente a texto claro. `.section--blue` es la variante más sutil para romper franjas blancas consecutivas (usada en Citas).
 
-> El logo aún no fue actualizado por la agencia a la nueva paleta — sigue pendiente.
+> **Logo oficial:** `public/images/brand/logo-horizontal.png` — versión rebrandeada, sin fondo, en la paleta azul/petróleo. Usado en Header y Footer directamente sobre cualquier fondo (claro u oscuro) gracias a la transparencia. El material fuente entregado por la agencia vive en `public/images/logo/` a la espera de variantes adicionales (ícono solo, versión vertical, modo oscuro, etc.).
 
 ### Tipografía
 
@@ -187,8 +187,7 @@ El proyecto está listo para desplegarse en **Vercel** (recomendado para Next.js
 ## Pendiente / próximos pasos
 
 - [ ] Fotos reales para Rehabilitación Oral, Estética Dental y Cirugía Dental (`public/images/services/oral-rehab.jpg`, `aesthetics.jpg`, `surgery.jpg`) — ya están destacadas en Inicio con placeholder a la espera
-- [ ] Actualizar el logo a la nueva paleta azul/petróleo (a cargo de la agencia)
-- [ ] Header y Footer usan actualmente dos archivos de logo distintos (`/images/brand/logo-horizontal.png` y `/logo-horizontal.png`) — conviene unificar a uno solo
+- [ ] Variantes adicionales del logo (ícono solo, versión vertical, modo oscuro) cuando la agencia las entregue — el material fuente va a `public/images/logo/`
 - [ ] Conectar el formulario de citas a un backend o servicio de email real (Resend, EmailJS, etc.)
 - [ ] Añadir dominio personalizado en Vercel
 

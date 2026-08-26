@@ -39,11 +39,9 @@
 
 .logo:hover { opacity: 0.85; }
 
-/* El PNG tiene fondo blanco; multiply lo funde con el fondo crema del header */
 .logoImg {
-  height: 52px;
+  height: 48px;
   width: auto;
-  mix-blend-mode: multiply;
 }
 
 .logoLight {

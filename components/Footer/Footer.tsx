@@ -23,7 +23,7 @@ export default function Footer() {
       <div className={styles.inner}>
         <div className={styles.col}>
           <div className={styles.logoWrap}>
-            <Image src="/logo-horizontal.png" alt="Dental Tello" height={40} width={170} style={{ objectFit: 'contain', objectPosition: 'left center' }} />
+            <Image src="/images/brand/logo-horizontal.png" alt="Dental Tello" height={520} width={1942} className={styles.logoImg} />
           </div>
           <p className={styles.description}>{t('description')}</p>
           <div className={styles.socials}>

@@ -55,8 +55,8 @@ export default function Header() {
           <Image
             src="/images/brand/logo-horizontal.png"
             alt="Dental Tello — Implantología y Rehabilitación Oral"
-            width={190}
-            height={134}
+            width={1942}
+            height={520}
             priority
             className={styles.logoImg}
           />
