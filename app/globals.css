@@ -76,7 +76,7 @@ html {
 }
 
 body {
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body), system-ui, -apple-system, sans-serif;
   color: var(--color-text);
   background-color: var(--color-bg);
   line-height: 1.6;
@@ -102,7 +102,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 ul, ol { list-style: none; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-jakarta), Georgia, serif;
+  font-family: var(--font-heading), Georgia, serif;
   line-height: 1.12;
   font-weight: 600;
   color: var(--color-text);
@@ -266,7 +266,7 @@ em, .italic-accent {
 /* Eyebrow pill */
 .eyebrow {
   display: inline-block;
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -287,7 +287,7 @@ em, .italic-accent {
   gap: 0.5rem;
   padding: 14px 32px;
   border-radius: var(--radius-full);
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 0.9375rem;
   font-weight: 600;
   letter-spacing: 0.01em;

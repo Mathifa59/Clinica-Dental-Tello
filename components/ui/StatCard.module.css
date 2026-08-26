@@ -51,7 +51,7 @@
 }
 
 .value {
-  font-family: var(--font-jakarta), Georgia, serif;
+  font-family: var(--font-heading), Georgia, serif;
   font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 700;
   line-height: 1;

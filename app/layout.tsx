@@ -2,13 +2,12 @@ import type { Metadata } from 'next';
 import { Fraunces, Figtree } from 'next/font/google';
 import './globals.css';
 
-// Fraunces → var(--font-jakarta) (títulos) · Figtree → var(--font-inter) (cuerpo).
-// Se conservan los nombres de variable para no tocar cada CSS Module.
+// Fraunces → var(--font-heading) (títulos) · Figtree → var(--font-body) (cuerpo).
 const fraunces = Fraunces({
   subsets: ['latin'],
   weight: 'variable',
   style: ['normal', 'italic'],
-  variable: '--font-jakarta',
+  variable: '--font-heading',
   display: 'swap',
   axes: ['opsz', 'SOFT', 'WONK'],
 });
@@ -16,7 +15,7 @@ const fraunces = Fraunces({
 const figtree = Figtree({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
-  variable: '--font-inter',
+  variable: '--font-body',
   display: 'swap',
 });
 

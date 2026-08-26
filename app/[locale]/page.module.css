@@ -59,7 +59,7 @@
   align-items: center;
   gap: 0.5rem;
   width: fit-content;
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.18em;
@@ -238,7 +238,7 @@
   display: block;
   font-size: 0.9375rem;
   color: var(--color-text-on-dark);
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-body), sans-serif;
 }
 
 .floatBadge small {
@@ -261,7 +261,7 @@
   display: inline-flex;
   align-items: center;
   gap: 3rem;
-  font-family: var(--font-jakarta), Georgia, serif;
+  font-family: var(--font-heading), Georgia, serif;
   font-size: 1.125rem;
   font-weight: 500;
   font-style: italic;

@@ -107,7 +107,7 @@
 
 /* Column title */
 .colTitle {
-  font-family: var(--font-jakarta), sans-serif;
+  font-family: var(--font-heading), sans-serif;
   font-size: 0.9375rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.9);
