@@ -40,17 +40,6 @@ const serviceData = [
     ),
   },
   {
-    key: 'whitening',
-    imageSrc: '/images/services/whitening.jpg',
-    placeholderLabel: 'images/services/whitening.jpg',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="5" />
-        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-      </svg>
-    ),
-  },
-  {
     key: 'emergency',
     imageSrc: '/images/services/emergency.jpg',
     placeholderLabel: 'images/services/emergency.jpg',
@@ -101,9 +90,8 @@ export default function ServicesPage() {
     <>
       <div className="page-hero">
         <div className="container">
-          <span className="eyebrow animate-fade-up">{t('hero_title')}</span>
-          <h1 className="animate-fade-up animate-delay-1">{t('hero_title')}</h1>
-          <p className="animate-fade-up animate-delay-2">{t('hero_subtitle')}</p>
+          <h1 className="animate-fade-up">{t('hero_title')}</h1>
+          <p className="animate-fade-up animate-delay-1">{t('hero_subtitle')}</p>
         </div>
       </div>
 
