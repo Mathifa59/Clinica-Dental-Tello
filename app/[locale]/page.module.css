@@ -1,6 +1,6 @@
 /* ─── Hero — oscuro con aurora animada ──────────────────────────────────── */
 .hero {
-  padding: clamp(4.5rem, 9vw, 8rem) 1.5rem clamp(2.5rem, 5vw, 4rem);
+  padding: clamp(2.5rem, 5vw, 5rem) 1.5rem clamp(2.5rem, 5vw, 4rem);
   background-color: var(--color-bg-dark);
   background-image: var(--aurora-dark);
   background-size: 180% 180%, 180% 180%, 180% 180%, 180% 180%;
@@ -45,7 +45,7 @@
 }
 
 @media (min-width: 1024px) {
-  .heroInner { grid-template-columns: 1.05fr 0.95fr; gap: 4rem; }
+  .heroInner { grid-template-columns: 1.05fr 0.95fr; gap: 4rem; align-items: start; }
 }
 
 .heroContent {

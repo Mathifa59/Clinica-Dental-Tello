@@ -104,7 +104,9 @@ clinica-dental-tello/
 
 > **Fondo "aurora":** las secciones oscuras (`.section--dark`, hero de Inicio, page-hero de páginas internas, Footer) usan `--aurora-dark`, cuatro capas de radiales azul/teal que se desplazan lentamente con `@keyframes aurora`, con `h2`/`h3`/`p` invertidos automáticamente a texto claro. `.section--blue` es la variante más sutil para romper franjas blancas consecutivas (usada en Citas).
 
-> **Logo oficial:** `public/images/brand/logo-horizontal.png` — versión rebrandeada, sin fondo, en la paleta azul/petróleo. Usado en Header y Footer directamente sobre cualquier fondo (claro u oscuro) gracias a la transparencia. El material fuente entregado por la agencia vive en `public/images/logo/` a la espera de variantes adicionales (ícono solo, versión vertical, modo oscuro, etc.).
+> **Logo oficial:** `public/images/brand/logo-horizontal.png` — versión rebrandeada, sin fondo, en la paleta azul/petróleo. Usado en Header y Footer directamente sobre cualquier fondo (claro u oscuro) gracias a la transparencia. El material fuente entregado por la agencia vive en `public/images/logo/` a la espera de variantes adicionales (versión vertical, modo oscuro, etc.).
+>
+> **Favicon:** `app/icon.png` (512×512, transparente), `app/apple-icon.png` (180×180, fondo sólido) y `app/favicon.ico` (16/32/48px) — generados a partir del ícono oficial (diente + implante, sin texto) mediante la convención de archivos de Next.js. No usar la propiedad `icons` de `metadata` en `layout.tsx`: duplicaría las etiquetas `<link rel="icon">`.
 
 ### Tipografía
 
@@ -187,7 +189,8 @@ El proyecto está listo para desplegarse en **Vercel** (recomendado para Next.js
 ## Pendiente / próximos pasos
 
 - [ ] Fotos reales para Rehabilitación Oral, Estética Dental y Cirugía Dental (`public/images/services/oral-rehab.jpg`, `aesthetics.jpg`, `surgery.jpg`) — ya están destacadas en Inicio con placeholder a la espera
-- [ ] Variantes adicionales del logo (ícono solo, versión vertical, modo oscuro) cuando la agencia las entregue — el material fuente va a `public/images/logo/`
+- [ ] Fotos reales de servicios en alta resolución (mínimo 1200×750px, idealmente 1600×1000px, proporción 16:10) — las actuales de Ortodoncia/Implantes/Urgencias están muy por debajo de eso (225–318px de ancho) y se ven pixeladas al mostrarse en las tarjetas
+- [ ] Variantes adicionales del logo (versión vertical, modo oscuro) cuando la agencia las entregue — el material fuente va a `public/images/logo/`
 - [ ] Conectar el formulario de citas a un backend o servicio de email real (Resend, EmailJS, etc.)
 - [ ] Añadir dominio personalizado en Vercel
 
