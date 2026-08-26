@@ -31,6 +31,7 @@ const serviceData = [
   {
     key: 'implants',
     imageSrc: '/images/services/implants.jpg',
+    imagePosition: 'center 65%',
     placeholderLabel: 'images/services/implants.jpg',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
@@ -52,6 +53,7 @@ const serviceData = [
   },
   {
     key: 'oralRehab',
+    imageSrc: '/images/services/oral-rehab.jpg',
     placeholderLabel: 'images/services/oral-rehab.jpg',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
@@ -62,6 +64,7 @@ const serviceData = [
   },
   {
     key: 'aesthetics',
+    imageSrc: '/images/services/aesthetics.jpg',
     placeholderLabel: 'images/services/aesthetics.jpg',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
@@ -72,6 +75,7 @@ const serviceData = [
   },
   {
     key: 'surgery',
+    imageSrc: '/images/services/surgery.jpg',
     placeholderLabel: 'images/services/surgery.jpg',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
@@ -98,7 +102,7 @@ export default function ServicesPage() {
       <section className="section">
         <div className="container">
           <div className="grid-3">
-            {serviceData.map(({ key, icon, imageSrc, placeholderLabel }, i) => (
+            {serviceData.map(({ key, icon, imageSrc, imagePosition, placeholderLabel }, i) => (
               <Reveal key={key} delay={i * 80} direction="scale">
                 <ServiceCard
                   icon={icon}
@@ -106,6 +110,7 @@ export default function ServicesPage() {
                   description={t(`items.${key}.description` as Parameters<typeof t>[0])}
                   learnMore={t('learn_more')}
                   imageSrc={imageSrc}
+                  imagePosition={imagePosition}
                   imageAlt={t(`items.${key}.name` as Parameters<typeof t>[0])}
                   placeholderLabel={placeholderLabel}
                 />

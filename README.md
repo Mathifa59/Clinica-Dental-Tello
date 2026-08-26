@@ -74,10 +74,7 @@ clinica-dental-tello/
 │   ├── videos/                  # hero.mp4 (vertical, entrada al consultorio), clinica.mp4
 │   └── images/
 │       ├── brand/                # Logo usado en el Header
-│       ├── services/              # 3 de 6 servicios con foto (Ortodoncia, Implantes,
-│       │                          #  Urgencias) — faltan Rehabilitación Oral, Estética
-│       │                          #  Dental y Cirugía (por eso están destacados en
-│       │                          #  Inicio, a la espera de sus fotos)
+│       ├── services/              # Los 6 servicios con foto real
 │       ├── about/                 # doctor-tello.png
 │       ├── clinic/                # fachada, consultorio, recepción, sala de espera, equipos
 │       └── casos/                 # 9 carpetas con fotos reales de casos clínicos
@@ -189,7 +186,6 @@ El proyecto está listo para desplegarse en **Vercel** (recomendado para Next.js
 ## Pendiente / próximos pasos
 
 - [ ] Fotos reales para Rehabilitación Oral, Estética Dental y Cirugía Dental (`public/images/services/oral-rehab.jpg`, `aesthetics.jpg`, `surgery.jpg`) — ya están destacadas en Inicio con placeholder a la espera
-- [ ] Fotos reales de servicios en alta resolución (mínimo 1200×750px, idealmente 1600×1000px, proporción 16:10) — las actuales de Ortodoncia/Implantes/Urgencias están muy por debajo de eso (225–318px de ancho) y se ven pixeladas al mostrarse en las tarjetas
 - [ ] Variantes adicionales del logo (versión vertical, modo oscuro) cuando la agencia las entregue — el material fuente va a `public/images/logo/`
 - [ ] Conectar el formulario de citas a un backend o servicio de email real (Resend, EmailJS, etc.)
 - [ ] Añadir dominio personalizado en Vercel

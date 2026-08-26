@@ -66,9 +66,9 @@ export default function HomePage() {
   ];
 
   const featuredServices = [
-    { key: 'oralRehab',  icon: serviceIcons.oralRehab,  placeholder: 'images/services/oral-rehab.jpg' },
-    { key: 'aesthetics', icon: serviceIcons.aesthetics, placeholder: 'images/services/aesthetics.jpg' },
-    { key: 'surgery',    icon: serviceIcons.surgery,    placeholder: 'images/services/surgery.jpg' },
+    { key: 'oralRehab',  icon: serviceIcons.oralRehab,  imageSrc: '/images/services/oral-rehab.jpg', placeholder: 'images/services/oral-rehab.jpg' },
+    { key: 'aesthetics', icon: serviceIcons.aesthetics, imageSrc: '/images/services/aesthetics.jpg', placeholder: 'images/services/aesthetics.jpg' },
+    { key: 'surgery',    icon: serviceIcons.surgery,    imageSrc: '/images/services/surgery.jpg',    placeholder: 'images/services/surgery.jpg' },
   ];
 
   const marqueeNames = SERVICE_KEYS.map((key) =>
@@ -190,7 +190,7 @@ export default function HomePage() {
             </div>
           </Reveal>
           <div className="grid-3">
-            {featuredServices.map(({ key, icon, placeholder }, i) => (
+            {featuredServices.map(({ key, icon, imageSrc, placeholder }, i) => (
               <Reveal key={key} delay={i * 100} direction="scale">
                 <ServiceCard
                   icon={icon}
@@ -198,6 +198,7 @@ export default function HomePage() {
                   description={tServices(`items.${key}.description` as Parameters<typeof tServices>[0])}
                   learnMore={tServices('learn_more')}
                   href="servicios"
+                  imageSrc={imageSrc}
                   imageAlt={tServices(`items.${key}.name` as Parameters<typeof tServices>[0])}
                   placeholderLabel={placeholder}
                 />

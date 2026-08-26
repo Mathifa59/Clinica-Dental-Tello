@@ -10,6 +10,7 @@ type ServiceCardProps = {
   href?: string;
   imageSrc?: string;
   imageAlt?: string;
+  imagePosition?: string;
   placeholderLabel?: string;
 };
 
@@ -21,6 +22,7 @@ export default function ServiceCard({
   href = '/servicios',
   imageSrc,
   imageAlt,
+  imagePosition = 'center',
   placeholderLabel,
 }: ServiceCardProps) {
   return (
@@ -36,7 +38,7 @@ export default function ServiceCard({
               alt={imageAlt || name}
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: 'cover', objectPosition: imagePosition }}
             />
           ) : (
             <div className={styles.imagePlaceholder}>
