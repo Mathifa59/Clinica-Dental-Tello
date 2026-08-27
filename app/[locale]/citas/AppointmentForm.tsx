@@ -22,7 +22,7 @@ type Status = 'idle' | 'loading' | 'success';
 
 const SERVICE_KEYS = ['orthodontics', 'implants', 'emergency', 'oralRehab', 'aesthetics', 'surgery', 'endodontics'] as const;
 
-const EXTERIOR_IMAGE = '/images/clinic/exterior.jpg';
+const EXTERIOR_IMAGE = '/images/clinic/exterior-amplio.jpg';
 
 function getTodayString() {
   const today = new Date();
@@ -403,7 +403,7 @@ export default function AppointmentForm() {
                     alt="Exterior Clínica Dental Tello"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    style={{ objectFit: 'cover', objectPosition: 'center 38%' }}
+                    style={{ objectFit: 'cover' }}
                   />
                 </div>
                 <div className={styles.contactMapEmbed}>
