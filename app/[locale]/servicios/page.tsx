@@ -85,6 +85,17 @@ const serviceData = [
       </svg>
     ),
   },
+  {
+    key: 'endodontics',
+    imageSrc: '/images/services/endodontics.jpg',
+    placeholderLabel: 'images/services/endodontics.jpg',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 3c-3 0-5 2-5 4.5 0 2 .8 3 1.3 4.5L9 19l1.5-4h3L15 19l.7-7c.5-1.5 1.3-2.5 1.3-4.5C17 5 15 3 12 3z" />
+        <path d="M12 8v9" />
+      </svg>
+    ),
+  },
 ];
 
 export default function ServicesPage() {

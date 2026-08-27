@@ -55,6 +55,10 @@
       "surgery": {
         "name": "Cirugía Dental",
         "description": "Extracciones simples, muelas del juicio, dientes retenidos o supernumerarios y cirugía de mucoceles. Procedimientos seguros con protocolos estrictos de bioseguridad."
+      },
+      "endodontics": {
+        "name": "Endodoncia",
+        "description": "Tratamiento de conducto para salvar dientes con la pulpa dañada o infectada. Elimina el dolor y preserva tu pieza dental original, evitando la extracción."
       }
     }
   },
@@ -68,8 +72,8 @@
     "doctor_education_title": "Formación académica",
     "doctor_education": {
       "degree": "Universidad Inca Garcilaso de la Vega — Pregrado en Odontología",
-      "spec1": "Instituto GROIS, Río Branco, Brasil — Especialización en Implantología",
-      "spec2": "Faculdade do Centro Oeste Paulista (FACOP), Brasil — Rehabilitación Oral y Estética"
+      "spec1": "Instituto GROIS, Río Branco, Brasil — Cursos de actualización y perfeccionamiento",
+      "spec2": "Faculdade do Centro Oeste Paulista (FACOP), Brasil — Especialidad en Implantología, Rehabilitación Oral, Estética y Endodoncia"
     },
     "photo_label": "Dr. Daniel Tello",
     "stats": {
@@ -185,7 +189,8 @@
         "emergency": "Urgencias Dentales",
         "oralRehab": "Rehabilitación Oral",
         "aesthetics": "Estética Dental",
-        "surgery": "Cirugía Dental"
+        "surgery": "Cirugía Dental",
+        "endodontics": "Endodoncia"
       }
     },
     "success_title": "¡Cita solicitada con éxito!",

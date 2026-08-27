@@ -31,8 +31,8 @@ Sitio web corporativo de 5 páginas diseñado para presentar los servicios de la
 
 | Ruta | Página | Descripción |
 |---|---|---|
-| `/es` o `/en` | **Inicio** | Hero con video vertical (entrada al consultorio), estadísticas, marquee animado con los 6 servicios, video de "Nuestra clínica", 3 servicios destacados |
-| `/es/servicios` | **Servicios** | 6 tarjetas de servicio (Ortodoncia, Implantes, Urgencias, Rehabilitación Oral, Estética Dental, Cirugía Dental) |
+| `/es` o `/en` | **Inicio** | Hero con video vertical (entrada al consultorio), estadísticas, marquee animado con los 7 servicios, video de "Nuestra clínica", 3 servicios destacados |
+| `/es/servicios` | **Servicios** | 7 tarjetas de servicio (Ortodoncia, Implantes, Urgencias, Rehabilitación Oral, Estética Dental, Cirugía Dental, Endodoncia) |
 | `/es/casos` | **Casos** | Portafolio de 9 categorías de casos clínicos reales, cada una con carrusel de fotos (antes/después o proceso), con swipe táctil en móvil |
 | `/es/nosotros` | **Nosotros** | Perfil, credenciales y formación del Dr. Tello (con estadísticas integradas en la misma columna), equipo médico (3 doctores, sección con fondo oscuro), valores, galería de instalaciones |
 | `/es/citas` | **Citas** | Formulario de reserva + FAQ (5 preguntas) + bloque de contacto completo (dirección, horario, redes, teléfono/WhatsApp) + mapa real embebido de Google Maps. Fusiona lo que antes eran dos páginas separadas (Citas y Contacto) alternando franjas oscura/blanca/azul/clara |
@@ -74,7 +74,7 @@ clinica-dental-tello/
 │   ├── videos/                  # hero.mp4 (vertical, entrada al consultorio), clinica.mp4
 │   └── images/
 │       ├── brand/                # Logo usado en el Header
-│       ├── services/              # Los 6 servicios con foto real
+│       ├── services/              # Los 7 servicios con foto real
 │       ├── about/                 # doctor-tello.png
 │       ├── clinic/                # fachada, consultorio, recepción, sala de espera, equipos
 │       └── casos/                 # 9 carpetas con fotos reales de casos clínicos
@@ -115,7 +115,7 @@ clinica-dental-tello/
 - Gradientes lineales y radiales en hero, botones, badges e íconos
 - Glassmorphism (`backdrop-filter: blur`) en header al scroll, tarjetas de valores/equipo/stats
 - Videos de fondo verticales en el hero y en "Nuestra clínica" del inicio (`autoPlay muted loop playsInline`, sin controles nativos ni picture-in-picture)
-- Marquee animado con los 6 servicios en la página de inicio
+- Marquee animado con los 7 servicios en la página de inicio
 - Grano sutil (`body::after`) sobre toda la página vía SVG de ruido
 - Animaciones CSS: `fadeUp`, `fadeIn`, `scaleIn`, `float`, `shimmer`, `pulse-glow`, `aurora`, `marquee`
 - Scroll reveal con `IntersectionObserver` (sin librería JS, solo CSS transitions)

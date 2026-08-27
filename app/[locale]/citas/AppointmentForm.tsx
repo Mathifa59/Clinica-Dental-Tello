@@ -20,9 +20,9 @@ type FormState = {
 type FormErrors = Partial<Record<keyof FormState, string>>;
 type Status = 'idle' | 'loading' | 'success';
 
-const SERVICE_KEYS = ['orthodontics', 'implants', 'emergency', 'oralRehab', 'aesthetics', 'surgery'] as const;
+const SERVICE_KEYS = ['orthodontics', 'implants', 'emergency', 'oralRehab', 'aesthetics', 'surgery', 'endodontics'] as const;
 
-const EXTERIOR_IMAGE = '/images/clinic/exterior.png';
+const EXTERIOR_IMAGE = '/images/clinic/exterior.jpg';
 
 function getTodayString() {
   const today = new Date();
@@ -403,7 +403,7 @@ export default function AppointmentForm() {
                     alt="Exterior Clínica Dental Tello"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'cover', objectPosition: 'center 38%' }}
                   />
                 </div>
                 <div className={styles.contactMapEmbed}>

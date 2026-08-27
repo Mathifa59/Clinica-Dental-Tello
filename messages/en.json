@@ -55,6 +55,10 @@
       "surgery": {
         "name": "Dental Surgery",
         "description": "Simple extractions, wisdom teeth, impacted or supernumerary teeth and mucocele surgery. Safe procedures under strict biosafety protocols."
+      },
+      "endodontics": {
+        "name": "Endodontics",
+        "description": "Root canal treatment to save teeth with damaged or infected pulp. Eliminates pain and preserves your natural tooth, avoiding extraction."
       }
     }
   },
@@ -68,8 +72,8 @@
     "doctor_education_title": "Academic Background",
     "doctor_education": {
       "degree": "Universidad Inca Garcilaso de la Vega — Undergraduate Degree in Dentistry",
-      "spec1": "GROIS Institute, Rio Branco, Brazil — Specialization in Implantology",
-      "spec2": "Faculdade do Centro Oeste Paulista (FACOP), Brazil — Oral Rehabilitation & Aesthetics"
+      "spec1": "GROIS Institute, Rio Branco, Brazil — Continuing education and advanced training courses",
+      "spec2": "Faculdade do Centro Oeste Paulista (FACOP), Brazil — Specialty in Implantology, Oral Rehabilitation, Aesthetics & Endodontics"
     },
     "photo_label": "Dr. Daniel Tello",
     "stats": {
@@ -185,7 +189,8 @@
         "emergency": "Dental Emergencies",
         "oralRehab": "Oral Rehabilitation",
         "aesthetics": "Dental Aesthetics",
-        "surgery": "Dental Surgery"
+        "surgery": "Dental Surgery",
+        "endodontics": "Endodontics"
       }
     },
     "success_title": "Appointment requested successfully!",
