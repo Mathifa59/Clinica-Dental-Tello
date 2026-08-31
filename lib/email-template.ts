@@ -15,7 +15,9 @@ const BRAND = {
 };
 
 const FONT = 'Arial, Helvetica, sans-serif';
-const LOGO_URL = 'https://www.dentaltello.com/images/brand/logo-horizontal.png';
+// Versión blanca del logo: el header del correo usa el degradado azul/petróleo
+// de fondo, y el logo a color (turquesa) se volvía casi invisible sobre él.
+const LOGO_URL = 'https://www.dentaltello.com/images/brand/logo-horizontal-white.png';
 const SITE_URL = 'https://www.dentaltello.com';
 
 export function emailLink(href: string, text: string) {
