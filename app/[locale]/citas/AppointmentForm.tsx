@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import FaqAccordion from '@/components/ui/FaqAccordion';
 import Reveal from '@/components/ui/Reveal';
+import { submitAppointment } from '@/lib/actions';
 import styles from './page.module.css';
 
 const CLINIC_IMAGE = '/images/clinic/consultorio.jpg';
@@ -18,7 +19,7 @@ type FormState = {
 };
 
 type FormErrors = Partial<Record<keyof FormState, string>>;
-type Status = 'idle' | 'loading' | 'success';
+type Status = 'idle' | 'loading' | 'success' | 'error';
 
 const SERVICE_KEYS = ['orthodontics', 'implants', 'emergency', 'oralRehab', 'aesthetics', 'surgery', 'endodontics'] as const;
 
@@ -75,7 +76,7 @@ export default function AppointmentForm() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const newErrors = validate();
     if (Object.keys(newErrors).length > 0) {
@@ -83,7 +84,15 @@ export default function AppointmentForm() {
       return;
     }
     setStatus('loading');
-    setTimeout(() => setStatus('success'), 1500);
+    const serviceLabel = tForm(`services.${form.service}` as Parameters<typeof tForm>[0]);
+    const result = await submitAppointment({
+      name: form.name,
+      phone: form.phone,
+      service: serviceLabel,
+      date: form.date,
+      message: form.message,
+    });
+    setStatus(result.success ? 'success' : 'error');
   };
 
   return (
@@ -209,6 +218,10 @@ export default function AppointmentForm() {
                       {tForm('char_count', { count: form.message.length })}
                     </span>
                   </div>
+
+                  {status === 'error' && (
+                    <p className={styles.error} role="alert">{t('error_message')}</p>
+                  )}
 
                   <button
                     type="submit"

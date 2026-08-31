@@ -108,6 +108,12 @@ export default function Footer() {
       <div className={styles.bottom}>
         <div className={styles.bottomInner}>
           <p>{t('copyright')}</p>
+          <p className={styles.legalId}>{t('legal_id')}</p>
+          <div className={styles.legalLinks}>
+            <Link href={localePath('/privacidad')} className={styles.legalLink}>{t('privacy_link')}</Link>
+            <span className={styles.legalDivider}>·</span>
+            <Link href={localePath('/libro-de-reclamaciones')} className={styles.legalLink}>{t('complaint_book_link')}</Link>
+          </div>
         </div>
       </div>
     </footer>

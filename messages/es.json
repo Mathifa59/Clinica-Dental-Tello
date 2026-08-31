@@ -73,7 +73,7 @@
     "doctor_education": {
       "degree": "Universidad Inca Garcilaso de la Vega — Pregrado en Odontología",
       "spec1": "Instituto GROIS, Río Branco, Brasil — Cursos de actualización y perfeccionamiento",
-      "spec2": "Faculdade do Centro Oeste Paulista (FACOP), Brasil — Especialidad en Implantología, Rehabilitación Oral, Estética y Endodoncia"
+      "spec2": "Faculdade do Centro Oeste Paulista (FACOP), Brasil — Especialidad en Implantología, Rehabilitación Oral y Estética"
     },
     "photo_label": "Dr. Daniel Tello",
     "stats": {
@@ -195,6 +195,7 @@
     },
     "success_title": "¡Cita solicitada con éxito!",
     "success_message": "Hemos recibido tu solicitud. Nos pondremos en contacto contigo en menos de 24 horas para confirmar tu cita.",
+    "error_message": "No pudimos enviar tu solicitud. Por favor intenta de nuevo o escríbenos por WhatsApp.",
     "contact_info": {
       "title": "También puedes contactarnos por",
       "phone": "+51 942 661 120",
@@ -251,7 +252,10 @@
     "address": "Av. Próceres de Huandoy 7865, Urb. Pro, Los Olivos, Lima",
     "phone": "+51 942 661 120",
     "email": "dgt_21@hotmail.com",
-    "copyright": "© 2026 Dental Tello. Desarrollado por DevHorses."
+    "copyright": "© 2026 Dental Tello. Desarrollado por DevHorses.",
+    "legal_id": "Daniel Tello Fernández — RUC 10100687751",
+    "privacy_link": "Política de Privacidad",
+    "complaint_book_link": "Libro de Reclamaciones"
   },
   "whatsapp": {
     "tooltip": "Escríbenos por WhatsApp"
@@ -263,5 +267,43 @@
     "cta_home": "Ir al inicio",
     "cta_services": "Ver servicios",
     "cta_appointments": "Reservar cita"
+  },
+  "complaintBook": {
+    "hero_title": "Libro de Reclamaciones",
+    "hero_subtitle": "Conforme a lo establecido en el Código de Protección y Defensa del Consumidor, este establecimiento cuenta con un Libro de Reclamaciones Virtual a disposición del consumidor.",
+    "intro": "Titular: Daniel Tello Fernández — RUC 10100687751. Completa el siguiente formulario para registrar tu reclamo o queja. Te responderemos en un plazo máximo de 30 días calendario, conforme a la normativa vigente.",
+    "section_consumer": "Datos del consumidor reclamante",
+    "section_good": "Datos del bien contratado",
+    "section_detail": "Detalle de la reclamación",
+    "success_title": "Hemos recibido tu reclamación",
+    "success_message": "Guarda tu código de referencia. Te responderemos a tu correo electrónico en un plazo máximo de 30 días calendario.",
+    "error_message": "No pudimos registrar tu reclamación. Por favor intenta de nuevo o escríbenos por WhatsApp.",
+    "form": {
+      "name_label": "Nombres y apellidos",
+      "doc_label": "DNI / Carné de Extranjería",
+      "doc_placeholder": "12345678",
+      "phone_label": "Teléfono",
+      "address_label": "Domicilio",
+      "email_label": "Correo electrónico",
+      "is_minor_label": "El consumidor es menor de edad",
+      "guardian_label": "Nombre del padre, madre o apoderado",
+      "good_type_label": "Tipo",
+      "good_type_product": "Producto",
+      "good_type_service": "Servicio",
+      "good_description_label": "Descripción del servicio o producto",
+      "amount_label": "Monto reclamado (si aplica)",
+      "amount_placeholder": "S/ 0.00",
+      "complaint_type_label": "Tipo",
+      "complaint_type_reclamo": "Reclamo — disconformidad relacionada al producto o servicio",
+      "complaint_type_queja": "Queja — disconformidad no relacionada al producto o servicio, o malestar en la atención",
+      "detail_label": "Detalle",
+      "request_label": "Pedido del consumidor",
+      "submit": "Enviar reclamación",
+      "submitting": "Enviando...",
+      "errors": {
+        "required": "Este campo es obligatorio",
+        "email_invalid": "Correo electrónico inválido"
+      }
+    }
   }
 }

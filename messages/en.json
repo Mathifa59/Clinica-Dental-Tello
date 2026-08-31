@@ -73,7 +73,7 @@
     "doctor_education": {
       "degree": "Universidad Inca Garcilaso de la Vega — Undergraduate Degree in Dentistry",
       "spec1": "GROIS Institute, Rio Branco, Brazil — Continuing education and advanced training courses",
-      "spec2": "Faculdade do Centro Oeste Paulista (FACOP), Brazil — Specialty in Implantology, Oral Rehabilitation, Aesthetics & Endodontics"
+      "spec2": "Faculdade do Centro Oeste Paulista (FACOP), Brazil — Specialty in Implantology, Oral Rehabilitation & Aesthetics"
     },
     "photo_label": "Dr. Daniel Tello",
     "stats": {
@@ -195,6 +195,7 @@
     },
     "success_title": "Appointment requested successfully!",
     "success_message": "We have received your request. We will contact you within 24 hours to confirm your appointment.",
+    "error_message": "We couldn't send your request. Please try again or message us on WhatsApp.",
     "contact_info": {
       "title": "You can also contact us via",
       "phone": "+51 942 661 120",
@@ -251,7 +252,10 @@
     "address": "Av. Próceres de Huandoy 7865, Urb. Pro, Los Olivos, Lima",
     "phone": "+51 942 661 120",
     "email": "dgt_21@hotmail.com",
-    "copyright": "© 2026 Dental Tello. Developed by DevHorses."
+    "copyright": "© 2026 Dental Tello. Developed by DevHorses.",
+    "legal_id": "Daniel Tello Fernández — RUC 10100687751",
+    "privacy_link": "Privacy Policy",
+    "complaint_book_link": "Complaints Book"
   },
   "whatsapp": {
     "tooltip": "Write to us on WhatsApp"
@@ -263,5 +267,43 @@
     "cta_home": "Go home",
     "cta_services": "View services",
     "cta_appointments": "Book appointment"
+  },
+  "complaintBook": {
+    "hero_title": "Complaints Book",
+    "hero_subtitle": "In accordance with the Consumer Protection and Defense Code, this establishment has a Virtual Complaints Book available to consumers.",
+    "intro": "Owner: Daniel Tello Fernández — RUC 10100687751. Fill out the form below to register your complaint or claim. We will respond within a maximum of 30 calendar days, in accordance with current regulations.",
+    "section_consumer": "Consumer information",
+    "section_good": "Product or service details",
+    "section_detail": "Complaint details",
+    "success_title": "We have received your complaint",
+    "success_message": "Save your reference code. We will respond to your email within a maximum of 30 calendar days.",
+    "error_message": "We couldn't register your complaint. Please try again or message us on WhatsApp.",
+    "form": {
+      "name_label": "Full name",
+      "doc_label": "National ID / Foreign ID",
+      "doc_placeholder": "12345678",
+      "phone_label": "Phone",
+      "address_label": "Address",
+      "email_label": "Email",
+      "is_minor_label": "The consumer is a minor",
+      "guardian_label": "Parent or guardian's name",
+      "good_type_label": "Type",
+      "good_type_product": "Product",
+      "good_type_service": "Service",
+      "good_description_label": "Description of the service or product",
+      "amount_label": "Claimed amount (if applicable)",
+      "amount_placeholder": "S/ 0.00",
+      "complaint_type_label": "Type",
+      "complaint_type_reclamo": "Complaint — dissatisfaction related to the product or service",
+      "complaint_type_queja": "Grievance — dissatisfaction unrelated to the product or service, or unhappiness with the customer service received",
+      "detail_label": "Detail",
+      "request_label": "Consumer's request",
+      "submit": "Submit complaint",
+      "submitting": "Sending...",
+      "errors": {
+        "required": "This field is required",
+        "email_invalid": "Invalid email address"
+      }
+    }
   }
 }
