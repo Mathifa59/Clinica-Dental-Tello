@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import StatCard from '@/components/ui/StatCard';
 import Reveal from '@/components/ui/Reveal';
+import { buildAlternates } from '@/lib/seo';
 import styles from './page.module.css';
 
 const DOCTOR_IMAGE = '/images/about/doctor-tello.png';
@@ -19,13 +20,16 @@ const FACILITY_PHOTOS = [
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const t = await getTranslations({ locale: params.locale, namespace: 'about' });
+  const title = params.locale === 'en' ? 'Implantology with Dr. Daniel Tello' : 'Implantología con el Dr. Daniel Tello';
   return {
-    title: 'Nosotros',
+    title,
     description: t('hero_subtitle'),
     openGraph: {
       title: `${t('hero_title')} | Dental Tello`,
       description: t('hero_subtitle'),
+      images: ['/og-image.jpg'],
     },
+    ...buildAlternates(params.locale, '/nosotros'),
   };
 }
 

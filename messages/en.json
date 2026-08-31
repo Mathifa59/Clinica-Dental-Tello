@@ -255,5 +255,13 @@
   },
   "whatsapp": {
     "tooltip": "Write to us on WhatsApp"
+  },
+  "notFound": {
+    "eyebrow": "Error 404",
+    "title": "This page doesn't exist",
+    "subtitle": "The link may be broken or the page may have moved. Try one of these instead.",
+    "cta_home": "Go home",
+    "cta_services": "View services",
+    "cta_appointments": "Book appointment"
   }
 }

@@ -3,16 +3,20 @@ import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import ServiceCard from '@/components/ui/ServiceCard';
 import Reveal from '@/components/ui/Reveal';
+import { buildAlternates } from '@/lib/seo';
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const t = await getTranslations({ locale: params.locale, namespace: 'services' });
+  const title = params.locale === 'en' ? 'Dental Services in Los Olivos, Lima' : 'Servicios Dentales en Los Olivos, Lima';
   return {
-    title: 'Servicios',
+    title,
     description: t('hero_subtitle'),
     openGraph: {
       title: `${t('hero_title')} | Dental Tello`,
       description: t('hero_subtitle'),
+      images: ['/og-image.jpg'],
     },
+    ...buildAlternates(params.locale, '/servicios'),
   };
 }
 

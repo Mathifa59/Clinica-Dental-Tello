@@ -255,5 +255,13 @@
   },
   "whatsapp": {
     "tooltip": "Escríbenos por WhatsApp"
+  },
+  "notFound": {
+    "eyebrow": "Error 404",
+    "title": "Esta página no existe",
+    "subtitle": "Puede que el enlace esté roto o la página se haya movido. Prueba con alguno de estos accesos.",
+    "cta_home": "Ir al inicio",
+    "cta_services": "Ver servicios",
+    "cta_appointments": "Reservar cita"
   }
 }

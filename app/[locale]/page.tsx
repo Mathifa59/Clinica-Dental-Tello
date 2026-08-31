@@ -5,17 +5,21 @@ import { getTranslations } from 'next-intl/server';
 import ServiceCard from '@/components/ui/ServiceCard';
 import StatCard from '@/components/ui/StatCard';
 import Reveal from '@/components/ui/Reveal';
+import { buildAlternates } from '@/lib/seo';
 import styles from './page.module.css';
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const t = await getTranslations({ locale: params.locale, namespace: 'home' });
+  const title = params.locale === 'en' ? 'Dental Clinic in Los Olivos, Lima' : 'Clínica Dental en Los Olivos, Lima';
   return {
-    title: 'Inicio',
+    title,
     description: t('subtitle'),
     openGraph: {
       title: `${t('title')} | Dental Tello`,
       description: t('subtitle'),
+      images: ['/og-image.jpg'],
     },
+    ...buildAlternates(params.locale, ''),
   };
 }
 

@@ -3,17 +3,21 @@ import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import CaseCarousel from '@/components/ui/CaseCarousel';
 import Reveal from '@/components/ui/Reveal';
+import { buildAlternates } from '@/lib/seo';
 import styles from './page.module.css';
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const t = await getTranslations({ locale: params.locale, namespace: 'cases' });
+  const title = params.locale === 'en' ? 'Real Dental Treatment Case Studies' : 'Casos Reales de Tratamientos Dentales';
   return {
-    title: 'Casos',
+    title,
     description: t('hero_subtitle'),
     openGraph: {
       title: `${t('hero_title')} | Dental Tello`,
       description: t('hero_subtitle'),
+      images: ['/og-image.jpg'],
     },
+    ...buildAlternates(params.locale, '/casos'),
   };
 }
 
