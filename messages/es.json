@@ -121,9 +121,9 @@
     "hero_subtitle": "Resultados reales de pacientes atendidos en nuestra clínica, documentados en cada etapa del tratamiento.",
     "disclaimer": "Todas las fotografías corresponden a casos reales tratados en nuestra clínica y se publican con el consentimiento de cada paciente.",
     "items": {
-      "desgasteDental": {
-        "title": "Desgaste dental",
-        "description": "Rehabilitación de dientes anteriores afectados por desgaste, recuperando su forma y función original."
+      "limpiezaDental": {
+        "title": "Limpieza dental",
+        "description": "Limpieza profunda con eliminación de manchas y sarro, devolviendo un aspecto más sano y luminoso a los dientes."
       },
       "resinaAnterior": {
         "title": "Resina estética anterior",

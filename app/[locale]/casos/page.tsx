@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
 }
 
 const CASE_DATA = [
-  { key: 'desgasteDental', slug: 'desgaste-dental', images: ['01-antes.jpg', '02-detalle.jpg', '03-despues.jpg'] },
+  { key: 'limpiezaDental', slug: 'limpieza-dental', images: ['01-antes.jpg', '02-detalle.jpg', '03-despues.jpg'] },
   { key: 'resinaAnterior', slug: 'resina-anterior', images: ['01-antes.jpg', '02-despues.jpg'] },
   { key: 'resinasMolares', slug: 'resinas-molares', images: ['01-antes.jpg', '02-despues.jpg'] },
   { key: 'reparacionCuellos', slug: 'reparacion-cuellos', images: ['01-antes.jpg', '02-despues.jpg'] },

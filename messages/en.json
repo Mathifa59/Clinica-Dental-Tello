@@ -121,9 +121,9 @@
     "hero_subtitle": "Real results from patients treated at our clinic, documented at every stage of treatment.",
     "disclaimer": "All photographs correspond to real cases treated at our clinic and are published with each patient's consent.",
     "items": {
-      "desgasteDental": {
-        "title": "Dental Wear",
-        "description": "Rehabilitation of front teeth affected by wear, restoring their original shape and function."
+      "limpiezaDental": {
+        "title": "Dental Cleaning",
+        "description": "Deep cleaning with stain and tartar removal, restoring a healthier, brighter look to the teeth."
       },
       "resinaAnterior": {
         "title": "Anterior Aesthetic Resin",
