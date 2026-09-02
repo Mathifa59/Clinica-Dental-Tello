@@ -28,7 +28,7 @@ const CASE_DATA = [
   { key: 'reparacionCuellos', slug: 'reparacion-cuellos', images: ['01-antes.jpg', '02-despues.jpg'] },
   { key: 'incrustacionesResina', slug: 'incrustaciones-resina', images: ['01.jpg', '02.jpg', '03.jpg', '04.jpg'] },
   { key: 'pernoCorona', slug: 'perno-corona', images: ['01-antes.jpg', '02-proceso.jpg'] },
-  { key: 'protesisTotal', slug: 'protesis-total', images: ['01-comparacion.jpg'] },
+  { key: 'protesisTotal', slug: 'protesis-total', images: ['01-comparacion.jpg', '02-despues.jpg'] },
   { key: 'protocoloImplantes', slug: 'protocolo-implantes', images: ['01-modelo.jpg', '02-prueba.jpg', '03-sonrisa.jpg', '04-sonrisa-detalle.jpg'] },
   { key: 'resinaEstetica', slug: 'resina-estetica', images: ['01-antes.jpg', '02-proceso.jpg'] },
 ] as const;
