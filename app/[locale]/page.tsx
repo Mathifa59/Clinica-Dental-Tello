@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
@@ -23,7 +24,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   };
 }
 
-const HERO_VIDEO = '/videos/hero.mp4';
+const HERO_IMAGE = '/images/hero-patient.jpg';
 const CLINIC_VIDEO = '/videos/clinica.mp4';
 
 const SERVICE_KEYS = ['orthodontics', 'implants', 'emergency', 'oralRehab', 'aesthetics', 'surgery', 'endodontics'] as const;
@@ -83,17 +84,14 @@ export default function HomePage() {
     <>
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className={styles.hero}>
-        <video
-          className={styles.heroBgVideo}
-          src={HERO_VIDEO}
-          autoPlay
-          muted
-          loop
-          playsInline
-          disablePictureInPicture
-          disableRemotePlayback
-          controlsList="nodownload noplaybackrate nofullscreen"
-          aria-hidden="true"
+        <Image
+          src={HERO_IMAGE}
+          alt=""
+          fill
+          priority
+          quality={90}
+          sizes="100vw"
+          className={styles.heroBgMedia}
         />
         <div className={styles.heroOverlay} />
         <div className={styles.heroInner}>

@@ -17,7 +17,7 @@ Estado de los recursos del sitio. Los archivos ya organizados se toman automáti
 | `services/implants.jpg` | Tarjeta Implantes Dentales |
 | `services/emergency.jpg` | Tarjeta Urgencias Dentales |
 | `casos/*/` | 9 categorías de casos clínicos reales (página Casos) — ver `casos-review` en el historial de commits para el detalle de cada una |
-| `../videos/hero.mp4` | Video vertical del hero en Inicio (entrada al consultorio) |
+| `hero-patient.jpg` | Foto de fondo del hero en Inicio (paciente sonriendo) |
 | `../videos/clinica.mp4` | Video de la sección "Nuestra clínica" en Inicio |
 
 ---
