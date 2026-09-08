@@ -91,28 +91,15 @@
       "member2": { "name": "Dr. Miguel Córdova García", "role": "General Dental Surgeon" },
       "member3": { "name": "Dr. Edwin Del Pino Palomino", "role": "Dental Surgeon, Implantologist" }
     },
-    "facilities_title": "Our Facilities",
-    "facilities_subtitle": "A modern, comfortable space designed for your peace of mind.",
+    "facilities_title": "Our Team in Action",
+    "facilities_subtitle": "Biosafety protocols and state-of-the-art equipment in every procedure.",
     "facilities": {
-      "exterior": "Clinic exterior",
-      "reception": "Reception",
-      "waiting": "Waiting room",
-      "equipment": "Fully equipped treatment room"
-    },
-    "values_title": "Our Values",
-    "values": {
-      "trust": {
-        "title": "Trust",
-        "description": "Friendly, sincere and honest treatment: we will always tell you the truth about your oral health. Over 26 years back every relationship we build with our patients."
-      },
-      "technology": {
-        "title": "Technology",
-        "description": "We have digital X-ray, electrosurgery, dental laser, state-of-the-art implant equipment and dry-heat and autoclave sterilization for your maximum safety."
-      },
-      "warmth": {
-        "title": "Warmth",
-        "description": "We understand that visiting the dentist can cause anxiety. That's why we create a welcoming environment where every patient feels safe and well cared for."
-      }
+      "team1": "Medical team during an implant procedure",
+      "team2": "Dental team mid-intervention",
+      "instruments1": "Sterilized instruments ready for the procedure",
+      "instruments2": "Implant kit and surgical instruments",
+      "room": "Equipped treatment room during a procedure",
+      "team3": "Medical team coordinating treatment"
     }
   },
   "cases": {

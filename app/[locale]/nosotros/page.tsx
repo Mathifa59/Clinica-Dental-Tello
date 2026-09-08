@@ -12,10 +12,12 @@ const DOCTOR_IMAGE = '/images/about/doctor-tello.png';
 const TEAM_KEYS = ['member1', 'member2', 'member3'] as const;
 
 const FACILITY_PHOTOS = [
-  { key: 'exterior', src: '/images/clinic/exterior-amplio.jpg' },
-  { key: 'reception', src: '/images/clinic/recepcion.jpg' },
-  { key: 'waiting', src: '/images/clinic/sala-espera.jpg' },
-  { key: 'equipment', src: '/images/clinic/equipos.jpg' },
+  { key: 'team1', src: '/images/clinic/equipo-01.jpg' },
+  { key: 'team2', src: '/images/clinic/equipo-02.jpg' },
+  { key: 'instruments1', src: '/images/clinic/equipo-03.jpg' },
+  { key: 'instruments2', src: '/images/clinic/equipo-04.jpg' },
+  { key: 'room', src: '/images/clinic/equipo-05.jpg' },
+  { key: 'team3', src: '/images/clinic/equipo-06.jpg' },
 ] as const;
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
@@ -40,36 +42,6 @@ export default function AboutPage() {
     { value: t('stats.years'), label: t('stats.years_label') },
     { value: t('stats.patients'), label: t('stats.patients_label') },
     { value: t('stats.specialties'), label: t('stats.specialties_label') },
-  ];
-
-  const values = [
-    {
-      key: 'trust',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-          <path d="M9 12l2 2 4-4" />
-        </svg>
-      ),
-    },
-    {
-      key: 'technology',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-          <line x1="8" y1="21" x2="16" y2="21" />
-          <line x1="12" y1="17" x2="12" y2="21" />
-        </svg>
-      ),
-    },
-    {
-      key: 'warmth',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-        </svg>
-      ),
-    },
   ];
 
   return (
@@ -151,28 +123,6 @@ export default function AboutPage() {
                   </div>
                   <span className={styles.teamName}>{t(`team.${key}.name` as Parameters<typeof t>[0])}</span>
                   <span className={styles.teamRole}>{t(`team.${key}.role` as Parameters<typeof t>[0])}</span>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="section">
-        <div className="container">
-          <Reveal>
-            <div className="section-header">
-              <h2>{t('values_title')}</h2>
-            </div>
-          </Reveal>
-          <div className={styles.valuesGrid}>
-            {values.map(({ key, icon }, i) => (
-              <Reveal key={key} delay={i * 110} direction="scale">
-                <div className={styles.valueCard}>
-                  <div className={styles.valueIcon}>{icon}</div>
-                  <h3>{t(`values.${key}.title` as Parameters<typeof t>[0])}</h3>
-                  <p>{t(`values.${key}.description` as Parameters<typeof t>[0])}</p>
                 </div>
               </Reveal>
             ))}

@@ -91,28 +91,15 @@
       "member2": { "name": "Dr. Miguel Córdova García", "role": "Cirujano Dentista General" },
       "member3": { "name": "Dr. Edwin Del Pino Palomino", "role": "Cirujano Dental, Implantólogo" }
     },
-    "facilities_title": "Nuestras instalaciones",
-    "facilities_subtitle": "Un espacio moderno y cómodo, pensado para tu tranquilidad.",
+    "facilities_title": "Nuestro equipo en acción",
+    "facilities_subtitle": "Protocolos de bioseguridad y equipamiento de última generación en cada procedimiento.",
     "facilities": {
-      "exterior": "Fachada de la clínica",
-      "reception": "Recepción",
-      "waiting": "Sala de espera",
-      "equipment": "Consultorio equipado"
-    },
-    "values_title": "Nuestros Valores",
-    "values": {
-      "trust": {
-        "title": "Confianza",
-        "description": "Trato amical, sincero y honesto: siempre te hablaremos con la verdad sobre tu salud oral. Más de 26 años respaldan cada relación que construimos con nuestros pacientes."
-      },
-      "technology": {
-        "title": "Tecnología",
-        "description": "Contamos con rayos X digital, electrobisturí, láser dental, equipos de implantes de última generación y esterilización con calor seco y autoclave para tu máxima seguridad."
-      },
-      "warmth": {
-        "title": "Calidez",
-        "description": "Entendemos que visitar al dentista puede generar ansiedad. Por eso creamos un ambiente acogedor donde cada paciente se siente seguro y bien cuidado."
-      }
+      "team1": "Equipo médico durante un procedimiento de implantes",
+      "team2": "Equipo dental en plena intervención",
+      "instruments1": "Instrumental esterilizado listo para el procedimiento",
+      "instruments2": "Kit de implantes y instrumental quirúrgico",
+      "room": "Consultorio equipado durante un procedimiento",
+      "team3": "Equipo médico coordinando el tratamiento"
     }
   },
   "cases": {
