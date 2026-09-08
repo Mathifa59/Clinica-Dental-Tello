@@ -83,6 +83,19 @@ export default function HomePage() {
     <>
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className={styles.hero}>
+        <video
+          className={styles.heroBgVideo}
+          src={HERO_VIDEO}
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          disableRemotePlayback
+          controlsList="nodownload noplaybackrate nofullscreen"
+          aria-hidden="true"
+        />
+        <div className={styles.heroOverlay} />
         <div className={styles.heroInner}>
           <div className={styles.heroContent}>
             <span className={styles.heroEyebrow}>{t('eyebrow')}</span>
@@ -97,36 +110,6 @@ export default function HomePage() {
             </div>
             <div className={styles.statsRow}>
               {stats.map((s) => <StatCard key={s.label} value={s.value} label={s.label} onDark />)}
-            </div>
-          </div>
-
-          {/* Hero video — arco */}
-          <div className={styles.heroImage}>
-            <div className={styles.imgWrap}>
-              <video
-                className={styles.heroVideo}
-                src={HERO_VIDEO}
-                autoPlay
-                muted
-                loop
-                playsInline
-                disablePictureInPicture
-                disableRemotePlayback
-                controlsList="nodownload noplaybackrate nofullscreen"
-                aria-label={t('photo_label')}
-              />
-            </div>
-            <div className={styles.floatBadge}>
-              <div className={styles.floatBadgeIcon}>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M9 12l2 2 4-4" />
-                  <circle cx="12" cy="12" r="10" />
-                </svg>
-              </div>
-              <div>
-                <strong>{t('stats.patients')}</strong>
-                <small>{t('stats.patients_label')}</small>
-              </div>
             </div>
           </div>
         </div>

@@ -1,6 +1,9 @@
-/* ─── Hero — oscuro con aurora animada ──────────────────────────────────── */
+/* ─── Hero — video de fondo con degradado oscuro ────────────────────────── */
 .hero {
   padding: clamp(2.5rem, 5vw, 5rem) 1.5rem clamp(2.5rem, 5vw, 4rem);
+  min-height: clamp(560px, 82vh, 760px);
+  display: flex;
+  align-items: center;
   background-color: var(--color-bg-dark);
   background-image: var(--aurora-dark);
   background-size: 180% 180%, 180% 180%, 180% 180%, 180% 180%;
@@ -8,6 +11,30 @@
   animation: aurora 22s ease-in-out infinite;
   position: relative;
   overflow: hidden;
+}
+
+.heroBgVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    100deg,
+    rgba(4, 30, 38, 0.93) 0%,
+    rgba(4, 30, 38, 0.82) 32%,
+    rgba(4, 30, 38, 0.45) 62%,
+    rgba(4, 30, 38, 0.18) 100%
+  );
+  pointer-events: none;
 }
 
 /* Anillo giratorio decorativo */
@@ -35,23 +62,17 @@
 
 .heroInner {
   max-width: var(--max-width);
+  width: 100%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3.5rem;
-  align-items: center;
   position: relative;
-  z-index: 1;
-}
-
-@media (min-width: 1024px) {
-  .heroInner { grid-template-columns: 1.05fr 0.95fr; gap: 4rem; align-items: start; }
+  z-index: 2;
 }
 
 .heroContent {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  max-width: 640px;
 }
 
 .heroEyebrow {
@@ -123,127 +144,6 @@
   gap: 1rem;
   margin-top: 1.5rem;
   animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.55s both;
-}
-
-/* ── Hero image — arco con anillo ───────────────────────────────────────── */
-.heroImage {
-  display: flex;
-  justify-content: center;
-  animation: scaleIn 1s cubic-bezier(0.22,1,0.36,1) 0.25s both;
-  position: relative;
-}
-
-.imgWrap {
-  width: 100%;
-  max-width: 460px;
-  aspect-ratio: 460 / 560;
-  border-radius: var(--radius-arch);
-  overflow: hidden;
-  position: relative;
-  border: 1px solid rgba(234, 247, 246,0.18);
-  box-shadow:
-    0 32px 80px rgba(4, 30, 38,0.55),
-    0 0 0 10px rgba(234, 247, 246,0.04);
-}
-
-/* Halo detrás de la imagen */
-.heroImage::before {
-  content: '';
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 115%;
-  aspect-ratio: 1;
-  background: radial-gradient(circle, rgba(0, 159, 153,0.16) 0%, transparent 60%);
-  pointer-events: none;
-}
-
-.imgWrap img {
-  transition: transform 0.8s cubic-bezier(0.22,1,0.36,1) !important;
-}
-
-.imgWrap:hover img { transform: scale(1.04); }
-
-/* Video decorativo (autoplay/loop/sin controles) — pointer-events:none evita
-   que Chrome muestre el botón de picture-in-picture al pasar el mouse */
-.heroVideo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  pointer-events: none;
-  transition: transform 0.8s cubic-bezier(0.22,1,0.36,1);
-}
-
-.imgWrap:hover .heroVideo { transform: scale(1.04); }
-
-.heroVideo::-webkit-media-controls,
-.clinicVideo::-webkit-media-controls,
-.heroVideo::-webkit-media-controls-overlay-play-button,
-.clinicVideo::-webkit-media-controls-overlay-play-button,
-.heroVideo::-webkit-media-controls-picture-in-picture-button,
-.clinicVideo::-webkit-media-controls-picture-in-picture-button {
-  display: none !important;
-}
-
-.imgPlaceholder {
-  width: 100%; height: 100%;
-  background:
-    radial-gradient(70% 60% at 30% 25%, rgba(0, 159, 153,0.25) 0%, transparent 70%),
-    radial-gradient(60% 50% at 80% 80%, rgba(77, 199, 193,0.15) 0%, transparent 70%),
-    linear-gradient(160deg, #0B4557 0%, #072F3B 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.imgPlaceholder span { font-size: 0.875rem; font-weight: 500; color: var(--color-text-on-dark-muted); }
-.imgPlaceholder small { font-size: 0.75rem; color: var(--color-text-on-dark-muted); opacity: 0.6; }
-
-/* Tarjeta flotante sobre la imagen */
-.floatBadge {
-  position: absolute;
-  bottom: 8%;
-  left: -4%;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  background: rgba(7, 47, 59,0.62);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(234, 247, 246,0.16);
-  border-radius: var(--radius-lg);
-  padding: 0.875rem 1.25rem;
-  box-shadow: 0 16px 48px rgba(4, 30, 38,0.5);
-  animation: float 6s ease-in-out infinite;
-  z-index: 2;
-}
-
-.floatBadgeIcon {
-  width: 40px; height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--gradient-brand);
-  border-radius: var(--radius-md);
-  color: #fff;
-  flex-shrink: 0;
-}
-
-.floatBadgeIcon svg { width: 20px; height: 20px; }
-
-.floatBadge strong {
-  display: block;
-  font-size: 0.9375rem;
-  color: var(--color-text-on-dark);
-  font-family: var(--font-body), sans-serif;
-}
-
-.floatBadge small {
-  font-size: 0.75rem;
-  color: var(--color-text-on-dark-muted);
 }
 
 /* ─── Marquee strip ─────────────────────────────────────────────────────── */
@@ -326,6 +226,12 @@
 }
 
 .clinicImageWrap:hover .clinicVideo { transform: scale(1.03); }
+
+.clinicVideo::-webkit-media-controls,
+.clinicVideo::-webkit-media-controls-overlay-play-button,
+.clinicVideo::-webkit-media-controls-picture-in-picture-button {
+  display: none !important;
+}
 
 .clinicPlaceholder {
   width: 100%; height: 100%;
