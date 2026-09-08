@@ -108,9 +108,9 @@ export default function HomePage() {
               <Link href="citas" className="btn btn--light">{t('cta_primary')}</Link>
               <Link href="servicios" className="btn btn--ghost-light">{t('cta_secondary')}</Link>
             </div>
-            <div className={styles.statsRow}>
-              {stats.map((s) => <StatCard key={s.label} value={s.value} label={s.label} onDark />)}
-            </div>
+          </div>
+          <div className={styles.statsRow}>
+            {stats.map((s) => <StatCard key={s.label} value={s.value} label={s.label} onDark />)}
           </div>
         </div>
       </section>
