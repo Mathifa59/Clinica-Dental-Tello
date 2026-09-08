@@ -108,7 +108,9 @@ export default function Footer() {
       <div className={styles.bottom}>
         <div className={styles.bottomInner}>
           <p>{t('copyright')}</p>
+          <span className={styles.legalDivider}>·</span>
           <p className={styles.legalId}>{t('legal_id')}</p>
+          <span className={styles.legalDivider}>·</span>
           <div className={styles.legalLinks}>
             <Link href={localePath('/privacidad')} className={styles.legalLink}>{t('privacy_link')}</Link>
             <span className={styles.legalDivider}>·</span>
