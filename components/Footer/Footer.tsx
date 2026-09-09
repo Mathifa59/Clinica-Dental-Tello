@@ -107,7 +107,15 @@ export default function Footer() {
 
       <div className={styles.bottom}>
         <div className={styles.bottomInner}>
-          <p>{t('copyright')}</p>
+          <p>
+            {t.rich('copyright', {
+              dh: (chunks) => (
+                <a href="https://www.devhorses.com/" target="_blank" rel="noopener noreferrer" className={styles.legalLink}>
+                  {chunks}
+                </a>
+              ),
+            })}
+          </p>
           <span className={styles.legalDivider}>·</span>
           <p className={styles.legalId}>{t('legal_id')}</p>
           <span className={styles.legalDivider}>·</span>
