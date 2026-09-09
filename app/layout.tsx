@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Fraunces, Figtree } from 'next/font/google';
 import { getLocale } from 'next-intl/server';
+import { dentistSchema } from '@/lib/schema';
 import './globals.css';
 
 // Fraunces → var(--font-heading) (títulos) · Figtree → var(--font-body) (cuerpo).
@@ -46,6 +47,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(dentistSchema) }}
+        />
+      </head>
       <body className={`${fraunces.variable} ${figtree.variable}`}>{children}</body>
     </html>
   );
