@@ -19,6 +19,7 @@ type FormState = {
   complaintType: 'reclamo' | 'queja';
   detail: string;
   request: string;
+  hpField: string; // honeypot — debe quedar siempre vacío
 };
 
 type FormErrors = Partial<Record<keyof FormState, string>>;
@@ -38,6 +39,7 @@ const INITIAL_STATE: FormState = {
   complaintType: 'reclamo',
   detail: '',
   request: '',
+  hpField: '',
 };
 
 export default function ComplaintBookForm() {
@@ -97,6 +99,7 @@ export default function ComplaintBookForm() {
       complaintType: form.complaintType,
       detail: form.detail,
       request: form.request,
+      hpField: form.hpField,
     });
     if (result.success) {
       setReference(result.reference ?? null);
@@ -127,6 +130,16 @@ export default function ComplaintBookForm() {
   return (
     <div className={styles.formCard}>
       <form onSubmit={handleSubmit} className={styles.form} noValidate>
+        <input
+          type="text"
+          name="hpField"
+          value={form.hpField}
+          onChange={handleChange}
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          className={styles.honeypot}
+        />
         {/* Datos del consumidor */}
         <fieldset className={styles.fieldset}>
           <legend className={styles.legend}>{t('section_consumer')}</legend>

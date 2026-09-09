@@ -16,9 +16,24 @@ type AppointmentInput = {
   service: string;
   date: string;
   message?: string;
+  hpField?: string; // honeypot — un bot que autocompleta todo lo llena, una persona nunca lo ve
 };
 
+/** Re-valida en el servidor lo que el formulario ya valida en el navegador —
+ * cualquiera puede llamar a un server action directamente, sin pasar por el <form>. */
+function validateAppointment(data: AppointmentInput): string | null {
+  if (!data.name.trim() || data.name.length > 120) return 'invalid_name';
+  if (!/^9\d{2}-\d{3}-\d{3}$/.test(data.phone.trim())) return 'invalid_phone';
+  if (!data.service.trim() || data.service.length > 120) return 'invalid_service';
+  if (!data.date.trim()) return 'invalid_date';
+  if (data.message && data.message.length > 500) return 'invalid_message';
+  return null;
+}
+
 export async function submitAppointment(data: AppointmentInput): Promise<ActionResult> {
+  if (data.hpField) return { success: true }; // honeypot activado — se descarta en silencio
+  if (validateAppointment(data)) return { success: false, error: 'validation' };
+
   try {
     const rows = dataTable([
       ['Nombre', escapeHtml(data.name)],
@@ -66,7 +81,21 @@ type ComplaintInput = {
   complaintType: 'reclamo' | 'queja';
   detail: string;
   request: string;
+  hpField?: string; // honeypot — un bot que autocompleta todo lo llena, una persona nunca lo ve
 };
+
+function validateComplaint(data: ComplaintInput): string | null {
+  if (!data.consumerName.trim() || data.consumerName.length > 150) return 'invalid_name';
+  if (!data.consumerDoc.trim() || data.consumerDoc.length > 30) return 'invalid_doc';
+  if (!data.consumerAddress.trim() || data.consumerAddress.length > 300) return 'invalid_address';
+  if (!/^\S+@\S+\.\S+$/.test(data.consumerEmail.trim())) return 'invalid_email';
+  if (!data.consumerPhone.trim() || data.consumerPhone.length > 30) return 'invalid_phone';
+  if (data.isMinor && !data.guardianName?.trim()) return 'invalid_guardian';
+  if (!data.goodDescription.trim() || data.goodDescription.length > 1000) return 'invalid_good';
+  if (!data.detail.trim() || data.detail.length > 3000) return 'invalid_detail';
+  if (!data.request.trim() || data.request.length > 1000) return 'invalid_request';
+  return null;
+}
 
 function generateReference() {
   const now = new Date();
@@ -110,6 +139,9 @@ function complaintSummaryHtml(data: ComplaintInput) {
 }
 
 export async function submitComplaint(data: ComplaintInput): Promise<ActionResult & { reference?: string }> {
+  if (data.hpField) return { success: true }; // honeypot activado — se descarta en silencio
+  if (validateComplaint(data)) return { success: false, error: 'validation' };
+
   const reference = generateReference();
   const label = data.complaintType === 'reclamo' ? 'reclamo' : 'queja';
   const summaryHtml = complaintSummaryHtml(data);

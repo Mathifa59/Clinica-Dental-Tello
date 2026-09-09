@@ -32,6 +32,17 @@
   gap: 1.5rem;
 }
 
+/* Honeypot anti-spam — invisible para personas, visible para bots que autocompletan todo */
+.honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  left: -9999px;
+}
+
 /* Fields */
 .field {
   display: flex;

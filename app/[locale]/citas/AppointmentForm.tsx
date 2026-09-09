@@ -16,6 +16,7 @@ type FormState = {
   service: string;
   date: string;
   message: string;
+  hpField: string; // honeypot — debe quedar siempre vacío
 };
 
 type FormErrors = Partial<Record<keyof FormState, string>>;
@@ -51,6 +52,7 @@ export default function AppointmentForm() {
     service: '',
     date: '',
     message: '',
+    hpField: '',
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [status, setStatus] = useState<Status>('idle');
@@ -91,6 +93,7 @@ export default function AppointmentForm() {
       service: serviceLabel,
       date: form.date,
       message: form.message,
+      hpField: form.hpField,
     });
     setStatus(result.success ? 'success' : 'error');
   };
@@ -122,6 +125,16 @@ export default function AppointmentForm() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className={styles.form} noValidate>
+                  <input
+                    type="text"
+                    name="hpField"
+                    value={form.hpField}
+                    onChange={handleChange}
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className={styles.honeypot}
+                  />
                   <div className={styles.field}>
                     <label htmlFor="name" className={styles.label}>
                       {tForm('name_label')} <span className={styles.required}>*</span>
