@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import StatCard from '@/components/ui/StatCard';
 import Reveal from '@/components/ui/Reveal';
-import { buildAlternates } from '@/lib/seo';
+import { buildAlternates, OG_IMAGE } from '@/lib/seo';
 import styles from './page.module.css';
 
 const DOCTOR_IMAGE = '/images/about/doctor-tello.png';
@@ -29,7 +29,9 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     openGraph: {
       title: `${t('hero_title')} | Dental Tello`,
       description: t('hero_subtitle'),
-      images: ['/og-image.jpg'],
+      siteName: 'Dental Tello',
+      type: 'website',
+      images: [OG_IMAGE],
     },
     ...buildAlternates(params.locale, '/nosotros'),
   };

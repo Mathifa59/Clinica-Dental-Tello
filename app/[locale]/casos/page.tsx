@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import CaseCarousel from '@/components/ui/CaseCarousel';
 import Reveal from '@/components/ui/Reveal';
-import { buildAlternates } from '@/lib/seo';
+import { buildAlternates, OG_IMAGE } from '@/lib/seo';
 import styles from './page.module.css';
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
@@ -15,7 +15,9 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     openGraph: {
       title: `${t('hero_title')} | Dental Tello`,
       description: t('hero_subtitle'),
-      images: ['/og-image.jpg'],
+      siteName: 'Dental Tello',
+      type: 'website',
+      images: [OG_IMAGE],
     },
     ...buildAlternates(params.locale, '/casos'),
   };

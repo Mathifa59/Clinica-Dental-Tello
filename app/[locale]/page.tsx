@@ -6,7 +6,7 @@ import { getTranslations } from 'next-intl/server';
 import ServiceCard from '@/components/ui/ServiceCard';
 import StatCard from '@/components/ui/StatCard';
 import Reveal from '@/components/ui/Reveal';
-import { buildAlternates } from '@/lib/seo';
+import { buildAlternates, OG_IMAGE } from '@/lib/seo';
 import styles from './page.module.css';
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
@@ -18,7 +18,9 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     openGraph: {
       title: `${t('title')} | Dental Tello`,
       description: t('subtitle'),
-      images: ['/og-image.jpg'],
+      siteName: 'Dental Tello',
+      type: 'website',
+      images: [OG_IMAGE],
     },
     ...buildAlternates(params.locale, ''),
   };
