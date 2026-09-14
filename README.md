@@ -6,7 +6,7 @@ Sitio web oficial de **Clínica Dental Tello**, clínica odontológica del **Dr.
 
 ## Descripción del proyecto
 
-Sitio web corporativo de 5 páginas diseñado para presentar los servicios de la clínica, mostrar el perfil del Dr. Tello y su equipo, exhibir un portafolio de casos clínicos reales, y permitir agendar citas / contactar a la clínica desde una sola página. La identidad visual combina glassmorphism, gradientes, video de fondo, fondo "aurora" animado y micro-interacciones.
+Sitio web corporativo diseñado para presentar los servicios de la clínica, mostrar el perfil del Dr. Tello y su equipo, exhibir un portafolio de casos clínicos reales, y permitir agendar citas / contactar a la clínica desde una sola página. La identidad visual combina glassmorphism, gradientes, video de fondo, fondo "aurora" animado y micro-interacciones.
 
 **Todo el contenido es real** (estadísticas, biografía del doctor, formación académica, equipo médico, servicios, horarios, datos de contacto) — proviene de un formulario oficial completado por la clínica, no hay texto de ejemplo ni inventado.
 
@@ -16,12 +16,13 @@ Sitio web corporativo de 5 páginas diseñado para presentar los servicios de la
 
 | Tecnología | Versión | Uso |
 |---|---|---|
-| Next.js | 14.2.5 | Framework principal — App Router |
+| Next.js | 14.2.35 | Framework principal — App Router |
 | TypeScript | 5.x | Tipado estático |
 | next-intl | 3.15.3 | Internacionalización ES / EN |
 | CSS Modules | — | Estilos encapsulados por componente |
-| next/image | built-in | Optimización automática de imágenes |
-| next/font | built-in | Plus Jakarta Sans + Inter (Google Fonts) |
+| next/image | built-in | Optimización automática de imágenes (AVIF desactivado, ver [SEO, seguridad y legal](#seo-seguridad-y-legal)) |
+| next/font | built-in | Fraunces (títulos) + Figtree (cuerpo), Google Fonts |
+| Resend | ^6.x | Envío de correos desde los formularios (citas, libro de reclamaciones) |
 
 > **Sin Tailwind. Sin librerías de animación externas.** Todas las animaciones y efectos visuales son CSS puro con custom properties y `@keyframes`. El acordeón de preguntas frecuentes usa `<details>/<summary>` nativo del navegador, sin JavaScript.
 
@@ -31,13 +32,15 @@ Sitio web corporativo de 5 páginas diseñado para presentar los servicios de la
 
 | Ruta | Página | Descripción |
 |---|---|---|
-| `/es` o `/en` | **Inicio** | Hero con video vertical (entrada al consultorio), estadísticas, marquee animado con los 7 servicios, video de "Nuestra clínica", 3 servicios destacados |
+| `/es` o `/en` | **Inicio** | Hero a pantalla completa con foto de fondo (paciente + dentista) y degradado oscuro, estadísticas, marquee animado con los 7 servicios, video de "Nuestra clínica", 3 servicios destacados |
 | `/es/servicios` | **Servicios** | 7 tarjetas de servicio (Ortodoncia, Implantes, Urgencias, Rehabilitación Oral, Estética Dental, Cirugía Dental, Endodoncia) |
 | `/es/casos` | **Casos** | Portafolio de 9 categorías de casos clínicos reales, cada una con carrusel de fotos (antes/después o proceso), con swipe táctil en móvil |
-| `/es/nosotros` | **Nosotros** | Perfil, credenciales y formación del Dr. Tello (con estadísticas integradas en la misma columna), equipo médico (3 doctores, sección con fondo oscuro), valores, galería de instalaciones |
-| `/es/citas` | **Citas** | Formulario de reserva + FAQ (5 preguntas) + bloque de contacto completo (dirección, horario, redes, teléfono/WhatsApp) + mapa real embebido de Google Maps. Fusiona lo que antes eran dos páginas separadas (Citas y Contacto) alternando franjas oscura/blanca/azul/clara |
+| `/es/nosotros` | **Nosotros** | Perfil, credenciales y formación del Dr. Tello (con estadísticas integradas en la misma columna), equipo médico (3 doctores, sección con fondo oscuro), galería de fotos reales del equipo/instalaciones |
+| `/es/citas` | **Citas** | Formulario de reserva (con validación en servidor y anti-spam) + FAQ (5 preguntas) + bloque de contacto completo (dirección, horario, redes, teléfono/WhatsApp) + mapa real embebido de Google Maps |
+| `/es/privacidad` | **Política de Privacidad** | Cumple la Ley N.º 29733 (Perú): responsable, datos recopilados, finalidad, base legal, terceros, plazo de conservación, derechos, contacto |
+| `/es/libro-de-reclamaciones` | **Libro de Reclamaciones Virtual** | Formulario oficial de reclamos/quejas exigido por Indecopi, envía notificación por correo a la clínica y copia de confirmación con código de referencia al consumidor |
 
-> No existen página de Blog ni ruta `/contacto` independiente — se retiraron para simplificar la navegación.
+> No existen página de Blog ni ruta `/contacto` independiente — se retiraron para simplificar la navegación. La sección "Valores" de Nosotros también se retiró en favor de más fotos reales del equipo.
 
 ---
 
@@ -47,15 +50,23 @@ Sitio web corporativo de 5 páginas diseñado para presentar los servicios de la
 clinica-dental-tello/
 ├── app/
 │   ├── globals.css              # Design tokens, keyframes, utilidades globales
-│   ├── layout.tsx               # Root layout (fuentes)
+│   ├── layout.tsx               # Root layout (fuentes, JSON-LD, metadataBase, OG/Twitter)
+│   ├── sitemap.ts                # sitemap.xml generado (ambos locales)
+│   ├── robots.ts                 # robots.txt
 │   └── [locale]/
 │       ├── layout.tsx           # Header + Footer + WhatsApp button
-│       ├── page.tsx             # Inicio (hero video, marquee, video de clínica)
+│       ├── not-found.tsx        # 404 propia, con CTAs a Inicio/Servicios/Citas
+│       ├── [...rest]/           # Catch-all → notFound() + noindex
+│       ├── page.tsx             # Inicio (hero foto de fondo, marquee, video de clínica)
 │       ├── servicios/
 │       ├── casos/               # Portafolio de casos clínicos reales
-│       ├── nosotros/            # Doctor, equipo, formación, valores, instalaciones
+│       ├── nosotros/            # Doctor, equipo, formación, galería de fotos reales
+│       ├── privacidad/          # Política de Privacidad (ES/EN)
+│       ├── libro-de-reclamaciones/
+│       │   ├── page.tsx
+│       │   └── ComplaintBookForm.tsx  # Client component: formulario + validación + honeypot
 │       └── citas/
-│           ├── page.tsx         # Server wrapper
+│           ├── page.tsx         # Server wrapper (metadata)
 │           └── AppointmentForm.tsx  # Client component: formulario + FAQ + contacto + mapa
 ├── components/
 │   ├── Header/                  # Sticky con glassmorphism al scroll, toggle idioma ES|EN
@@ -67,20 +78,27 @@ clinica-dental-tello/
 │       ├── CaseCarousel.tsx     # Carrusel táctil (swipe) para cada caso clínico
 │       ├── FaqAccordion.tsx     # Accordion nativo (<details>) para preguntas frecuentes
 │       └── Reveal.tsx           # Scroll reveal con IntersectionObserver
+├── lib/
+│   ├── actions.ts                # Server actions: submitAppointment / submitComplaint (Resend)
+│   ├── email-template.ts         # Plantilla HTML compartida para los correos
+│   ├── schema.ts                  # JSON-LD (Schema.org Dentist) para SEO local
+│   └── seo.ts                     # Canonical/hreflang + imagen de Open Graph compartida
 ├── messages/
 │   ├── es.json                  # Contenido en español (fuente de verdad)
 │   └── en.json                  # Contenido en inglés
 ├── public/
-│   ├── videos/                  # hero.mp4 (vertical, entrada al consultorio), clinica.mp4
+│   ├── og-image.jpg              # Tarjeta de Open Graph (logo + degradado de marca)
+│   ├── videos/                  # clinica.mp4 (sección "Nuestra clínica")
 │   └── images/
-│       ├── brand/                # Logo usado en el Header
+│       ├── brand/                # Logo (Header, Footer, JSON-LD)
+│       ├── hero-patient.jpg      # Foto de fondo del hero de Inicio
 │       ├── services/              # Los 7 servicios con foto real
 │       ├── about/                 # doctor-tello.png
-│       ├── clinic/                # fachada, consultorio, recepción, sala de espera, equipos
+│       ├── clinic/                # fachada, consultorio, equipo (fotos reales de Nosotros)
 │       └── casos/                 # 9 carpetas con fotos reales de casos clínicos
 ├── middleware.ts                # Enrutamiento de locales (es/en)
 ├── i18n.ts                      # Configuración next-intl
-└── next.config.mjs              # Config Next.js con plugin i18n
+└── next.config.mjs              # Config Next.js: plugin i18n, headers de seguridad, imágenes
 ```
 
 ---
@@ -107,14 +125,15 @@ clinica-dental-tello/
 
 ### Tipografía
 
-- **Títulos:** Plus Jakarta Sans (400 / 500 / 600 / 700)
-- **Cuerpo:** Inter (400 / 500)
+- **Títulos:** Fraunces (serif variable, con itálica para el acento de gradiente)
+- **Cuerpo:** Figtree (400 / 500 / 600)
 
 ### Efectos visuales
 
 - Gradientes lineales y radiales en hero, botones, badges e íconos
-- Glassmorphism (`backdrop-filter: blur`) en header al scroll, tarjetas de valores/equipo/stats
-- Videos de fondo verticales en el hero y en "Nuestra clínica" del inicio (`autoPlay muted loop playsInline`, sin controles nativos ni picture-in-picture)
+- Hero de Inicio: foto de fondo a pantalla completa (`next/image` con `fill`) + degradado oscuro superpuesto (más opaco a la izquierda, donde va el texto) para legibilidad
+- Glassmorphism (`backdrop-filter: blur`) en header al scroll, tarjetas de stats
+- Video de fondo en "Nuestra clínica" del inicio (`autoPlay muted loop playsInline`, sin controles nativos ni picture-in-picture)
 - Marquee animado con los 7 servicios en la página de inicio
 - Grano sutil (`body::after`) sobre toda la página vía SVG de ruido
 - Animaciones CSS: `fadeUp`, `fadeIn`, `scaleIn`, `float`, `shimmer`, `pulse-glow`, `aurora`, `marquee`
@@ -153,6 +172,19 @@ La página `/casos` muestra 9 categorías curadas a partir de **268 fotos clíni
 
 ---
 
+## SEO, seguridad y legal
+
+- **Metadata por página:** cada ruta tiene `title`/`description` propios (no genéricos) y canonical + hreflang ES/EN vía `lib/seo.ts`.
+- **Open Graph / redes sociales:** tarjeta de imagen propia (`public/og-image.jpg`, 1200×630) con logo y degradado de marca — se ve al compartir el link en WhatsApp, Facebook, etc. Metadata completa (`og:image:width/height/alt`, `og:type`, `og:site_name`, `twitter:card`).
+- **SEO local:** datos estructurados JSON-LD (`Schema.org` tipo `Dentist`) en `lib/schema.ts` — nombre, dirección, teléfono, horario y redes, para que Google pueda mostrar la clínica como negocio local.
+- **Indexación:** `app/sitemap.ts` y `app/robots.ts` (generados por Next.js, no archivos estáticos), conectado a Google Search Console.
+- **Seguridad:** headers (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`) en `next.config.mjs`. AVIF desactivado en `next/image` (`images.formats: ['image/webp']`) como mitigación de una vulnerabilidad de RCE conocida en Next.js — ver la sección de pendientes.
+- **Formularios (citas y libro de reclamaciones):** validan en el navegador *y* se revalidan en el servidor (`lib/actions.ts`), y tienen un campo honeypot invisible contra bots de spam.
+- **Legal:** Política de Privacidad (`/privacidad`, conforme a la Ley N.º 29733) y Libro de Reclamaciones Virtual (`/libro-de-reclamaciones`, exigido por Indecopi) con envío real de correos vía Resend.
+- **Cookies:** el sitio no usa ningún tracker (GA4, Meta Pixel, etc.) por ahora, así que no hace falta banner de consentimiento — el día que se agregue analítica, sí será obligatorio.
+
+---
+
 ## Instalación y desarrollo
 
 ```bash
@@ -173,7 +205,12 @@ Requiere **Node.js 18+**.
 
 ## Despliegue
 
-El proyecto está listo para desplegarse en **Vercel** (recomendado para Next.js). No se requieren variables de entorno para el funcionamiento básico.
+Desplegado en **Vercel**, disponible en [dentaltello.com](https://www.dentaltello.com). Variables de entorno requeridas (configuradas en Vercel, no en el repo):
+
+| Variable | Uso |
+|---|---|
+| `RESEND_API_KEY` | Envío de correos desde los formularios de citas y libro de reclamaciones |
+| `RESEND_TO_EMAIL` | Correo de destino de la clínica (por defecto `dgt_21@hotmail.com` si no se define) |
 
 ---
 
@@ -185,10 +222,10 @@ El proyecto está listo para desplegarse en **Vercel** (recomendado para Next.js
 
 ## Pendiente / próximos pasos
 
-- [ ] Fotos reales para Rehabilitación Oral, Estética Dental y Cirugía Dental (`public/images/services/oral-rehab.jpg`, `aesthetics.jpg`, `surgery.jpg`) — ya están destacadas en Inicio con placeholder a la espera
 - [ ] Variantes adicionales del logo (versión vertical, modo oscuro) cuando la agencia las entregue — el material fuente va a `public/images/logo/`
-- [ ] Conectar el formulario de citas a un backend o servicio de email real (Resend, EmailJS, etc.)
-- [ ] Añadir dominio personalizado en Vercel
+- [ ] Migrar a Next.js 15/16: la rama 14.x ya está en fin de soporte (14.2.35 es el último parche) y `npm audit` reporta CVEs críticas sin corregir que solo se resuelven con el salto de versión mayor. Requiere actualizar `params`/`cookies()`/`headers()` a la API async de Next 15 en cada página — se aplazó a propósito por el alcance del cambio, no por descuido. Dos de las vulnerabilidades más graves ya están mitigadas sin necesidad del upgrade (ver [SEO, seguridad y legal](#seo-seguridad-y-legal)).
+- [ ] Content-Security-Policy: se dejó fuera de los headers de seguridad a propósito (hay un iframe de Google Maps y scripts de Next que requieren configurarlo con cuidado para no romper la página)
+- [ ] Términos y Condiciones: no aplica por ahora — el formulario de citas es una solicitud, no una compra/pago online
 
 ---
 
