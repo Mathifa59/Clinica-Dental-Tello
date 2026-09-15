@@ -140,6 +140,10 @@
         "title": "Implant-Supported Rehabilitation",
         "description": "Fixed prosthesis protocol on dental implants, from the working model to the final result."
       },
+      "implantesMolares": {
+        "title": "Posterior Molar Implants",
+        "description": "Implant placement in the posterior area, documented with X-rays, through to the final crown restoration."
+      },
       "resinaEstetica": {
         "title": "Aesthetic Molar Resin",
         "description": "Treatment of multiple cavities with resin, preserving as much healthy tooth structure as possible."

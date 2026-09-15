@@ -140,6 +140,10 @@
         "title": "Rehabilitación sobre implantes",
         "description": "Protocolo de prótesis fija sobre implantes dentales, desde el modelo de trabajo hasta el resultado final."
       },
+      "implantesMolares": {
+        "title": "Implantes en molares posteriores",
+        "description": "Colocación de implantes en la zona posterior, documentada con radiografías, hasta la colocación de las coronas definitivas."
+      },
       "resinaEstetica": {
         "title": "Resina estética en molares",
         "description": "Tratamiento de caries múltiples con resina, preservando la mayor cantidad posible de tejido dental sano."

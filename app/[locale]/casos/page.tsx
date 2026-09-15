@@ -32,6 +32,7 @@ const CASE_DATA = [
   { key: 'pernoCorona', slug: 'perno-corona', images: ['01-antes.jpg', '02-proceso.jpg'] },
   { key: 'protesisTotal', slug: 'protesis-total', images: ['01-antes.jpg', '02-despues.jpg', '03-comparacion.jpg'] },
   { key: 'protocoloImplantes', slug: 'protocolo-implantes', images: ['01-modelo.jpg', '02-prueba.jpg', '03-sonrisa.jpg', '04-sonrisa-detalle.jpg', '05-en-boca.jpg'] },
+  { key: 'implantesMolares', slug: 'implantes-molares', images: ['01-radiografia-implantes.jpg', '02-radiografia-coronas.jpg', '03-antes.jpg', '04-despues.jpg'] },
   { key: 'resinaEstetica', slug: 'resina-estetica', images: ['01-antes.jpg', '02-proceso.jpg'] },
 ] as const;
 
